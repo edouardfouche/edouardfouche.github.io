@@ -1,0 +1,914 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+  
+  overflow-y: scroll ; 
+
+  overflow-x:hidden;
+
+}
+
+.post {
+  text-align: justify;
+  font-size: 18px;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+/* AVOID THE OVERFLOW ON THE RIGHT 
+-------------------------------------------------- */
+/*
+.element.style {
+  .row {
+    margin-right : 0px;
+  }
+}
+*/
+
+/* Make the the link to the current page is highlighted 
+Require to hav for each page the body with the corresponding class
+As well as the links in the navbar
+*/
+body.home a.home, body.about a.about, body.cv a.cv, body.contact a.contact {
+color: white;
+
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  /* Debuging coloration */
+  /* background-color: #ffe400 ; */
+}
+
+  /* Flip around the padding for proper display in narrow viewports */
+  .navbar-wrapper .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: 'Cambria' ;
+    font-weight: bold ;
+    font-size: 16px ;
+
+  }
+
+  .navbar-inverse .navbar-brand-custom > a {
+  /*  color: #c4c4c4; */
+  font-family: 'Cambria' ;
+  font-weight: bold ; 
+  color: #999999; 
+  }
+
+  .navbar-inverse .navbar-brand-custom > a:hover,
+  .navbar-inverse .navbar-brand-custom > a:focus {
+  color: #ffffff; 
+  background-color: transparent; 
+  }
+
+  .navbar-brand-custom {
+    /* float: left; */
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 50px;
+    width: 220px;
+  }
+
+   @media (max-width: 350px) {
+    .navbar-brand-custom {
+    width: 190px;
+  }
+
+   }
+
+  #splitter {
+    padding: 0px 0px;
+    width: 51px ;
+  }
+
+  .navbar-brand-custom:hover,
+  .navbar-brand-custom:focus {
+    text-decoration: none;
+  }
+
+  @media (min-width: 768px) {
+    .navbar > .container .navbar-brand-custom,
+    .navbar > .container-fluid .navbar-brand-custom {
+      margin-left: -15px;
+    }
+  }
+
+  .navbar-brand-custom
+  {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
+
+  .navbar-inverse .navbar-brand-custom
+  {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+
+
+.link-icon {
+    /* padding-top: 10px; /* c'était 20 avant */
+    /* padding-bottom: 10px; /* c'était 10 avant */
+    line-height: 25px;
+    margin-left: 10px;
+    width: 25px ;
+    height: 25px ;
+    margin-bottom: 10px ;
+    float:right ; 
+  }
+
+body:after{
+ display:none;
+ content: url('/img/linkedin25x25.png');
+}
+
+
+#linkedin-container {
+
+  /* Handling transition */
+  /*
+  -o-transition:color .5s ease-out, background .3s ease-in;
+  -ms-transition:color .5s ease-out, background .3s ease-in;
+  -moz-transition:color .5s ease-out, background .3s ease-in;
+  -webkit-transition:color .5s ease-out, background .3s ease-in;
+  transition:color .5s ease-out, background .3s ease-in;
+  */
+
+  height: 25px ;
+  width : 25px ; 
+  margin-bottom : 0px;
+  /*
+  background-image:url('img/linkedin25x25.png') ;
+  */
+  
+    -webkit-filter: grayscale(100%);
+
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+
+    -webkit-backface-visibility: hidden
+}
+
+#linkedin-container:hover {
+
+   -webkit-filter: grayscale(0%);
+  /* text-decoration: none ; */
+}
+
+#xing-container {
+  height: 25px ;
+  width : 25px ; 
+  margin-bottom : 0px;
+  /*
+  background-image:url('img/xing25x25.png') ;
+  */
+    -webkit-filter: grayscale(100%);
+
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+
+    -webkit-backface-visibility: hidden
+
+}
+
+#xing-container:hover {
+
+   -webkit-filter: grayscale(0%);
+  /* text-decoration: none ; */
+}
+
+#twitter-container {
+  height: 25px ;
+  width : 25px ; 
+  margin-bottom : 0px;
+  /*
+  background-image:url('img/twitter25x25.png') ;
+  */
+    -webkit-filter: grayscale(100%);
+
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+
+    -webkit-backface-visibility: hidden
+
+}
+
+#twitter-container:hover {
+
+   -webkit-filter: grayscale(0%);
+  /* text-decoration: none ; */
+}
+
+#github-container {
+  height: 25px ;
+  width : 25px ; 
+  margin-bottom : 0px;
+  /*
+  background-image:url('img/git25x25.png') ;
+  */ 
+    -webkit-filter: grayscale(100%);
+
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+
+    -webkit-backface-visibility: hidden
+
+}
+
+#github-container:hover {
+   -webkit-filter: grayscale(0%);
+  /* text-decoration: none ; */
+}
+
+#facebook-container {
+  height: 25px ;
+  width : 25px ; 
+  margin-bottom : 0px;
+  /*
+  background-image:url('img/facebook25x25.png') ;
+  */
+
+    -webkit-filter: grayscale(100%);
+
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+
+    -webkit-backface-visibility: hidden
+
+}
+
+#facebook-container:hover {
+   -webkit-filter: grayscale(0%);
+  /* text-decoration: none ; */
+}
+
+#ibm {
+  height: 50px;
+  width: 100px;
+  margin-top : 15px;
+   background-image: url('img/ibm100x50.png');
+    -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+#ibm:hover {
+   background-image: url('img/eyebeem.png');
+}
+
+#flickr-container {
+
+  /* Handling transition */
+  /*
+  -o-transition:color .5s ease-out, background .3s ease-in;
+  -ms-transition:color .5s ease-out, background .3s ease-in;
+  -moz-transition:color .5s ease-out, background .3s ease-in;
+  -webkit-transition:color .5s ease-out, background .3s ease-in;
+  transition:color .5s ease-out, background .3s ease-in;
+  */
+
+  -webkit-filter: grayscale(100%);
+
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+
+  height: 25px ;
+  width : 25px ; 
+  margin-bottom : 0px;
+
+  background-image:url('img/flickr25x25.png') ;
+
+}
+
+#flickr-container:hover {
+
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+          
+  -webkit-filter: grayscale(0%);
+
+}
+
+.navbar-right .link-icon {
+    margin-top: 0px;
+  }
+
+  .navbar-right:last-child {
+    margin-right: 0px;
+    padding-right: 0px ; 
+    margin-top: 12px ;
+  }
+
+
+/* SMOTH HOVER ON LINKS
+-------------------------------------------------- */
+
+
+a {
+
+  -o-transition:color .1s ease-out, background .3s ease-in;
+  -ms-transition:color .1s ease-out, background .3s ease-in;
+  -moz-transition:color .1s ease-out, background .3s ease-in;
+  -webkit-transition:color .1s ease-out, background .3s ease-in;
+
+  transition:color .5s ease-out, background .2s ease-in;
+
+}
+
+/* BUTTON CUSTOMIZATION
+-------------------------------------------------- */
+
+#custom-button {
+  color: #c4c4c4;
+  /* background-color: red; */
+  /* border-color: #357ebd; */
+}
+#custom-button:hover,
+#custom-button:focus,
+#custom-button:active,
+#custom-button.active {
+  color: #c4c4c4;
+  /* background-color: yellow ; */
+  /* border-color: #285e8e; */
+}
+
+#custom-button {
+  background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+  background-image: linear-gradient(to bottom, #3c3c3c 0%, #222222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #101010;
+}
+#custom-button:hover,
+#custom-button:focus {
+  background-color: #222222;
+  background-position: 0 -15px;
+}
+#custom-button:active,
+#custom-button.active {
+  background-color: #222222;
+  border-color: #101010;
+}
+
+/* CUSTOMIZE FOOTER 
+-------------------------------------------------- */
+
+#footer {
+  border-top: 1px solid #999999 ;
+}
+
+#footer > p {
+  padding-top: 1% ;
+  padding-bottom: 1% ;
+  font-family: 'Cambria' ;
+  font-weight: bold ;
+  font-size: 15px ;
+  text-align: center ;
+}
+
+
+
+
+/* CUSTOMIZE CONTENT
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .content, used for positioning it into place. */
+.content-wrapper {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-top: 50px;
+  /* Debuging coloration */
+  /* background-color: #b400ff ; */
+}
+
+  /* Flip around the padding for proper display in narrow viewports */
+  .content-wrapper .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+/* Define wrapper for title in the main content */
+.title-wrapper {
+  /*height: 70px ;
+  border-bottom: 2px solid ;
+  padding-left: 2% ;*/
+  /* Debuging coloration */
+  /* background-color: #ff00de ; */ 
+}
+
+/* Define wrapper for subcontent in the main content */
+.subcontent-wrapper {
+  height: auto ;
+  width: 100%;
+  clear:both;
+  /* Debuging coloration */
+  /* background-color: #0274b3 ; */
+}
+
+/* Define title style in the main content */
+.content-wrapper .container .content-title {
+  font-family: 'Georgia' ;
+  font-size: 38px ;
+  color: #454343;
+  border-bottom: 2px solid ;
+  /* padding-left: 2% ; */
+}
+
+/* Define paragraph style in the main content */
+.content-paragraph {
+  font-family: 'Cambria' ;
+  font-size: 18px ;
+  color: black;
+  text-align: justify;
+  /* padding: 2%; */
+  /*margin-left: 2px;
+  margin-top: 2px; */
+}
+
+#gallery-title {
+  font-family: 'Cambria' ;
+  font-size: 18px ;
+  color: black;
+  text-align: justify;
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-right : 2%;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+
+.profilpic {
+  float: right;
+  /*
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 15px;
+  margin-top: 3.5%;
+  */
+  /* border: 1px solid #ccc; */
+  border-radius: 2px ;
+}
+
+.information-line {
+  font-family: 'Cambria' ;
+  font-size: 16px ;
+  margin-left: 2% ;
+  padding-right: 2% ;
+  margin-left: 2px;
+  /* background-color: red ; */
+  border-top-left-radius: 6px ;
+  /* border-left: 4px solid #438bbe ; */ 
+  /* border-bottom-left-radius: 0px ; */
+  /* border-bottom: 1px solid #438bbe ; */
+  clear: both ;
+  margin-bottom: 0px ;
+  margin-top: 0px ;
+}
+
+.main-info {
+  clear: both ;
+  background-color: red ;
+}
+
+.more-info {
+  clear: both ;
+  display:none; 
+  text-align: justify ;
+  font-family: 'Cambria' ;
+  font-size: 16px ; 
+}
+
+.skills-line {
+  font-family: 'Cambria' ;
+  font-size: 16px ;
+  margin-left: 20px;
+  margin-bottom: 5px ;
+  height: 50px;
+}
+
+  .info-icon {
+      float: left;
+      width: 65px;
+      /* width: 100px ; */
+      /* border-radius: 6px; */
+      border-bottom-left-radius: 0px ;
+      padding-left: 10px; 
+      padding-top: 0.5% ;
+      padding-bottom: 0% ;
+      vertical-align: center ;
+      margin-left: 0px;
+      margin-right: 10px ;  
+      
+      /* Debuging coloration */
+      /* background-color: #06ff00 ; */
+    }
+
+  .dropdownbutton{
+    width: auto;
+    text-align: left ;
+    vertical-align: text-bottom ;
+    font-weight: bold ;
+    font-size: 12px ;
+  }
+
+  .dropdownbutton:hover{
+    text-decoration: none ; 
+  }
+
+  .skills-icon {
+      float: left;
+      border-radius: 4px;
+      height: 50px ;
+      width: 200px ; 
+      vertical-align: center ;
+      margin-left: 2px;
+      margin-right: 20px ;  
+      /* Debuging coloration */
+      /* background-color: #06ff00 ; */
+    }  
+
+  .name-and-diplom {
+      float: left;
+      padding-top: 1%;
+      margin: 0px ;
+      /* Debuging coloration */
+      /* background-color: #fcff00 ; */
+    }
+
+      .university-name {
+        font-family: 'Georgia' ;
+        margin-top: 0px;
+        margin-bottom: 0px ;
+        font-size: 25px ;
+        color: #454343;
+      }
+
+      .skills-name {
+        font-family: 'Georgia' ;
+        padding-top: 1% ;
+        padding-left: 3% ;
+        margin-top: 0px ;
+        margin-left: 10px;
+        font-size: 25px ;
+        color: #454343;
+      }
+
+      .subtitle {
+        font-family: 'Georgia' ;
+        padding-top: 1% ;
+        padding-left: 0% ;
+        margin-top: 0px ;
+        margin-left: 10px;
+        font-size: 25px ;
+        color: #454343;
+      }
+
+
+
+      .grade-diplom {
+        font-family: 'Cambria' ;
+        font-size: 18px ;
+        color: #454343;
+        margin-top: 0px ;
+        margin-left : 10px;
+        margin-bottom: 0px;
+      }
+
+      .from-to {
+        font-family: 'Cambria' ;
+        font-weight: bold;
+        color: #454343;
+        font-size: 15px ;
+        margin-top: 0px ;
+        margin-left : 40px;
+      }
+
+      .from-to-included {
+        font-family: 'Cambria' ;
+        font-weight: bold;
+        color: #454343;
+        font-size: 15px ;
+        margin-top: 0px ;
+        /* margin-left : 40px; */
+      }
+
+        .expected-graduation {
+          color: #0274b3;
+          font-weight: bold;
+        }
+
+  .university-icon {
+    float: right;
+    padding-top: 2%;
+    padding-bottom: 2% ;
+    /* Debuging coloration */
+    /* background-color: #1200ff ; */
+    
+  }
+
+.space {
+  /* background-color: #1200ff ; */
+  height : 20px;
+  clear:both;
+  /* Debuging coloration */
+  /* background-color: #ffe400 ; */
+}
+
+.space2 {
+  /* background-color: #1200ff ; */
+  height : 10px;
+  clear:both;
+  /* Debuging coloration */
+  /* background-color: #ffe400 ; */
+}
+
+.tag_cloud {
+  vertical-align: center ;
+  text-align: center ;
+  background-image: url(img/tag_cloud_700.png) ;
+  width: 700px ;
+  height: 150px ;
+  margin : auto ;
+
+}    
+
+ /* Changing tag cloud when scale down
+-------------------------------------------------- */   
+
+@media (max-width: 990px) {
+  .tag_cloud {
+    background-image: url(img/tag_cloud_550_160.png) ;
+    width: 550px;
+    height: 160px ;
+  }
+}
+
+@media (max-width: 570px) {
+  .tag_cloud {
+    background-image: url(img/tag_cloud_400_200.png) ;
+    width: 400px;
+    height: 200px ;
+  }
+}
+
+
+
+ 
+ /* CSS for sidebar
+-------------------------------------------------- */   
+
+.affix-top,.affix{
+  position: static;
+}
+
+.sidebar-line{
+  color: #454343;
+  font-family: 'Cambria' ;
+  font-size: 16px ;
+  font-weight: bold ;
+  width: 180px;
+}
+
+@media (max-width: 990px) {
+  #leftCol{
+    visibility: collapse ;
+  }
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+    margin-top:26px; 
+    width: auto;
+  }
+  
+  #sidebar.affix {
+    position: fixed;
+    top : 17px ; 
+    width: auto;
+  }
+}
+
+#sidebar li.active > a {
+    border:0 #cbcbcb solid;
+    border-left-width:4px;
+}
+
+#sidebar > li > a {
+    margin-left: 2px ;
+    border-radius: 4px;
+}
+
+/* CSS FOR CONTACT INFORMATIONS
+-------------------------------------------------- */
+
+.contact-info {
+  font-family: 'Cambria' ;
+  font-weight: bold ;
+  font-size: 16px ;
+  margin-left: 20px ;
+}
+
+.form-horizontal {
+  font-family: 'Cambria' ;
+  padding: 2% ;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+ /* Adjusting size of text in information lines when reducing
+-------------------------------------------------- */   
+@media (max-width: 990px) {
+  
+  .university-name {
+        font-size: 20px ;
+      }
+  .grade-diplom {
+        font-size: 15px ;
+      }
+  .from-to {
+        font-size: 13px ;
+      }
+  .from-to-included {
+        font-size: 13px ;
+      }
+}
+
+/* Adjusting the left margin-padding of the info-icon
+-------------------------------------------------- */
+@media (max-width: 600px) {
+  
+  .info-icon {
+    margin-right: 0px ;
+    padding-right: 0px ;
+    width: 80px ;
+  }
+}
+
+/* Collapse university icon when too small in test scores
+-------------------------------------------------- */
+@media (max-width: 1200px) {
+  
+  .collapsemewhentoosmall1{
+    visibility: collapse; 
+    height: 0px ;
+  }
+}
+
+/* for the gallery */
+@media (max-width: 1198px) {
+  #gallery{
+    clear:both;
+    float: left ;
+  }
+}
+
+@media (max-width: 768px) {
+    .navbar-right{
+      float: left;
+      padding-left: 5px ;
+    }
+  }
+
+/* Handling the profil pic placement when too small */
+@media (max-width: 600px) {
+  .profilpic{
+    float: none;
+    margin-left:25%;
+    margin-right:25%;
+    margin-bottom: 10px ;
+  }
+}
+
+/* Handling the university icon placement when too small */
+/*
+@media (max-width: 730px) {
+  .university-icon{
+    visibility: collapse; 
+    height: 0px ;
+    clear:both ;
+    float: left;
+    background-color: red ;
+    margin-top: 0px ;
+  }
+  .name-and-diplom{
+    width: 430px ;
+  }
+}
+*/
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left:  15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left:  0;
+  }
+
+  /* Content positioning foo */
+  .content-wrapper {
+    margin-top: 100px;
+  }
+
+  .content-wrapper .container {
+    padding-right: 65px;
+    padding-left:  65px;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+
+  .navbar-right:last-child {
+    margin-right: 55px;
+    padding-right: 50px ; 
+  }
+
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+@media 
+/* Iphone portrait case */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    min-width: 550px;
+    device-width: 550px;
+}
