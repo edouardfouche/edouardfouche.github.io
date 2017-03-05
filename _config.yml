@@ -37,7 +37,7 @@ disqus:
 google_analytics: 
 
 # Other stuff
-highlighter: pygments
+highlighter: rouge
 permalink: /:title/
 # /blog/:year-:month-:day/:title.html
 
