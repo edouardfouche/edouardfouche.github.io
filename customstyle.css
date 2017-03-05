@@ -143,9 +143,7 @@ body:after{
  content: url('/img/linkedin25x25.png');
 }
 
-
-#linkedin-container {
-
+#icon-container {
   /* Handling transition */
   /*
   -o-transition:color .5s ease-out, background .3s ease-in;
@@ -173,107 +171,8 @@ body:after{
     -webkit-backface-visibility: hidden
 }
 
-#linkedin-container:hover {
+#icon-container:hover {
 
-   -webkit-filter: grayscale(0%);
-  /* text-decoration: none ; */
-}
-
-#xing-container {
-  height: 25px ;
-  width : 25px ; 
-  margin-bottom : 0px;
-  /*
-  background-image:url('img/xing25x25.png') ;
-  */
-    -webkit-filter: grayscale(100%);
-
-    -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-
-    -webkit-backface-visibility: hidden
-
-}
-
-#xing-container:hover {
-
-   -webkit-filter: grayscale(0%);
-  /* text-decoration: none ; */
-}
-
-#twitter-container {
-  height: 25px ;
-  width : 25px ; 
-  margin-bottom : 0px;
-  /*
-  background-image:url('img/twitter25x25.png') ;
-  */
-    -webkit-filter: grayscale(100%);
-
-    -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-
-    -webkit-backface-visibility: hidden
-
-}
-
-#twitter-container:hover {
-
-   -webkit-filter: grayscale(0%);
-  /* text-decoration: none ; */
-}
-
-#github-container {
-  height: 25px ;
-  width : 25px ; 
-  margin-bottom : 0px;
-  /*
-  background-image:url('img/git25x25.png') ;
-  */ 
-    -webkit-filter: grayscale(100%);
-
-    -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-
-    -webkit-backface-visibility: hidden
-
-}
-
-#github-container:hover {
-   -webkit-filter: grayscale(0%);
-  /* text-decoration: none ; */
-}
-
-#facebook-container {
-  height: 25px ;
-  width : 25px ; 
-  margin-bottom : 0px;
-  /*
-  background-image:url('img/facebook25x25.png') ;
-  */
-
-    -webkit-filter: grayscale(100%);
-
-    -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-
-    -webkit-backface-visibility: hidden
-
-}
-
-#facebook-container:hover {
    -webkit-filter: grayscale(0%);
   /* text-decoration: none ; */
 }
