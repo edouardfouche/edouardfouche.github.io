@@ -8,13 +8,12 @@ A few things that are still to be done...
 
 - ~~Disqu Support~~
 - ~~page titles~~
-- Push to Github
-- Cleaner code
-- Domain name (edouardfouche.com)
+- ~~Push to Github~~
+- Domain name edouardfouche.com (pending)
+- Add right column in blog section 
 - Google Analytics
 - Add RSS feed
 - Latex integration
-- icon flickrs when changing pages
 - write posts
 - update CV
 - 404 page
