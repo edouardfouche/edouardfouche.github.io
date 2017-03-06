@@ -156,10 +156,7 @@ body:after{
   height: 25px ;
   width : 25px ; 
   margin-bottom : 0px;
-  /*
-  background-image:url('img/linkedin25x25.png') ;
-  */
-  
+
     -webkit-filter: grayscale(100%);
 
     -webkit-transition: all 0.5s ease;
@@ -190,9 +187,6 @@ body:after{
   height: 25px ;
   width : 25px ; 
   margin-bottom : 0px;
-  /*
-  background-image:url('img/linkedin25x25.png') ;
-  */
   
     -webkit-filter: grayscale(100%);
 
@@ -222,7 +216,7 @@ body:after{
   height: 50px;
   width: 100px;
   margin-top : 15px;
-   background-image: url('img/ibm100x50.png');
+   background-image: url('/img/ibm100x50.png');
     -webkit-transition: all 0.5s ease;
      -moz-transition: all 0.5s ease;
        -o-transition: all 0.5s ease;
@@ -231,7 +225,7 @@ body:after{
 }
 
 #ibm:hover {
-   background-image: url('img/eyebeem.png');
+   background-image: url('/img/eyebeem.png');
 }
 
 #flickr-container {
@@ -257,7 +251,7 @@ body:after{
   width : 25px ; 
   margin-bottom : 0px;
 
-  background-image:url('img/flickr25x25.png') ;
+  background-image:url('/img/flickr25x25.png') ;
 
 }
 
@@ -371,8 +365,8 @@ a {
 
   /* Flip around the padding for proper display in narrow viewports */
   .content-wrapper .container {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 1%;
+    padding-left: 1%;
   }
 
 /* Define wrapper for title in the main content */
@@ -756,6 +750,9 @@ a {
 }
 
 @media (max-width: 768px) {
+    #container{
+      padding: 2%;
+    }
     .navbar-right{
       float: left;
       padding-left: 5px ;
