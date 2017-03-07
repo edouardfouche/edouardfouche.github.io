@@ -11,13 +11,14 @@ A few things that are still to be done...
 - ~~Push to Github~~
 - ~~Domain name edouardfouche.com~~
 - ~~404 page~~
-- Set up https (pending)
-	- https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/
-	-https://developer.ubuntu.com/en/blog/2016/02/17/how-host-your-static-site-https-github-pages-and-cloudflare/
-- Add right column in blog section 
+- ~~Set up https (pending)~~
+	- ~~https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/~~
+	- ~~https://developer.ubuntu.com/en/blog/2016/02/17/how-host-your-static-site-https-github-pages-and-cloudflare/~~
+- ~~update CV online~~
+- ~~Google Analytics~~
+- update CV pdf
 - write posts
-- update CV
-- Add RSS feed
-- Google Analytics
 - Latex integration
 - Matplotlib / Visualization integration 
+- Add right column in blog section 
+- Add RSS feed
