@@ -722,7 +722,7 @@ a {
 
 /* Adjusting the left margin-padding of the info-icon
 -------------------------------------------------- */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   
   .info-icon {
     margin-right: 0px ;
@@ -731,9 +731,9 @@ a {
   }
 }
 
-/* Collapse university icon when too small in test scores
--------------------------------------------------- */
-@media (max-width: 1200px) {
+/* Collapse university icon when too small
+--------------------------------------- */
+@media (max-width: 600px) {
   
   .collapsemewhentoosmall1{
     visibility: collapse; 
