@@ -152,11 +152,11 @@ Black points are the outliers, inferred from the labels. As we can see, they get
 Interpretability
 ----------------
 
-The outlier score is a useful information about the *abnormality* of data points. However, in practice this is often not enough. One does not only want to know which points are outliers, but also why they can be considered as outliers, i.e. in which subspace they are so special. 
+The outlier score is a useful information about the *abnormality* of data points. However, in practice this is often not enough. One does not only want to know which points are outliers, but also why these points are so special, i.e. in which subspaces they are abnormal. 
 
 The lack of interpretation possibilities has been a major criticism of neural network. Neural networks are often seen as a magic black box doing great things but excluding any interpretation possibilities. I would say that in the case of outlier detection, this is not true. 
 
-It turns out that one can find an indication in which dimension a particular data point is outlying by looking at the reconstruction error. For example, point n°350 is one of the outlier in the subspace [30,31,32], we can compute its reconstruction error per dimension and plot it:
+By looking at the reconstruction error, we can find hints about the dimensions in which a particular data point is outlying. For example, point n°350 is one of the outlier in the subspace [30,31,32], we can compute its reconstruction error per dimension and plot it:
 
 ``` python
 def compute_error_per_dim(point):
@@ -181,11 +181,11 @@ Similarly, point n°50, which is an outlier in subspace [30,31,32] and [68,69], 
 
 ![ae-outlier-reconstruction-50](/img/ae-outlier-reconstruction-50.png){:class="img-responsive"}
 
-Point n°50 also has a relative high reconstruction error in subspace [50,51,52]. This is a false positive, because point n°50 does not show a clear outlier behavior in this subspace. However, it seems that point n°50 is located in a relatively sparse region in the subspace [50,51,52] (see the red point hereafter).
+Point n°50 also has a relative high reconstruction error in subspace [50,51,52]. This is a false positive, because point n°50 does not show a clear outlier behavior in this subspace. Still, it seems that point n°50 is located in a relatively sparse region in the subspace [50,51,52] (see the red point).
 
 ![3d-plot-non-outlier-50](/img/3d-plot-non-outlier-50.png){:class="img-responsive"}
 
-So it seems that one can find back the information in which each object is an outlier by looking at the reconstruction errors, or at least reduce drastically the search space. Hereafter we plot the reconstruction error of each outlier in the subspace [30,31,32]. Namely, the points n°50, 121, 350, 572 and 559. 
+So it seems that one can find back the information in which each object is an outlier by looking at the reconstruction errors, or at least reduce drastically the search space. Hereafter, we plot the reconstruction error of each outlier in the subspace [30,31,32]. Namely, the points n°50, 121, 350, 572 and 559. 
 
 ``` python
 %matplotlib notebook
@@ -211,9 +211,9 @@ The peak at [30,31,32] seems quite consistent for each point.
 What about Deep Learning?
 -------------------------
 
-Nowadays, everybody is crazy about deep learning. Increasing the size of a neural network is often thought as a silver bullet to increase accuracy. Despite being true in many setting, and especially in computer vision tasks, this is not true here. 
+Nowadays, everybody is crazy about deep learning. Increasing the size of a neural network is often thought as a silver bullet to increase accuracy. Despite being true in many settings, and especially in computer vision tasks, this is not true here. 
 
-For example, having to many parameters would allow the network to overfit the data, such that all points would be reconstructed nearly perfectly, blurring out the differences between *normal* and *abnormal* data points. Previous work[^fn5] showed that one single layer brings better results in outlier detection. Controversely, [^fn6] argue than adding layer to reduce gradually the *compressed* representation of the helps. Obviously, there is a need for experiment here. 
+For example, having to many parameters would allow the network to overfit the data, such that all points would be reconstructed nearly perfectly, blurring out the differences between *normal* and *abnormal* data points. Previous work[^fn5] showed that one single layer brings better results in outlier detection. Controversely, [^fn6] argue that adding layers to *compress* gradually representation of the data helps. Obviously, there is a need for experiments here. 
 
 By chance, deep learning research leads the development of many gradient optimization and regularization methods that can be very useful for this task too. 
 
@@ -222,9 +222,9 @@ Conclusion
 
 In this article, we introduced the problems related to finding outlier in high-dimensional spaces. We show that neural-based approaches, such as auto-encoders, can provide great results. 
 
-Nonetheless, the quality of these results is conditioned by the choice of the parameters, such as *number of hidden neurons*, *activation function*, *gradient optimization*, *number of training epochs*, *size of mini-batches*, *distance function*... Most of the current work is based on trial-and-error, which is time consuming and may lead to overfitting. It would be interesting to derive rules for these parameters based on the data, or assumptions about the data, such as its correlation structure or the expected proportion or characteristics of outliers.
+Nonetheless, the quality of these results is conditioned by the choice of the parameters, such as the *number of hidden neurons*, *activation function*, *gradient optimization*, *number of training epochs*, *size of mini-batches*, *distance function*... Most of the current work is based on trial-and-error, which is time consuming and may lead to poor generalization. It would be interesting to derive rules to fix these parameters based on the data, such as its correlation structure or the expected proportion/characteristics of outliers.
 
-The results showed in this article are based on a single data set, with carefully chosen parameters. It would be difficult to infer the quality of the same model on different data sets with different characteristics. Other neural-based methods, such as the *Self-Organizing Maps*[^fn9] or the *Restricted Boltzmann Machines*[^fn10] shows also promising results and would be interesting to compare with. 
+The results showed in this article are based on a single data set, with carefully chosen parameters. It would be difficult to infer the quality of the same model on different data sets with different characteristics. Other neural-based methods, such as the *Self-Organizing Maps*[^fn9] or the *Restricted Boltzmann Machines*[^fn10] also shows promising results and would be interesting to compare. 
 
 Try it yourself !
 -----------------
