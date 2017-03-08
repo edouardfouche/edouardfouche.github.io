@@ -11,7 +11,7 @@ Outlier detection has the goal to reveal unusual patterns in data. Typical scena
 Introduction
 ------------
 
-Let's start with an example. By looking at the plot hereafter, it is easy to see that the red points can be seen as outlying in the space spanned by the variables x, y and z. 
+Let's start with an example. By looking at the plot hereafter, it is easy to see that the red points are outlying in the space spanned by the variables x, y and z. 
 
 ![3d-plot-outlier](/img/3d-plot-outlier.png){:class="img-responsive"}
 
@@ -19,7 +19,7 @@ However, if we project the data in lower dimensional subspaces, their outlying b
 
 ![2d-plot-outlier](/img/2d-plot-outlier.png){:class="img-responsive"}
 
-Also, the same points might not be detected as outliers in other dimensions, such as [r,s,t]. 
+Also, the same points might not be seen as outliers in other dimensions, such as [r,s,t]. 
 
 ![3d-plot-non-outlier](/img/3d-plot-non-outlier.png){:class="img-responsive"}
 
@@ -28,13 +28,13 @@ When the data is high-dimensional, i.e. each data point is described by a large 
 Auto-encoder
 ------------
 
-One can use an auto-encoder to detect outliers. An auto-encoder, also formerly called *replicator network* is an unsupervised neural networks. Basically, it consists in learning a pair of non-linear transformations: A mapping from the original to another space (encoder) - of possibly higher or lower dimensionality - and a mapping back from this new space to the original one (decoder). The assumption is, since outliers are *rare* and *different*, that the auto-encoder will not learn to map those objects correctly, inducing a higher reconstruction error. By looking at the reconstruction errors, one can infer an outlier score. 
+One can use an auto-encoder to detect outliers. An auto-encoder, also formerly called *replicator network*, is an unsupervised neural networks. Basically, it consists in learning a pair of non-linear transformations: A mapping from the original to another space (encoder) - of possibly higher or lower dimensionality - and a mapping back from this new space to the original one (decoder). The assumption is, since outliers are *rare* and *different*, that the auto-encoder will not learn to map those objects correctly, inducing a higher reconstruction error. By looking at the reconstruction errors, one can infer an outlier score. 
 
 Interestingly, there is no need for labels, i.e. we don't need to get example of *normal* and *abnormal* points. The network can infer directly from the data points a degree of abnormality with respect to the other points. This is what we may call a *pure* unsupervised setting. This is convenient in anomaly detection, because the characteristics of anomalies/outliers are in general not known in advance. It turns out that this method works quite well, as shown in previous work[^fn4] [^fn5] [^fn6].  
 
 Nonetheless, high-dimensionality represents a major obstacle to outlier detection. Since auto-encoder learn a mapping to a possibly lower space, there are good reasons to think they would scale to high-dimensional problems. Unfortunately, such aspect was overlooked in the existing literature. Also, the typical benchmark data sets are low dimensional (with a maximum of 30 to 40 dimensions). 
 
-So, let's try out. We are using one of the HiCS synthetic data sets[^fn2]. The data set contains 100 dimensions and 1000 instances, with 136 of them being outliers. The data was generated in a way that outliers are hidden, i.e. they are visible only in particular subspaces. In the example above, we looked at the subspace [30,31,32] of this data set, which contains 5 outliers. 
+So, let's try out. We are using one of the HiCS synthetic data sets[^fn2]. The data set contains 100 dimensions and 1000 instances, with 136 of them being outliers. The data was generated such that outliers are hidden, i.e. they are visible only in particular subspaces. In the example above, we actually looked at the subspace [30,31,32] of this data set, which contains 5 outliers. 
 
 Let's open the data set as a Pandas.DataFrame: 
 
@@ -64,7 +64,7 @@ data_n = pd.DataFrame(np_scaled)
 data_n = data_n.astype('float32')
 ```
 
-Now we can start building a simple autoencoder. In this example, we will use Keras. We build an autoencoder with a single hidden layer containing 80 neurons, and an input and output layer of size 100. We use ReLU as activation function in the hidden layer and Sigmoid in the output layer. We choose adadelta as gradient optimizer and binary_crossentropy as loss function. 
+Now we can start building a simple autoencoder. In this example, we will use [Keras][keras]. We build an autoencoder with a single hidden layer containing 80 neurons, and an input and output layer of size 100. We use *ReLU* as activation function in the hidden layer and *Sigmoid* in the output layer. We choose *adadelta* as gradient optimizer and *binary_crossentropy* as loss function. 
 
 With just a few lines of code, we can starting training this network. 
 
@@ -93,14 +93,14 @@ autoencoder.fit(data_n.values, data_n.values,
                 verbose=0)
 ```
 
-We train over 2500 epochs and a batch size of 100. Finally, we get the prediction of the network for our data:
+We train over 2500 epochs, with a batch size of 100. Finally, we get the prediction of the network for our data:
 
 ```python
 encoded = encoder.predict(data_n.values)
 decoded = decoder.predict(encoded)
 ```
 
-We will use the euclidean distance from each sample to its reconstruction as an outlier score: 
+We compute the euclidean distance from each point to its reconstruction. We use it as an outlier score: 
 
 ```python
 dist = np.zeros(len(data_n.values))
@@ -128,9 +128,9 @@ plt.show()
 
 ![ae-outlier-training-roc](/img/ae-outlier-training-roc.png){:class="img-responsive"}
 
-An area under the curve (AUC) of 0.90 is actually very good. As a comparison, state-of-the-art methods such as HiCS[^fn2] only obtain an AUC of about 0.8 on this data set. 
+An area under the curve (AUC) of 0.9 is actually very good. As a comparison, state-of-the-art methods such as HiCS[^fn2] only obtain an AUC of about 0.8 on this data set. 
 
-It is interesting to plot the outlier scores of each single data point. 
+It is interesting to plot the outlier scores of each single data point: 
 
 ```python
 data['labels'] = labels
@@ -145,7 +145,7 @@ plt.show()
 
 ![ae-outlier-training](/img/ae-outlier-training.png){:class="img-responsive"}
 
-Black points are the outliers, inferred from the labels. As we can see, they get in general a higher score than non-outliers. The effect is even more visible if we compare the distance before and after learning. Before learning, the network weights are initialized randomly. The network has not learned any transformation yet so it performs very bad at the reconstruction of each data points, independent of them being outliers or not. 
+Black points are the outliers, inferred from the labels. As we can see, they get in general a higher score than non-outliers. The effect is even more visible if we compare the distance before and after learning. Before learning, the network weights are initialized randomly. The network has not learned any transformation yet so it performs very poorly at the reconstruction of each data points, independent of them being outliers or not. 
 
 ![ae-outlier-training-comp](/img/ae-outlier-training-comp.png){:class="img-responsive"}
 
@@ -222,7 +222,7 @@ Conclusion
 
 In this article, we introduced the problems related to finding outlier in high-dimensional spaces. We show that neural-based approaches, such as auto-encoders, can provide great results. 
 
-Nonetheless, the quality of these results is conditioned by the choice of the parameters, such as *number of hidden neurons*, *activation function*, *gradient optimization*, *number of training epochs*, *size of mini-batches*... Most of the current work is based on trial-and-error, which is time consuming and may lead to overfitting. It would be interesting to derive rules for these parameters based on the data, or assumptions about the data, such as its correlation structure or the expected proportion or characteristics of outliers.
+Nonetheless, the quality of these results is conditioned by the choice of the parameters, such as *number of hidden neurons*, *activation function*, *gradient optimization*, *number of training epochs*, *size of mini-batches*, *distance function*... Most of the current work is based on trial-and-error, which is time consuming and may lead to overfitting. It would be interesting to derive rules for these parameters based on the data, or assumptions about the data, such as its correlation structure or the expected proportion or characteristics of outliers.
 
 The results showed in this article are based on a single data set, with carefully chosen parameters. It would be difficult to infer the quality of the same model on different data sets with different characteristics. Other neural-based methods, such as the *Self-Organizing Maps*[^fn9] or the *Restricted Boltzmann Machines*[^fn10] shows also promising results and would be interesting to compare with. 
 
@@ -234,18 +234,19 @@ The underlying notebook is available on my github, [here][nn-github]. You are we
 Sources
 -------
 
-[^fn2]: Keller F., Müller E. & Böhm K. (2012). HiCS: High contrast subspaces for density-based outlier ranking. Proceedings - International Conference on Data Engineering
+[^fn2]: Keller F., Müller E. & Böhm K. (2012). *HiCS: High contrast subspaces for density-based outlier ranking*. International Conference on Data Engineering.
 
-[^fn3]: Beyer K., Goldstein J., Ramakrishnan R. & Shaft U. (1999). When is “nearest neighbor” meaningful? Database Theory—ICDT’99
+[^fn3]: Beyer K., Goldstein J., Ramakrishnan R. & Shaft U. (1999). *When is “nearest neighbor” meaningful?*. International Conference on Database Theory.
 
-[^fn4]: Hawkins S., He H., Williams G. & Baxter R. (2002). Outlier Detection Using Replicator Neural Networks. Data Warehousing and Knowledge Discovery.
+[^fn4]: Hawkins S., He H., Williams G. & Baxter R. (2002). *Outlier Detection Using Replicator Neural Networks*. Data Warehousing and Knowledge Discovery.
 
-[^fn5]: Dau H. A., Ciesielski V. & Song A. (2014). Anomaly Detection Using Replicator Neural Networks Trained on Examples of One Class. Simulated Evolution and Learning.
+[^fn5]: Dau H. A., Ciesielski V. & Song A. (2014). *Anomaly Detection Using Replicator Neural Networks Trained on Examples of One Class*. Simulated Evolution and Learning.
 
-[^fn6]: An J. (2016). Variational Autoencoder based Anomaly Detection using Reconstruction Probability. CoRR.
+[^fn6]: An J., Cho S. (2016). *Variational Autoencoder based Anomaly Detection using Reconstruction Probability*. CoRR.
 
-[^fn9]: Muñoz A. & Muruzábal J. (1998). Self-organizing maps for outlier detection. Neurocomputing.
+[^fn9]: Muñoz A. & Muruzábal J. (1998). *Self-organizing maps for outlier detection*. Neurocomputing.
 
-[^fn10]: Fiore U., Palmieri F., Castiglione A. & De Santis A. (2013). Network anomaly detection with the restricted Boltzmann machine. Neurocomputing.
+[^fn10]: Fiore U., Palmieri F., Castiglione A. & De Santis A. (2013). *Network anomaly detection with the restricted Boltzmann machine*. Neurocomputing.
 
 [nn-github]: https://github.com/edouardfouche/neural-based-outlier-detection
+[keras]:https://keras.io/
