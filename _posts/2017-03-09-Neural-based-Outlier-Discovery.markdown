@@ -34,7 +34,7 @@ Interestingly, there is no need for labels, i.e. we don't need to get example of
 
 Nonetheless, high-dimensionality represents a major obstacle to outlier detection. Since auto-encoder learn a mapping to a possibly lower space, there are good reasons to think they would scale to high-dimensional problems. Unfortunately, such aspect was overlooked in the existing literature. Also, the typical benchmark data sets are low dimensional (with a maximum of 30 to 40 dimensions). 
 
-So, let's try out. We are using one of the HiCS synthetic data sets[^fn2]. The data set contains 100 dimensions and 1000 instances, with 136 of them being outliers. The data was generated such that outliers are hidden, i.e. they are visible only in particular subspaces. In the example above, we actually looked at the subspace [30,31,32] of this data set, which contains 5 outliers. 
+So, let's try out. We are using one of the HiCS[^fn2] synthetic [data sets][HiCSdata]. The data set contains 100 dimensions and 1000 instances, with 136 of them being outliers. The data was generated such that outliers are hidden, i.e. they are visible only in particular subspaces. In the example above, we actually looked at the subspace [30,31,32] of this data set, which contains 5 outliers. 
 
 Let's open the data set as a Pandas.DataFrame: 
 
@@ -251,3 +251,4 @@ Sources
 
 [nn-github]: https://github.com/edouardfouche/neural-based-outlier-discovery/blob/master/autoencoder-keras.ipynb
 [keras]:https://keras.io/
+[HiCSdata]: https://www.ipd.kit.edu/~muellere/HiCS/
