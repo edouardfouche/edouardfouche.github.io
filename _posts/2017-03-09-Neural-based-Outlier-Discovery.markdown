@@ -120,8 +120,10 @@ import matplotlib.pyplot as plt
 fpr, tpr, thresholds = roc_curve(labels, dist)
 roc_auc = auc(fpr, tpr)
 
-plt.figure(figsize=(12,7))
+plt.figure(figsize=(10,6))
 plt.plot(fpr, tpr, color='red', label='AUC = %0.2f)' % roc_auc)
+plt.xlim((0,1))
+plt.ylim((0,1))
 plt.plot([0, 1], [0, 1], color='navy', linestyle='--')
 plt.xlabel('False Positive rate')
 plt.ylabel('True Positive rate')
@@ -140,11 +142,13 @@ It is interesting to plot the outlier scores of each single data point:
 data['labels'] = labels
 data['dist'] = dist
 
-plt.figure(figsize=(12,7))
-plt.scatter(data.index, data['dist'], c=data['labels'])
+plt.figure(figsize=(10,7))
+plt.scatter(data.index, data['dist'], c=data['labels'], edgecolor='black', s=15)
 plt.xlabel('Index')
 plt.ylabel('Score')
 plt.xlim((0,1000))
+plt.title("Outlier Score")
+plt.show()
 plt.show()
 ```
 
@@ -172,6 +176,7 @@ def compute_error_per_dim(point):
 
 plt.figure(figsize=(12,7))
 plt.plot(compute_error_per_dim(350))
+plt.xlim((0,100))
 plt.xlabel('Index')
 plt.ylabel('Reconstruction error')
 plt.title("Reconstruction error in each dimension of point 350")
@@ -194,6 +199,7 @@ So it seems that one can find back the information in which each object is an ou
 ``` python
 # 50, 121, 350, 572 and 559 are outliers in subspace [30,31,32]
 plt.figure(figsize=(12,7))
+plt.xlim((0,100))
 plt.plot(range(100), compute_error_per_dim(50), label="50")
 plt.plot(range(100), compute_error_per_dim(121), label="121")
 plt.plot(range(100), compute_error_per_dim(350), label="350")
