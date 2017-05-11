@@ -13,9 +13,16 @@ The Background Story
 
 The [Knight's Tour][wikipedia-knights-tour] is a famous problem in computer science and chess. It consists in finding a sequence of moves of a knight on a chessboard, such that the knight visits every square only once. The tour is said to be "closed" if the starting position is reachable with a valid move from the ending position. The Knight's Tour problem is an instance of the more general [Hamiltonian path][wikipedia-hamiltonian-path] problem in graph theory, and the closed Knight's Tour problem is an instance of the [Hamiltonian cycle][hamiltonian-cycle] problem. 
 
+<br>
+![img1](/img/knight/knight_tour_animation.gif){:class="img-responsive"}
+{:style="max-width: 408px; margin: auto"}
+*An open Knight's Tour. Source: [Wikipedia][wikipedia-knights-tour]*
+{:style="text-align: center"}
+<br>
+
 The earliest known Knight's Tour was described in an Arabic manuscript from **al-Adli ar-Rumi**, a professional chess player who lived in Baghdad in around 840 AD. It was then rediscovered much later in 18th century and several famous mathematicians such as [Leonhard Euler][wikipedia-euler] have worked on it.
 
-It is known that the Hamiltonian path and Hamiltonian cycle problems are NP-complete. A brute-force approach would be totally intractable: on a \\(8 \times 8\\) board there are approximately \\(4*10^{51}\\) possible move sequences! Interestingly, in the case of the Knight's Tour, it is possible to find solutions in a linear time, thanks to useful heuristics. In 1823, Warnsdorff[^fn2] described a heuristic for finding a Knight's Tour in linear time. The Warnsdorf's rule can be described by recurrence as follows[^fn1]:
+It is known that the Hamiltonian path and Hamiltonian cycle problems are NP-complete. A brute-force approach would be totally intractable: on a \\(8 \times 8\\) board there are approximately \\(4*10^{51}\\) possible move sequences! Interestingly, in the case of the Knight's Tour, it is possible to find solutions in a linear time, thanks to useful heuristics. In 1823, H.C. von Warnsdorf[^fn2] described a heuristic to find a Knight's Tour in linear time. The Warnsdorf's rule can be described by recurrence as follows[^fn1]:
 
 Given that the Knight is placed on the *n*th square of the path, let the *(n+1)*th square of the path be the square which:
 1. is adjacent to the *n*th square (i.e., it can be reached with a single Knight's move)
@@ -24,15 +31,15 @@ Given that the Knight is placed on the *n*th square of the path, let the *(n+1)*
 
 The question that remains is how to handle ties between two or more unvisited squares. There was a bit of controversy about that. Warnsdorf claimed that no matter which random choices are made to break the ties, the path produced is always a tour, which turned out to be false[^fn1]. There exists better ways to break the ties and more generally to find a tour, but I am not doing to go into details here. 
 
-In the next section, I am going to introduce the simple little software I wrote in Scala, which uses Warnsdorf's rule with random tie breaking !  
+In the next section, I am going to introduce the little software I wrote in Scala, which uses Warnsdorf's rule with random tie breaking !  
 
 
 Solving the Knight's Tour
 -------------------------
 
-The little Scala program I wrote is available on GitHub [here][github-chesstour]. Here is a little tutorial about how to use the program. The program is currently distributed as an SBT project. I would recommend you to clone the repository and to open the project in your favorite IDE (I use IntelliJ) and simply work in a Scala worksheet. 
+The source code is available on GitHub [here][github-chesstour]. Here is a little tutorial about how to use the program. The program is currently distributed as an SBT project. I would recommend you to clone the repository and to open the project in your favorite IDE (such as IntelliJ IDEA or Eclipse) and simply open a Scala worksheet. 
 
-First, let us import the classes `ChessBoard` and `KnightTour` from the `ChessTour` package and define the path to a folder for our output. 
+First, let us import the classes `ChessBoard` and `KnightTour` from the `chesstour` package and define the path to a folder for our output. 
 
 ```scala
 import chesstour.{ChessBoard, KnightTour}
@@ -58,14 +65,14 @@ This will produce a closed tour from a random starting position on this board. W
 tour.draw(path=folder)
 ```
 
-This will save the following output in a .png file:  
+This will draw the tour and save it in a .png file, such as this one:  
 
 <br>
 ![img1](/img/knight/drawing.jpg){:class="img-responsive"}
 {:style="max-width: 400px; margin: auto"}
 <br>
 
-We can continue and find tours on boards with different dimensions. However, it is very unlikely to find twice the same tour, given that the starting position is picked randomly and ties are solved randomly. For convenience, I provide a pair of functions to save and load a tour, so that you can use it later again:
+We can continue and find tours on boards with different dimensions. However, it is very unlikely to find twice the same tour, given that ties are solved randomly. For convenience, I provide a pair of functions to save and load a tour, so that you can use it later again:
 
 ```scala
 tour.save(output_folder) // The tour is saved simply in a file <hashcode>
@@ -84,7 +91,7 @@ I find the random patterns created by the solutions of the Knight's Tour really 
 {:style="max-width: 500px; margin: auto"}
 <br>
 
-Using `ChessBoard.fromMask`, you can use this image as a mask to initialize a board ! 
+Using `ChessBoard.fromMask`, you can use this image as a mask to initialize a board:
 
 ```scala
 val board = ChessBoard.fromMask("knight/<mymask>.png")
@@ -93,7 +100,7 @@ val board = ChessBoard.fromMask("knight/<mymask>.png")
 
 By default, all the transparent or white pixels will be taken out from the board. If you set the `switch` parameter to `true`, you can use the same picture as negative.
 
-The problem with arbitrary shapes is that it is rather unlikely (or even impossible) to find a (closed) tour. But that's ok. With the argument `closed=true` you declare expressively that you are only interested in closed tours. The algorithm will return a cycle, no matter if all squares are visited. With the argument `complete=true` you additionally say that you want a complete tour, i.e. that all squares are visited once. This might not be possible, but the algorithm will perform a number of `n` attempts, after which it will return the tour found with the highest number of square visited. 
+The problem with arbitrary shapes is that it is rather unlikely (or even impossible) to find a (closed) tour. But that's ok. With the argument `closed=true` you declare expressively that you are only interested in closed tours. The algorithm tries to return a cycle, no matter if all squares are visited. With the argument `complete=true` you additionally say that you want a complete tour, i.e. that all squares are visited once. This might not be possible, but the algorithm will perform a number of `n` attempts, after which it will return the tour found with the highest number of square visited. 
 
 ```scala
 val tour = knight.warnsdorfsHeuristic(closed=true, complete=true, n=1000)
@@ -106,7 +113,7 @@ By running it several times, you always get different results, because the start
 ![img](/img/knight/knight_heart.jpg){:class="img-responsive"}
 {:style="max-width: 500px; margin: auto"}
 
-The method `simulate` gives you more control on the aspect of the output. You can change the size of cells `cellsize`, the size of the nails `nailsize`, the size of the line `linewidth`, declare if the drawing should be closed (`closed`) as well as the color of the visualization (`color`): 
+The method `simulate` gives you more control on the aspect of the output. You can change the size of cells `cellSize`, the size of the nails `nailSize`, the width of the line `lineWidth`, declare if the drawing should be closed (`closed`) as well as the color of the visualization (`color`): 
  
 
 ```scala
@@ -158,7 +165,7 @@ Aww. I see that you found this post interesting. Here is a list of selected reso
 
 By looking around for resources about the Knight's Tour on the Internet, I found out that many have disappeared, because the pages were not maintained anymore. That's a pity. I would instead encourage you to read the historical literature. 
 
-By the way, I'm not sure, is it *Warnsdorf* or *Warnsdorff* ? I found both writing in the literature and Internet. This is confusing. 
+By the way, I'm not sure, is it *Warnsdorf* or *Warnsdorff* ? I found both writing in the literature and Internet. 
 
 Sources
 -------
