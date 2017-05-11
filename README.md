@@ -17,8 +17,9 @@ A few things that are still to be done...
 - ~~update CV online~~
 - ~~Google Analytics~~
 - update CV pdf
-- write posts
-- Latex integration
-- Matplotlib / Visualization integration 
+- ~~write posts~~
+- ~~Latex integration~~
+- Matplotlib / interactive visualization integration 
 - Add right column in blog section 
 - Add RSS feed
+- Add CC license 
