@@ -187,6 +187,6 @@ Sources
 [laptop-clutch]: https://www.redbubble.com/de/people/edouardfouche/works/25836292-knight-of-love?p=laptop-skin&rel=carousel
 [Knight's-Tour-Notes]: http://www.mayhematics.com/t/t.htm
 [video]: https://youtu.be/9fSFC00ZKPg
-[collection]: https://rosettacode.org/wiki/Knight%27s_tour#Scala
+[collection]: https://rosettacode.org/wiki/Knight%27s_tour
 [warnsdorff]: http://warnsdorff.com/
 [repository-squirrel]: https://github.com/douglassquirrel/warnsdorff
