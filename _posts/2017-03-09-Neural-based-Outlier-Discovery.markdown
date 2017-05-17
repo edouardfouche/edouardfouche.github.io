@@ -77,13 +77,13 @@ encoding_dim = 80
 input = Input(shape=(100,))
 encoded = Dense(encoding_dim, activation='relu')(input)
 decoded = Dense(100, activation='sigmoid')(encoded)
-autoencoder = Model(input=input, output=decoded)
+autoencoder = Model(inputs=input, outputs=decoded)
 
-encoder = Model(input=input, output=encoded)
+encoder = Model(inputs=input, outputs=encoded)
 
 encoded_input = Input(shape=(encoding_dim,))
 decoder_layer = autoencoder.layers[-1]
-decoder = Model(input=encoded_input, output=decoder_layer(encoded_input))
+decoder = Model(inputs=encoded_input, outputs=decoder_layer(encoded_input))
 
 autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy')
 
