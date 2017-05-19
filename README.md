@@ -16,10 +16,11 @@ A few things that are still to be done...
 	- ~~https://developer.ubuntu.com/en/blog/2016/02/17/how-host-your-static-site-https-github-pages-and-cloudflare/~~
 - ~~update CV online~~
 - ~~Google Analytics~~
-- update CV pdf
+- ~~update CV pdf~~
 - ~~write posts~~
 - ~~Latex integration~~
 - Matplotlib / interactive visualization integration 
 - Add right column in blog section 
 - Add RSS feed
-- Add CC license 
+- Move to CC license 
+- Add citation policy
