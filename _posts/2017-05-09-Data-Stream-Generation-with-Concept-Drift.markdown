@@ -22,6 +22,10 @@ Concept drift can also be of different types:
 - Concept drift can be **recurrent**. It means that a concept from the past might reappear again in the future. This recurrence can be **cyclic**.
 - Concept drift can be **local** or **global**[^fn1]. Local concept drift affects only a small region of the feature space, and they are thus harder to detect than global drifts. **Feature drift**[^fn2] is also used to characterize drifts that affect only a subset of attributes. 
 
+The following figure illustrates the main types of concept drifts: 
+
+![concept-drift](/img/concept-drift/conceptdrift.png){:class="img-responsive"}{:style="margin: auto"}
+
 Quite often, concept drifts are a combination of all the above described types. Typically, concurrent drifts take place in multi-dimensional data streams and the characteristics of those drifts are unknown a priori. 
 
 From the literature, its seems that *concept drift* is quite well understood. This survey[^fn4] contains a rather compact description of the different types of concept drift, while this work[^fn5] provides a comprehensive taxonomy. In this survey[^fn6] also, the different approaches to adapt to concept drift are reviewed.

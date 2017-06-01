@@ -6,7 +6,9 @@ comments: true
 categories: Machine Learning
 ---
 
-Outlier detection has the goal to reveal unusual patterns in data. Typical scenarios in predictive maintenance are the identification of failures, sensor malfunctions or intrusions. This is a challenging task, especially when the data is high-dimensional, because outliers become *hidden* and are visible only in particular subspaces. In this article, I will discuss approaches based on neural networks to discover outliers in high-dimensional data.  
+Outlier detection has the goal to reveal unusual patterns in data. Typical scenarios in predictive maintenance are the identification of failures, sensor malfunctions or intrusions. This is a challenging task, especially when the data is high-dimensional, because outliers become *hidden* and are visible only in particular subspaces. In this article, I will discuss approaches based on auto-encoder to discover outliers in high-dimensional data.  
+
+![autoencoder](/img/neural-based-outlier-discovery/autoencoder.png){:class="img-responsive"}
 
 Introduction
 ------------
