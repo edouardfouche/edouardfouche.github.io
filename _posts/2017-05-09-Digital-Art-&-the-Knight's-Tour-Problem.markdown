@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Digital Art & the Knight's Tour Problem"
+title:  "Digital Art &amp the Knight's Tour Problem"
 date:   2017-05-11 08:00:00 +0100
 comments: true
 categories: other
