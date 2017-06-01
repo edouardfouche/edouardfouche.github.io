@@ -56,4 +56,8 @@ permalink: /:title/
 
 exclude: [README.md, LICENSE, Gemfile, Gemfile.lock]
 
-
+# Feed
+#feed:
+#  path: feed.xml
+#  limit: 20
+#  #type: atom
