@@ -11,7 +11,7 @@ Concept drift is a well-known issue in the data stream community. It means that 
 What is Concept Drift?
 ----------------------
 
-[Concept drift][wikipedia-concept-drift] has become a buzzword in data stream mining. It means that a change occur in a time-dependent data flow, such that the description (either statistical or informal, qualitative) of *concepts* that are known currently might change in the future. This is interesting, because it can be understood intuitively. For example, in cyber-security the nature of cyber-attacks might change over time. It is a consequence of security patches, making selected attack vectors unusable, or new software introducing so far unknown security faults. As a result, the statistical properties of the underlying data change, and the anomaly detection models trained on aging data might show a loss in precision on new instances, if they are not correctly adapted.  
+[Concept drift][wikipedia-concept-drift] has become a buzzword in data stream mining. It means that a change occurs in a time-dependent data flow, such that the description (either statistical or informal, qualitative) of *concepts* that are known currently might change in the future. This is interesting, because it can be understood intuitively. For example, in cyber-security the nature of cyber-attacks might change over time. It is a consequence of security patches, making selected attack vectors unusable, or new software introducing so far unknown security faults. As a result, the statistical properties of the underlying data change, and the anomaly detection models trained on aging data might show a loss in precision on new instances, if they are not correctly adapted.  
 
 Concept drift can be characterized differently, depending on its properties. If concept drift affects the boundaries of an underlying learning algorithms - i.e., the posterior probabilities have changed - it is said to be **real**. On the contrary, if it is not influencing the decision boundaries it is **virtual**. 
 
@@ -43,25 +43,25 @@ As a result, outlier detection is often treated as an *unsupervised* problem.
 
 Concept drift can impact outlier detection. For example, a point that may be considered as an outlier at time \\(t_{1}\\) may not be seen as an outlier at time \\(t_{2}\\) anymore. 
 
-There exist many ways to generate data to reflect concept drift. The MOA[^fn8] framework includes several drifting data stream generators based for example on rotating hyperplanes or radial basis functions. 
+There exist tools to generate data to reflect concept drift. The MOA[^fn8] framework includes several drifting data stream generators based for example on rotating hyperplanes or radial basis functions. 
 
-There exist also ways to generate data sets with outlier. The most common method is to start from a multi-class problem and to downsample one of the class. Then, the instances of this class becomes rare. Note that the relevance of such procedure in outlier detection is arguable, because all "outliers" are then tied to a same underlying concept: The class they originally belong to.
+There exist also ways to generate data sets with outlier. The most common method is to start from a multi-class problem and to downsample one of the class. Then, the instances of this class become rare. Note that the relevance of such procedure in outlier detection is arguable, because all "outliers" are then tied to a same underlying concept: The class they originally belong to.
 
 Nonetheless, there are - to the best of my knowledge - no generation procedure available to generate data with outliers subject concept drift. Particularly interesting are the so-called *hidden* outliers, because they can only be seen in particular subspace, so their detection is not trivial. I gave an example of what a hidden outlier is in a precedent [article][neural-based-outlier-discovery], that I am going to display here again: 
 
 
 ![3d-plot-outlier](/img/neural-based-outlier-discovery/3d-plot-outlier.svg){:class="img-responsive"}
 
-In this 3-dimensional space, the points in red can be considered as *hidden* outliers, because they will be invisible as such in any 2-D or 1-D projections. Such outliers are in regions of relatively low density in those particular subspaces. They cannot be detected in the full dimensional space because of the effects of the so-called *curse of dimensionality* which destroys the notion of neighborhood[^fn7]. To find them, one need to investigate particular subspaces. This is difficult, because the number of subspaces increases exponentially with the total number of dimensions. 
+In this 3-dimensional space, the points in red can be considered as *hidden* outliers, because they will be invisible as such in any 2-D or 1-D projections. Such outliers are in regions of relatively low density, but they cannot be detected in the full dimensional space because of the effects of the so-called *curse of dimensionality*, which destroys the notion of neighborhood[^fn7]. To find them, one need to investigate particular subspaces. This is difficult, because the number of subspaces increases exponentially with the total number of dimensions. 
 
 In the following, we describe a data generator that simulates this kind of outliers, and where the dependencies in subspaces change such that the concept of outlier is drifting. 
 
 The Data Stream Generator
 -------------------------
 
-We create a number *N* of *m*-dimensional vectors. Their values are uniformly distributed between 0 and 1, except for selected subspaces, which show some kind of dependency. This dependency can changes over time. To generate the dependencies, we take inspiration from the synthetic data used in the HiCS[^fn9] experiments, where dependencies are constructed by placing most data points close to the subspace axises, below a particular *margin*, creating an almost empty hypercube. Then, we let the size of this margin vary. 
+We create a number *N* of *m*-dimensional vectors. Their values are uniformly distributed between 0 and 1, except for selected subspaces, which show some kind of dependency, whose strength can change over time. To generate the dependencies, we take inspiration from the synthetic data used in the HiCS[^fn9] experiments, where dependencies are constructed by placing most data points close to the subspace axises, below a particular *margin*, creating an almost empty hypercube. Then, we let the size of this margin vary. 
 
-The following image illustrates a 2-D subspace where the dependencies change over time. Each image corresponds to a snapshot of the same stream at different time steps. As you can see, two outliers (in red) are visible in the third image. 
+The following image illustrates a 2-D subspace where the strength of the dependency changes over time. Each image corresponds to a snapshot of the same stream at different time steps. As you can see, two outliers (in red) are visible in the third image. 
 
 ![stream-generator](/img/concept-drift/streamgenerator.svg){:class="img-responsive"}
 
@@ -69,7 +69,7 @@ Basically, points are generated independently, with respect to parameters that c
 
 - Generate a new *m*-dimensional vector whose values are taken uniformly from the range 0 to 1 for all *m* dimension. 
 - For each subspace \\(S_{k}\\), the vector has a probability \\(prop\\) to become an outlier in this subspace. 
-- If the vector is an outlier in subspace \\(S_{k}\\). We scale the value of such outlier in \\(S_{k}\\) to make sure that it is at a certain distance from the margin (10% of the side of the hypercube).
+- If the vector is an outlier in subspace \\(S_{k}\\). We scale the value of such outlier in \\(S_{k}\\) to make sure that it is at a certain distance from the margin (10% of the side of the hypercube). This hinders the creation of false positives. 
 - If the vector is not an outlier in subspace \\(S_{k}\\), it is moved uniformly into the margins. By *uniformly*, we mean that it has an equal chance to be projected in any part of the denser area, to make sure that its density stays uniform. 
 
 For a number of step \\(nstep\\), the set \\(S\\) is modified randomly and the value in \\(M\\) incremented/decremented uniformly to reach after a number of iteration *n* the value fixed at the next step. The result is a data stream where hypercubes of variable size in selected subspaces are formed, which potentially contain outliers. Note that the probability to find outliers in the hypercubes is proportional to the volume of the hypercube.
