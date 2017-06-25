@@ -29,7 +29,7 @@ In this small tutorial, I used the version at commit [c226118][c226118]. This is
 
 The following packages are required ([instructions][requirements]): 
 - Bazel 
-- Tensorflow
+- Tensorflow (version 0.12.1)
 - Numpy
 - Natural Languages Toolkit (NLTK)
 
