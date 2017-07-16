@@ -24,7 +24,7 @@ I found the principle very interesting, so I decided to extend the wheel by addi
 {:style="max-width: 700px; margin: auto"}
 <br>
 
-I have documented the different stages of the creation of this image on Photoshop, as a GIF:  
+I have documented the different steps of the creation of this image on Photoshop, as a GIF:  
 
 <br>
 ![img](/img/color-wheel/animation.gif){:class="img-responsive"}
