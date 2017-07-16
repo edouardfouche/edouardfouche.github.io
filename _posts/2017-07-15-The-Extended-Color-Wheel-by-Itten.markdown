@@ -17,7 +17,7 @@ This representation is particularly interesting. In the center are the first-ord
 
 If you fit a regular shape in the wheel, such as a square, rectangle, or equilateral triangle, the color that you will get at the apexes are harmonious, i.e. they "go well" together. 
 
-I found the principle very interesting, so I decided to extend the wheel by adding a ring containing the "fourth-order" colors, i.e. a mix of the first-order colors and the third-order colors. So we move from a 12-color representation to a 24-color representation. It looks like this: 
+I found the principle very interesting, so I decided to extend the wheel by adding a ring containing the "fourth-order" colors, i.e. a mix of the third-order colors with the first or second-order colors. So we move from a 12-color representation to a 24-color representation. It looks like this: 
 
 <br>
 ![img](/img/color-wheel/farbkreis_extended.png){:class="img-responsive"}
