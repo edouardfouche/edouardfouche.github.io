@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Extended Color Wheel by Itten"
-date:   2017-07-15 08:00:00 +0100
+date:   2017-07-05 08:00:00 +0100
 comments: true
 categories: color
 ---

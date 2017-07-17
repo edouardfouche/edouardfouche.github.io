@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Automatic Train Timetable Display with Raspberry Pi"
-date:   2017-07-24 08:00:00 +0100
+date:   2017-07-17 08:00:00 +0100
 comments: true
 categories: Project RPi
 ---
