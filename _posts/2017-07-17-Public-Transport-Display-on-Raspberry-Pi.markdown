@@ -1,17 +1,17 @@
 ---
 layout: post
-title:  "Automatic Train Timetable Display with Raspberry Pi"
+title:  "Public Transport Display on Raspberry Pi"
 date:   2017-07-17 08:00:00 +0100
 comments: true
 categories: Project RPi
 ---
 
-I hate missing my train or arriving at the station to find out that my train is being delayed. This happens often, because German trains are so unpredictable ! Since I take the train every day for work, it is also a pain to check online every time I leave. I found a solution to alleviate this problem, using a Raspberry Pi. 
+I hate missing my train or arriving at the station to find out that my train is being delayed. This happens often, because German public transports are so unpredictable ! Since I take the train every day for work, it is also a pain to check online every time I leave. I found a solution to alleviate this problem, using a Raspberry Pi. 
 
 The Solution
 ------------
 
-A Raspberry Pi computer shows in my corridor the departure times for the next trains for a set of chosen lines. Let me first show you how the solution looks like ! 
+A Raspberry Pi computer shows in my corridor the departure times for the next trains or public transports (buses etc.) for a set of chosen lines. Let me first show you how the solution looks like ! 
 
 <br>
 [![Ok Rpi, show me the next trains](/img/deutsche-bahn/Rpi.png)](https://www.youtube.com/watch?v=Ocr8C1BaPi8)
