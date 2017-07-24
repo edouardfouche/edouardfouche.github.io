@@ -6,22 +6,22 @@ comments: true
 categories: Project RPi
 ---
 
-I hate missing my train or arriving at the station to find out that my train is being delayed. This happens often, because German public transports are so unpredictable ! Since I take the train every day for work, it is also a pain to check online every time I leave. I found a solution to alleviate this problem, using a Raspberry Pi. 
+I hate missing my train or arriving at the station to find out that my train is being delayed. This happens often, because German public transports are so unpredictable ! Since I take the train every day for work, it is also a pain to check online every time I leave. I found a solution to this problem, using a Raspberry Pi. 
 
 The Solution
 ------------
 
-A Raspberry Pi computer shows in my corridor the departure times for the next trains or public transports (buses etc.) for a set of chosen lines. Let me first show you how the solution looks like ! 
+A Raspberry Pi computer shows in my corridor the departure times for the next trains or public transports (bus, etc.) for a set of chosen lines. Let me first show you how the solution looks like ! 
 
 <br>
 [![Ok Rpi, show me the next trains](/img/deutsche-bahn/Rpi.png)](https://www.youtube.com/watch?v=Ocr8C1BaPi8)
 {:style="margin: auto"}
 <br>
 
-The display can show information about the next trains for various destinations. So this can be useful not only for me, but also for my girlfriend or our flatmate. 
+The display can show information about the next trains for various destinations. So this can be useful not only for me, but also for my girlfriend or our flatmate. By the way, this video shows only the first prototype, the software was quite improved afterwards. 
 
-Hardware Requirement
---------------------
+Hardware Setup
+--------------
 
 - Raspberry Pi 1 B + [Sweetbox][Sweetbox]
 - [Touchscreen Waveshare 3.5'][screen] on GPIO (< 30€)
@@ -29,7 +29,7 @@ Hardware Requirement
 - Nano Dongle Wifi LF-Link 150 Mb/s (< 10€)
 - Sandisk 16 Gb 45 Mb/s (Smaller would also make it) (< 10€)
 
-Note that if you take a Raspberry PI 3 you won't need the wifi dongle :). The display constructor provides a Raspbian image in which the external GPIO display is pre-configured. So it works out-of-the-box ! 
+If you take a Raspberry PI 3 you won't need the wifi dongle :). The touchscreen constructor provides a pre-configured Raspbian image, to download on its website, so it works out-of-the-box ! 
 
 Then I bought some [on/off hook strips][tesa] from Tesa to put it in my corridor ! Hiding a part of the cable behind the mirror, it looks like this: 
 
@@ -39,12 +39,12 @@ Then I bought some [on/off hook strips][tesa] from Tesa to put it in my corridor
 <br>
 
 
-Software Requirement
---------------------
+Software Setup
+--------------
 
-Getting an official Deutsch Bahn API key is difficult, if not impossible when you are not a business company. Instead, I used [schiene][schiene], a tiny Python library for interacting with Bahn.de, developed by [Kevin Kennell][kennell]. Basically it crawls the bahn.de mobile website to retrieve the next time table. It is like an unofficial API. I wrote a small script that wraps around it and handles the presentation of the results (including incidents and delay !) in the standard output with a periodic refresh of the results. It is available on my GitHub [here][dbtime]. 
+Getting an official Deutsch Bahn API key is impossible if you are not a business company. So I used [schiene][schiene], a tiny Python library for interacting with Bahn.de, developed by [Kevin Kennell][kennell]. Basically it crawls the bahn.de mobile website to retrieve the next time table. It is like an unofficial API. I wrote a small script that wraps around it and handles the presentation of the results (including incidents and delay) in the standard output with a periodic refresh of the results. It is available on my GitHub [here][dbtime]. 
 
-This works for any connection in Germany. The script `dbtime.py` should be started with a few arguments, which specify the start and end stations of your trip. I've put a small bash script `launcher.sh` on the desktop of the Raspberry. It starts the program in the terminal with my desired connections:
+This works for any connection in Germany. The script `dbtime.py` should be started with a few arguments, to specify the start and end stations of your trip(s). I've created a small bash script `launcher.sh` to start the program in the terminal of my Raspberry Pi with my desired connections:
 
 ```bash
 #!/bin/sh
@@ -56,10 +56,21 @@ sudo python dbtime.py "Stuttgart Hbf" "Karlsruhe HbF" "==KA==>" True
 To make it executable, don't forget to do:
 
 ```bash
-pi@rasp:~/Desktop$ sudo chmod 774 launcher.sh
+pi@rasp:~/$ sudo chmod 774 launcher.sh
 ```
 
-Executing the script will display in the terminal the next trains from Stuttgart to Karlsruhe with the little prefix `==KA==>`, considering only direct connections (`True`). It looks like this:
+The script lives in my home folder. Then, I've put a script `launcher.desktop` with the following content on the Desktop: 
+
+```bash
+[Desktop Entry]
+Name=launcher
+Comment=Starts Python dbtime program
+Exec=/home/pu/launcher.sh
+Terminal=true
+Type=Application
+```
+
+So when I double-click `launcher.desktop` on the touchscreen, it will starts the program directly in a new terminal. It will display the next trains from Stuttgart to Karlsruhe with the little prefix `==KA==>`, considering only direct connections (`True`). It looks like this:
 
 ```
 1/1======================
@@ -72,11 +83,15 @@ ICE | 13:28 | 0:36
 .......
 ```
 
-To make it look nice on the touchscreen, I changed the police to `DejaVu Sans Mono Book` with size 17 and changed the default dimensions of the terminal. To do so, just add the following line in the file `/usr/share/raspi-ui-overrides/applications/lxterminal.desktop`
+If you add more trips, it will alternatively display each of them. The information is refreshed after a number of seconds (by default 45 seconds). 
+
+To make it look better on the touchscreen, I changed the police to `DejaVu Sans Mono Book` with size 17 and changed the default dimensions of the terminal. To do so, just add the following line in the file `/usr/share/raspi-ui-overrides/applications/lxterminal.desktop`
 
 ```bash
 Exec=lxtermnal --geometry=37x15
 ```
+
+At first I considered not having a GUI on the Touchscreen, and simply start the program in the console, but then I would not be able to shutdown the Raspberry Pi from the touchscreen anymore. 
 
 My friend Daniel is doing something similar, with a much fancier design, you can check it out [here][sancho].
 
