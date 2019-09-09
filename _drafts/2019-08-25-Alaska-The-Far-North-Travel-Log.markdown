@@ -35,29 +35,56 @@ We had a great dinner on the rooftop of the 49th State brewing.
 
 [picture]
 
-Other places I liked in Anchorage: 
+Other places I liked in Anchorage: Humpy's, Mindnight sun brewery
 
 - Day 1
 
 Picking up the car 
 Ekltunta historical park
 Stocking at Fred Meyer in Palmer
-Heading to Hatcher pass
+Heading to Hatcher pass 
 Gold mint trailhead
 
 - Day 2 
 
 Gold mint trail 
-
-Heading to Talkeetna
+Heading to Matanuska Glacier State Recreational site 
 
 - Day 3
 
+Ice Fall trek MICA Awesome
+Heading to Talkeetna
+Talkeetna RV LLC & Boat Launch
+Nice river side and shower ! 
+ 
+
 - Day 4 
+
+Talkeetna Historical Society Museum -> information about the mountain with a model, railway and gold mining history, small historical trail in the city. 
+Heading to Denali, unfortunately, it will rain the day after, so we booked the bus. 
+Camping at Riley creek campground
 
 - Day 5 
 
+8h bus tundra wilderness tour 
+Camping at Savage River, clearly more remote
 
+- Day 6 
+
+Going to Fairbanks
+Did not like Fairbanks
+The Alaskan art gallery,
+Golden Heart Revue awesome 
+Camping at Chena Lake Recreation Area, nice on the river side, discount at their restaurant, good FREE showers and wifi but not private. 
+
+- Day 7 
+Stocking at Fred Meyer and on our way to Chena hot springs
+starting our way to Valdez, stopping for the evening at delta state recreation site. Unfortunately, rain. 
+
+Scenic drive on Richardson highway, but did not see much because of rain.  
+
+- Day 8 
+Driving the rest of the way to Valdez. 
 
 Budgeting
 ---------
