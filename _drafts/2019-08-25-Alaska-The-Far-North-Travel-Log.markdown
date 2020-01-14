@@ -6,7 +6,7 @@ comments: true
 categories: Travel Log
 ---
 
-This summer, I was invited to present my [research][publications] at KDD, one of the top conference in my field! The conference took place in Anchorage, Alaska. Probably, I would not have come up to go on vacation in Alaska, but since I was there for work, Charlotte and I decided to take some time off to discover the 49th state! 
+This summer, I was invited to present my [research][publications] at KDD. The conference took place in Anchorage, Alaska. Probably, I would not have come up to go on vacation in Alaska, but since I was there for work, Charlotte and I decided to take some time off to discover the 49th state! 
 
 We spent 18 days in the state, most of it camping in a Jeep Wrangler, with pop top tent. It was a wonderful experience! We had X different stops over the state and drove more than Y miles. This article is our travel log. If you are planning a trip to Alaska, it may be useful to you, if not, maybe you will change your mind :)!
 
