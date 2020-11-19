@@ -1,6 +1,7 @@
 .highlight { font-family: monospace}
 
-.highlight { border: 2px groove #000000 }
+/* .highlight { border: 2px groove #000000 } */
+/*  .highlight {background-color: #272822;} */
 
 .highlight code { color: #f8f8f2}
 
@@ -74,4 +75,3 @@
 .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 
-.highlight {background-color: #272822;}
