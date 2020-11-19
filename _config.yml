@@ -30,6 +30,8 @@ github_username:  edouardfouche
 #markdown: kramdown
 
 markdown: kramdown
+kramdown:
+  html_to_native: true
 highlighter: rouge
 
 #kramdown:
