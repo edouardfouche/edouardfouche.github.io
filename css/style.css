@@ -14,6 +14,9 @@ body {
   color: $darkGray;
   color: #333;
   background-color: #fff;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 /*
@@ -29,6 +32,8 @@ h1, h2, h3, h4, h5, h6 {
   /* font-family: $helveticaNeue; */
   color: $darkerGray;
   /* font-weight: bold; */
+  text-align: left;
+  font-weight: 570; /*Semi bold */
   
   line-height: 1.7;
   margin: 1em 0 15px;

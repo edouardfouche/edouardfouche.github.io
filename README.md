@@ -24,3 +24,7 @@ A few things that are still to be done...
 - Add RSS feed
 - Move to CC license 
 - Add citation policy
+
+A cool trick for title resizing: https://css-tricks.com/snippets/css/fluid-typography/
+
+Hyphenation: https://www.w3schools.com/cssref/css3_pr_hyphens.asp
