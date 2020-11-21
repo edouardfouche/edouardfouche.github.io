@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $darkerGray;
   /* font-weight: bold; */
   text-align: left;
-  font-weight: 570; /*Semi bold */
+  /* font-weight: 570; */ /*Semi bold */
   
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -45,6 +45,8 @@ h1, h2, h3, h4, h5, h6 {
 }
   
 h1 {  
+  font-size: 20px;
+  font-size: -webkit-calc(20px + 6 * ((100vw - 320px) / 680));
   font-size: calc(20px + 6 * ((100vw - 320px) / 680));
   /* font-size: 30px; */
   a {
@@ -53,16 +55,22 @@ h1 {
 }
 
 h2 {  
+  font-size: 18px;
+  font-size: -webkit-calc(18px + 6 * ((100vw - 320px) / 680));
   font-size: calc(18px + 6 * ((100vw - 320px) / 680));
   /* font-size: 24px; */
 }
 
-h3 {  
+h3 { 
+  font-size: 16px;
+  font-size: -webkit-calc(16px + 6 * ((100vw - 320px) / 680)); 
   font-size: calc(16px + 6 * ((100vw - 320px) / 680));
   /* font-size: 20px; */
 }
 
 h4 {  
+  font-size: 14px;
+  font-size: -webkit-calc(14px + 6 * ((100vw - 320px) / 680));
   font-size: calc(14px + 6 * ((100vw - 320px) / 680));
   /* font-size: 18px; */ 
   color: $gray;

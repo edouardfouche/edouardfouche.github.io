@@ -20,10 +20,10 @@ A few things that are still to be done...
 - ~~write posts~~
 - ~~Latex integration~~
 - Matplotlib / interactive visualization integration 
-- Add right column in blog section 
-- Add RSS feed
-- Move to CC license 
-- Add citation policy
+- Add right column in blog section (categories)
+- ~~Add RSS feed~~
+- ~~Move to CC license~~ 
+- Add citation policy (how?)
 
 A cool trick for title resizing: https://css-tricks.com/snippets/css/fluid-typography/
 
