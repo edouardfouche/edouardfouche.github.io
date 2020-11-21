@@ -10,18 +10,14 @@ Nowadays, it has become more and more common to publish on [arXiv][arXiv] before
 
 This indeed comes with some drawbacks. Before it was "cool" to publish on [arXiv][arXiv], researchers had no other option but to publish in peer-reviewed journals or conferences, which only have room for a few hundreds of papers per year. As of 2020, we are now facing more than 44K paper per year being published on [arXiv][arXiv], just for the field of Computer Science! This more than 155K per year, all categories together.
 
-Even if scientists tend to specialize in small niches, it becomes challenging to stay up to date with the progress in your field. If you were to read, say 1K new paper per year, that would be about 3 per day -- and you also need to allocate time to *your* research. This raises some questions: As a researcher, how are you going to select what to read? Will the number of submissions per year continue to increase? 
+Even if scientists tend to specialize in small niches, it becomes challenging to stay up to date with the progress in your field. If you were to read, say 1K new paper per year, that would be about 3 per day -- and you also need to allocate time to *your* research. As a researcher, it just becomes harder and harder to decide what to read. 
 
-As we have more and more papers, each of them gets less and less exposure (unless if you work with someone famous?). In the end, one may only consider those with more citations. But getting citations is a tricky business (more on that later, probably). Although citations are often being used as a proxy for quality, they do not help us to find new problems, i.e., those which did not get much attention so far! 
-
-In the future, it may become more likely that we will reinvent things over and over again, simply because they have gone unnoticed. By systemically exploring the papers being published (via Data Mining, Machine Learning, etc.), can we find new trends? New subfields? [arXiv][arXiv] does publish some statistics. For example, [here][arXivstats]. However, the plots are somewhat clunky. Let's start exploring the data on our own! 
+So, will the number of submissions per year continue to increase? Let's find out. 
 
 Mining the [arXiv][arXiv] Metadata
 ==================================
 
-You can reproduce everything here from this GitHub [repository][github]. 
-
-We obtained the MetaData about every paper submitted on [arXiv][arXiv] from [here][arXivdata]. 
+You can reproduce everything here from this GitHub [repository][github]. [arXiv][arXiv] does publish some statistics. For example, [here][arXivstats]. However, the plots are somewhat clunky. We obtained the MetaData about every paper submitted on [arXiv][arXiv] from [here][arXivdata]. 
 
 Preparing the data
 ------------------
@@ -337,8 +333,12 @@ So at the very start, there were only three categories: `DS` (Data Structures an
 
 As an exercise for you: How many computer science articles will we have on [arXiv][arXiv] in 2030? Of course, you can use the polynomial-fitting technique above, but the question is instead: How many more paper per year will the community post on [arXiv][arXiv]?
 
-Opportunities
-=============
+Threats and Opportunities
+=========================
+
+As we have more and more papers, each of them gets less and less exposure (unless if you work with someone famous?). In the end, one may only consider those with more citations. But getting citations is a tricky business (more on that later, probably). Although citations are often being used as a proxy for quality, they do not help us to find new problems, i.e., those which did not get much attention so far! 
+
+In the future, it may become more likely that we will reinvent things over and over again, simply because they have gone unnoticed. By systemically exploring the papers being published (via Data Mining, Machine Learning, etc.), can we find new trends? New subfields? 
 
 The massive information explosion on [arXiv][arXiv] also opens the ways to exciting research directions. [arXiv][arXiv] can be a great tool to explore the historical evolution of a particular field. For this, however, you might need to dive deeper into the semantics of the papers. Luckily we now have many great tools to extract semantic information from text! Interesting questions are, for example: 
 
