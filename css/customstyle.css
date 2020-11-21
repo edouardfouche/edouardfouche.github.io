@@ -12,8 +12,11 @@ body {
 
 }
 
-.post {
+p {
   text-align: justify;
+}
+
+.post {
   font-size: 18px;
 }
 
