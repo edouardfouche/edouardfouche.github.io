@@ -393,7 +393,7 @@ a {
 /* Define title style in the main content */
 .content-wrapper .container .content-title {
   font-family: 'Georgia' ;
-  font-size: 38px ;
+  /* font-size: 38px ; */
   color: #454343;
   border-bottom: 2px solid ;
   /* padding-left: 2% ; */

@@ -12,8 +12,7 @@ This indeed comes with some drawbacks. Before it was "cool" to publish on [arXiv
 
 Even if scientists tend to specialize in small niches, it becomes challenging to stay up to date with the progress in your field. If you were to read, say 1K new paper per year, that would be about 3 per day -- and you also need to allocate time to *your* research. As a researcher, it just becomes harder and harder to decide what to read. So, will the number of submissions per year continue to increase? Let's find out. 
 
-Mining the [arXiv][arXiv] Metadata
-==================================
+## Mining the [arXiv][arXiv] Metadata
 
 You can reproduce all the plots from this GitHub [repository][github]. Note that [arXiv][arXiv] does publish some statistics. For example, [here][arXivstats]. However, the plots are somewhat clunky. We obtained the MetaData about every paper submitted on [arXiv][arXiv] from [here][arXivdata]. 
 
@@ -35,8 +34,7 @@ We have also fitted a second- and third-order polynomial to the evolution of the
 
 Who is right? Only time will tell. It depends on how many scientists in the world are there, who do not *yet* use [arXiv][arXiv] —Rendez-vous in 2030. 
 
-And what about Computer Science?
---------------------------------
+## And what about Computer Science?
 
 As we could see, the number of submissions has increased steeply in recent years. Let's have a look!
 
@@ -50,8 +48,7 @@ So at the very start, there were only three categories: `DS` (Data Structures an
 
 As an exercise for you: How many computer science articles will we have on [arXiv][arXiv] in 2030? Of course, you can use the polynomial-fitting technique above, but the question is instead: How many more paper per year will the community post on [arXiv][arXiv]?
 
-Threats and Opportunities
-=========================
+## Threats and Opportunities
 
 As we have more and more papers, each of them gets less and less exposure (unless if you work with someone famous?). In the end, one may only consider those with more citations. But getting citations is a tricky business (more on that later, probably). Although citations are often being used as a proxy for quality, they do not help us to find new problems, i.e., those which did not get much attention so far! 
 
