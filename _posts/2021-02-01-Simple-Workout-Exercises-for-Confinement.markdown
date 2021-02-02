@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Simple Workout Exercises for Confinement"
-date:   2020-11-18 08:00:00 +0100
+date:   2021-01-01 08:00:00 +0100
 comments: true
 categories: Sport
 ---
