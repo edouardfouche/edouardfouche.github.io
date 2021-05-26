@@ -8,13 +8,13 @@ categories: Sport
 
 Exercising is extremely important for our physical and mental health. Nowadays, it could not be more true, as we are facing numerous restrictions: We can't go to the gym, we can't meet our friends and family, we work from home and don't have much time outdoor. Also, many of us live in tiny spaces. In this article, I am sharing a small set of exercises that are suitable for our confined lives. Maybe you'll find them useful too!
 
-### How I came up with it
+## How I came up with it
 
-Let me start with some background. In Q4 2019, I visited UIUC in Champaign (IL, USA) for 3 months for a research project. I rented a small room in a house[^fn1] and made very good friends at the local Roller Derby[^fn2] leagues, the [Twin City Derby Girls][TCDG] and the [Prairieland Punishers][Prairieland Punishers]. I wanted to experience Roller Derby in the USA but, at the same time, I was afraid to hurt myself, and I did not want to use a foreign health system (and we all know that in the USA it is crazy expensive...). So I came up with this small set of exercises that I would do almost every day in the evening. I bought for $20 a small graphic tablet to a student and drew it to increase my commitment and share it with peers!
+Let me start with some background. In Q4 2019, I visited UIUC in Champaign (IL, US) for 3 months for a research project. I rented a small room in a house[^fn1] and made very good friends at the local Roller Derby[^fn2] leagues, the [Twin City Derby Girls][TCDG] and the [Prairieland Punishers][Prairieland Punishers]. I wanted to experience Roller Derby in the US but, at the same time, I was afraid to hurt myself, and I did not want to use a foreign health system (and we all know that in the US it is crazy expensive...). So I came up with this small set of exercises that I would do almost every day in the evening. I bought for $20 a small graphic tablet to a student and drew it to increase my commitment and share it with peers!
 
 **DISCLAIMER:** I am not a health or sport expert. There are many great resources out there. A well-known reference for confined exercises is the book by famous prisoner Charles Bronson: [Solitary Fitness][SolitaryFitness]. But hopefully, this one-pager is a good start for someone to exercise on their own or with friends.  
 
-### The Daily Derby Hell Workout
+## The Daily Derby Hell Workout
 
 <object data="/publications/workout_derby_v1_cc.pdf" type="application/pdf" style="min-height:100vh;width:100%">
         <p>It appears that this browser does not support embedded PDFs. Please download the PDF to view it: <a href="/publications/workout_derby_v1_cc.pdf">Download PDF</a>.</p>
@@ -29,9 +29,9 @@ By the way, Dr. Frog is my Derby name ☺.
 
 For Sally, here is the song: [Flower (Moby)][Flower, by Moby]. At "Bring Sally up", you go up. At "Bring Sally down", you go down.
 
-### Advantages
+## Advantages
 
-The advantage of this routine are as follows:
+The advantages of this routine are as follows:
 
 - **You need almost nothing!**
 
@@ -49,7 +49,7 @@ You can adjust the time and difficulty on each exercise depending on your needs 
 
 You can call your family or friends via Skype, Zoom, or any videoconferencing tool and do the routine together! The PDF is a creative common material ([CC-BY-SA-4.0][CC-BY-SA-4.0]) in DIN A4 format. 
 
-### Results
+## Results
 
 I followed this routine for about 3 months and ate as healthy as I could (organic vegetables, as much as possible) and gained about 4 kilos on top of my modest 60 kilos, no fat. This routine did not only help me preventing injuries (I did several scrimmages, had Roller Derby 2-3 times a week and went to the skate park on the weekend), but also helped me to be successful in my research stay. After that, I could also see a notable difference in my performance as a skater and generally felt stronger and more balanced in my body. 
 
