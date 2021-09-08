@@ -395,7 +395,7 @@ a {
 
 /* Define title style in the main content */
 .content-wrapper .container .content-title {
-  font-family: 'Georgia' ;
+  /* font-family: 'Georgia' ; */
   /* font-size: 38px ; */
   color: #454343;
   border-bottom: 2px solid ;
@@ -525,7 +525,7 @@ a {
     }
 
       .university-name {
-        font-family: 'Georgia' ;
+        /* font-family: 'Georgia' ; */
         margin-top: 0px;
         margin-bottom: 0px ;
         font-size: 23px ;
@@ -533,7 +533,7 @@ a {
       }
 
       .skills-name {
-        font-family: 'Georgia' ;
+        /* font-family: 'Georgia' ; */
         padding-top: 1% ;
         padding-left: 3% ;
         margin-top: 0px ;
@@ -543,7 +543,7 @@ a {
       }
 
       .subtitle {
-        font-family: 'Georgia' ;
+        /* font-family: 'Georgia' ; */
         padding-top: 1% ;
         padding-left: 0% ;
         margin-top: 0px ;
