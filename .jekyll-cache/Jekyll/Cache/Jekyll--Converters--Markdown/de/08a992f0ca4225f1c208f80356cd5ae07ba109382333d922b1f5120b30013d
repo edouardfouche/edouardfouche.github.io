@@ -1,0 +1,83 @@
+I"K<p>I hate missing my train or arriving at the station to find out that my train is being delayed. This happens often, because German public transports are so unpredictable ! Since I take the train every day for work, it is also a pain to check online every time I leave. I found a solution to this problem, using a Raspberry Pi.</p>
+
+<h2 id="the-solution">The Solution</h2>
+
+<p>A Raspberry Pi computer shows in my corridor the departure times for the next trains or public transports (bus, etc.) for a set of chosen lines. Let me first show you how the solution looks like !</p>
+
+<p style="margin: auto"><br />
+<a href="https://www.youtube.com/watch?v=Ocr8C1BaPi8"><img src="/img/deutsche-bahn/Rpi.png" alt="Ok Rpi, show me the next trains" /></a></p>
+<p><br /></p>
+
+<p>The display can show information about the next trains for various destinations. So this can be useful not only for me, but also for my girlfriend or our flatmate. By the way, this video shows only the first prototype, the software was quite improved afterwards.</p>
+
+<h2 id="hardware-setup">Hardware Setup</h2>
+
+<ul>
+  <li>Raspberry Pi 1 B + <a href="https://www.amazon.de/Sweetbox-Geh%C3%A4use-Raspberry-Modell-K%C3%BChlk%C3%B6rper/dp/B00IF9LIHC">Sweetbox</a></li>
+  <li><a href="https://www.amazon.de/Waveshare-Raspberry-Resistive-Interface-Rapsberry-pi/dp/B00OZLG2YS/ref=sr_1_9?ie=UTF8&amp;qid=1500132927&amp;sr=8-9&amp;keywords=waveshare+raspberry+pi+touchscreen">Touchscreen Waveshare 3.5’</a> on GPIO (&lt; 30€)</li>
+  <li>Power Supply <a href="https://www.amazon.de/Nokia-AC-10-Energiespar-Reiseladeger%C3%A4t-Micro-USB/dp/B002DPPKL4/ref=sr_1_1?s=computers&amp;ie=UTF8&amp;qid=1500133198&amp;sr=1-1&amp;keywords=Nokia+BT-AC10E">Nokia BT-AC10E</a> (&lt; 10€)</li>
+  <li>Nano Dongle Wifi LF-Link 150 Mb/s (&lt; 10€)</li>
+  <li>Sandisk 16 Gb 45 Mb/s (Smaller would also make it) (&lt; 10€)</li>
+</ul>
+
+<p>If you take a Raspberry PI 3 you won’t need the wifi dongle :). The touchscreen constructor provides a pre-configured Raspbian image, to download on its website, so it works out-of-the-box !</p>
+
+<p>Then I bought some <a href="https://www.amazon.de/gp/product/B000WL4T8Q/ref=oh_aui_search_detailpage?ie=UTF8&amp;psc=1">on/off hook strips</a> from Tesa to put it in my corridor ! Hiding a part of the cable behind the mirror, it looks like this:</p>
+
+<p style="margin: auto"><br />
+<img src="/img/deutsche-bahn/DSC_8839.JPG" alt="img" class="img-responsive" /></p>
+<p><br /></p>
+
+<h2 id="software-setup">Software Setup</h2>
+
+<p>Getting an official Deutsch Bahn API key is impossible if you are not a business company. So I used <a href="https://github.com/kennell/schiene">schiene</a>, a tiny Python library for interacting with Bahn.de, developed by <a href="https://github.com/kennell">Kevin Kennell</a>. Basically it crawls the bahn.de mobile website to retrieve the next time table. It is like an unofficial API. I wrote a small script that wraps around it and handles the presentation of the results (including incidents and delay) in the standard output with a periodic refresh of the results. It is available on my GitHub <a href="https://github.com/edouardfouche/deutsche-bahn-time-display">here</a>.</p>
+
+<p>This works for any connection in Germany. The script <code class="language-plaintext highlighter-rouge">dbtime.py</code> should be started with a few arguments, to specify the start and end stations of your trip(s). I’ve created a small bash script <code class="language-plaintext highlighter-rouge">launcher.sh</code> to start the program in the terminal of my Raspberry Pi with my desired connections:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/sh</span>
+<span class="c"># launcher.sh</span>
+<span class="nb">cd</span> ~/github/deutsche-bahn-time-display/
+<span class="nb">sudo </span>python dbtime.py <span class="s2">"Stuttgart Hbf"</span> <span class="s2">"Karlsruhe HbF"</span> <span class="s2">"==KA==&gt;"</span> True
+</code></pre></div></div>
+
+<p>To make it executable, don’t forget to do:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi@rasp:~/<span class="nv">$ </span><span class="nb">sudo chmod </span>774 launcher.sh
+</code></pre></div></div>
+
+<p>The script lives in my home folder. Then, I’ve put a script <code class="language-plaintext highlighter-rouge">launcher.desktop</code> with the following content on the Desktop:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>Desktop Entry]
+<span class="nv">Name</span><span class="o">=</span>launcher
+<span class="nv">Comment</span><span class="o">=</span>Starts Python dbtime program
+<span class="nv">Exec</span><span class="o">=</span>/home/pu/launcher.sh
+<span class="nv">Terminal</span><span class="o">=</span><span class="nb">true
+</span><span class="nv">Type</span><span class="o">=</span>Application
+</code></pre></div></div>
+
+<p>So when I double-click <code class="language-plaintext highlighter-rouge">launcher.desktop</code> on the touchscreen, it will starts the program directly in a new terminal. It will display the next trains from Stuttgart to Karlsruhe with the little prefix <code class="language-plaintext highlighter-rouge">==KA==&gt;</code>, considering only direct connections (<code class="language-plaintext highlighter-rouge">True</code>). It looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1/1======================
+==KA==&gt; 23,36,82,143,165
+IC  | 11:06 | 0:57 +0
+RE  | 11:19 | 1:20 +0
+IC  | 12:05 | 0:44 +0
+IC  | 13:06 | 0:53 
+ICE | 13:28 | 0:36 
+.......
+</code></pre></div></div>
+
+<p>If you add more trips, it will alternatively display each of them. The information is refreshed after a number of seconds (by default 45 seconds).</p>
+
+<p>To make it look better on the touchscreen, I changed the police to <code class="language-plaintext highlighter-rouge">DejaVu Sans Mono Book</code> with size 17 and changed the default dimensions of the terminal. To do so, just add the following line in the file <code class="language-plaintext highlighter-rouge">/usr/share/raspi-ui-overrides/applications/lxterminal.desktop</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">Exec</span><span class="o">=</span>lxtermnal <span class="nt">--geometry</span><span class="o">=</span>37x15
+</code></pre></div></div>
+
+<p>At first I considered not having a GUI on the Touchscreen, and simply start the program in the console, but then I would not be able to shutdown the Raspberry Pi from the touchscreen anymore.</p>
+
+<p>My friend Daniel is doing something similar, with a much fancier design, you can check it out <a href="https://hackaday.io/project/9690-tram-departure-time-indicator">here</a>.</p>
+
+<p>Have a good trip !</p>
+
+:ET

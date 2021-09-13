@@ -1,0 +1,167 @@
+I"�H<p>I became recently interested in the Knight’s Tour problem. It is one of the oldest problem in computer science, known for more than 1000 years! I have written a program in Scala that solves it for arbitrary-shaped chessboards. I find the visual patterns in the solutions quite interesting. In this article, I will talk about that.</p>
+
+<h2 id="the-background-story">The Background Story</h2>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Knight%27s_tour">Knight’s Tour</a> is a famous problem in computer science and chess. It consists in finding a sequence of moves of a knight on a chessboard, such that the knight visits every square only once. The tour is said to be “closed” if the starting position is reachable with a valid move from the ending position. The Knight’s Tour problem is an instance of the more general <a href="https://en.wikipedia.org/wiki/Hamiltonian_path">Hamiltonian path</a> problem in graph theory, and the closed Knight’s Tour problem is an instance of the <a href="http://mathworld.wolfram.com/HamiltonianCycle.html">Hamiltonian cycle</a> problem.</p>
+
+<p style="max-width: 408px; margin: auto"><br />
+<img src="/img/knight/knight_tour_animation.gif" alt="img1" class="img-responsive" /></p>
+<p style="text-align: center"><em>An open Knight’s Tour. Source: <a href="https://en.wikipedia.org/wiki/Knight%27s_tour">Wikipedia</a></em></p>
+<p><br /></p>
+
+<p>The earliest known Knight’s Tour was described in an Arabic manuscript from <strong>al-Adli ar-Rumi</strong>, a professional chess player who lived in Baghdad in around 840 AD. It was then rediscovered much later in 18th century and several famous mathematicians such as <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a> have worked on it.</p>
+
+<p>It is known that the Hamiltonian path and Hamiltonian cycle problems are NP-complete. A brute-force approach would be totally intractable: on a \(8 \times 8\) board there are approximately \(4*10^{51}\) possible move sequences! Interestingly, in the case of the Knight’s Tour, it is possible to find solutions in a linear time, thanks to useful heuristics. In 1823, H.C. von Warnsdorf<sup id="fnref:fn2" role="doc-noteref"><a href="#fn:fn2" class="footnote" rel="footnote">1</a></sup> described a heuristic to find a Knight’s Tour in linear time. The Warnsdorf’s rule can be described by recurrence as follows<sup id="fnref:fn1" role="doc-noteref"><a href="#fn:fn1" class="footnote" rel="footnote">2</a></sup>:</p>
+
+<p>Given that the Knight is placed on the <em>n</em>th square of the path, let the <em>(n+1)</em>th square of the path be the square which:</p>
+<ol>
+  <li>is adjacent to the <em>n</em>th square (i.e., it can be reached with a single Knight’s move)</li>
+  <li>is unvisited (i.e., it did not appear earlier in the path) and</li>
+  <li>has the minimal number of adjacent, unvisited squares</li>
+</ol>
+
+<p>The question that remains is how to handle ties between two or more unvisited squares. There was a bit of controversy about that. Warnsdorf claimed that no matter which random choices are made to break the ties, the path produced is always a tour, which turned out to be false<sup id="fnref:fn1:1" role="doc-noteref"><a href="#fn:fn1" class="footnote" rel="footnote">2</a></sup>. There exists better ways to break the ties and more generally to find a tour, but I am not doing to go into details here.</p>
+
+<p>In the next section, I am going to introduce the little software I wrote in Scala, which uses Warnsdorf’s rule with random tie breaking !</p>
+
+<h2 id="solving-the-knights-tour">Solving the Knight’s Tour</h2>
+
+<p>The source code is available on GitHub <a href="https://github.com/edouardfouche/chesstour">here</a>. Here is a little tutorial about how to use the program. The program is currently distributed as an SBT project. I would recommend you to clone the repository and to open the project in your favorite IDE (such as IntelliJ IDEA or Eclipse) and simply open a Scala worksheet.</p>
+
+<p>First, let us import the classes <code class="language-plaintext highlighter-rouge">ChessBoard</code> and <code class="language-plaintext highlighter-rouge">KnightTour</code> from the <code class="language-plaintext highlighter-rouge">chesstour</code> package and define the path to a folder for our output.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chesstour.</span><span class="o">{</span><span class="nc">ChessBoard</span><span class="o">,</span> <span class="nc">KnightTour</span><span class="o">}</span>
+<span class="k">val</span> <span class="nv">output_folder</span> <span class="k">=</span> <span class="s">"knight/"</span> <span class="c1">// define an a path to an output folder</span>
+</code></pre></div></div>
+
+<p>Let’s instantiate an \(8 \times 8 \) <code class="language-plaintext highlighter-rouge">Chessboard</code> and pass it to a new instance of <code class="language-plaintext highlighter-rouge">KnightTour</code>.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">board</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">ChessBoard</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span><span class="mi">8</span><span class="o">)</span>
+<span class="k">val</span> <span class="nv">knight</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">KnightTour</span><span class="o">(</span><span class="n">board</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>Now let’s find a closed tour using Warnsdorf’s heuritic !</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">tour</span> <span class="k">=</span> <span class="nv">knight</span><span class="o">.</span><span class="py">warnsdorfsHeuristic</span><span class="o">(</span><span class="n">closed</span><span class="k">=</span><span class="kc">true</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>This will produce a closed tour from a random starting position on this board. We can produce an output using the <code class="language-plaintext highlighter-rouge">draw</code> method:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">tour</span><span class="o">.</span><span class="py">draw</span><span class="o">(</span><span class="n">path</span><span class="k">=</span><span class="n">folder</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>This will draw the tour and save it in a .png file, such as this one:</p>
+
+<p style="max-width: 400px; margin: auto"><br />
+<img src="/img/knight/drawing.jpg" alt="img1" class="img-responsive" /></p>
+<p><br /></p>
+
+<p>We can continue and find tours on boards with different dimensions. However, it is very unlikely to find twice the same tour, given that ties are solved randomly. For convenience, I provide a pair of functions to save and load a tour, so that you can use it later again:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">tour</span><span class="o">.</span><span class="py">save</span><span class="o">(</span><span class="n">output_folder</span><span class="o">)</span> <span class="c1">// The tour is saved simply in a file &lt;hashcode&gt;</span>
+<span class="k">val</span> <span class="nv">t</span> <span class="k">=</span> <span class="nv">ChessTour</span><span class="o">.</span><span class="py">load</span><span class="o">(</span><span class="s">"knight/&lt;hashcode&gt;"</span><span class="o">)</span> <span class="c1">// Load the tour from file</span>
+</code></pre></div></div>
+
+<p>Note that a (closed) tour may be difficult or impossible to find depending on the dimensions of the board. It was showed that a tour exists for any board whose smaller dimension is at least 5<sup id="fnref:fn3" role="doc-noteref"><a href="#fn:fn3" class="footnote" rel="footnote">3</a></sup> and that a closed tour exists if the number of square is even (i.e., \(m\) and \(n\) are not both odd). However, finding a tour becomes much more difficult when the size of the board grows<sup id="fnref:fn1:2" role="doc-noteref"><a href="#fn:fn1" class="footnote" rel="footnote">2</a></sup>. The existence of a tour in non-rectangular boards is unknown a priori. We are going to talk a bit more about that in the next section!</p>
+
+<h2 id="the-knights-tour-as-digital-art">The Knight’s Tour as Digital Art</h2>
+
+<p>I find the random patterns created by the solutions of the Knight’s Tour really interesting. So I had the idea to let the algorithm run on boards with custom shapes. My first idea was to try on a board in the shape of an heart (yes, computer science can be romantic!). I took a basic drawing of an heart from the Internet that I reduced down to \( 30 \times 30\) pixels. This resulted in this image, if we look at it pixel-wise.</p>
+
+<p style="max-width: 500px; margin: auto"><br />
+<img src="/img/knight/heart.jpg" alt="img" class="img-responsive" /></p>
+<p><br /></p>
+
+<p>Using <code class="language-plaintext highlighter-rouge">ChessBoard.fromMask</code>, you can use this image as a mask to initialize a board:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">board</span> <span class="k">=</span> <span class="nv">ChessBoard</span><span class="o">.</span><span class="py">fromMask</span><span class="o">(</span><span class="s">"knight/&lt;mymask&gt;.png"</span><span class="o">)</span>
+<span class="c1">// val board = ChessBoard.fromMask("knight/&lt;mymask&gt;.png", switch=true)</span>
+</code></pre></div></div>
+
+<p>By default, all the transparent or white pixels will be taken out from the board. If you set the <code class="language-plaintext highlighter-rouge">switch</code> parameter to <code class="language-plaintext highlighter-rouge">true</code>, you can use the same picture as negative.</p>
+
+<p>The problem with arbitrary shapes is that it is rather unlikely (or even impossible) to find a (closed) tour. But that’s ok. With the argument <code class="language-plaintext highlighter-rouge">closed=true</code> you declare expressively that you are only interested in closed tours. The algorithm tries to return a cycle, no matter if all squares are visited. With the argument <code class="language-plaintext highlighter-rouge">complete=true</code> you additionally say that you want a complete tour, i.e. that all squares are visited once. This might not be possible, but the algorithm will perform a number of <code class="language-plaintext highlighter-rouge">n</code> attempts, after which it will return the tour found with the highest number of square visited.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">tour</span> <span class="k">=</span> <span class="nv">knight</span><span class="o">.</span><span class="py">warnsdorfsHeuristic</span><span class="o">(</span><span class="n">closed</span><span class="k">=</span><span class="kc">true</span><span class="o">,</span> <span class="n">complete</span><span class="k">=</span><span class="kc">true</span><span class="o">,</span> <span class="n">n</span><span class="k">=</span><span class="mi">1000</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>The result might not be a closed tour on the custom board, but at least the largest cycle the algorithm could find using Warnsdorf’s heuristic and the given number of trials.</p>
+
+<p>By running it several times, you always get different results, because the starting square changes at each attempt and the ties in the Warnsdorf’s rule are solved randomly. Each result is unique. Sometimes, it is surprising, ugly or good-looking. For example I like this one especially:</p>
+
+<p style="max-width: 500px; margin: auto"><img src="/img/knight/knight_heart.jpg" alt="img" class="img-responsive" /></p>
+
+<p>The method <code class="language-plaintext highlighter-rouge">simulate</code> gives you more control on the aspect of the output. You can change the size of cells <code class="language-plaintext highlighter-rouge">cellSize</code>, the size of the nails <code class="language-plaintext highlighter-rouge">nailSize</code>, the width of the line <code class="language-plaintext highlighter-rouge">lineWidth</code>, declare if the drawing should be closed (<code class="language-plaintext highlighter-rouge">closed</code>) as well as the color of the visualization (<code class="language-plaintext highlighter-rouge">color</code>):</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">tour</span><span class="o">.</span><span class="py">simulate</span><span class="o">(</span><span class="n">cellSize</span><span class="k">=</span><span class="mi">50</span><span class="o">,</span> <span class="n">nailSize</span><span class="k">=</span><span class="mi">15</span><span class="o">,</span> <span class="n">closed</span><span class="k">=</span><span class="kc">true</span><span class="o">,</span> <span class="n">path</span><span class="k">=</span><span class="n">output_folder</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>Here are a few example of designs I produced this way:</p>
+
+<p style="max-width: 700px; margin: auto"><br />
+<img src="/img/knight/ILOVEU.jpg" alt="img" class="img-responsive" /></p>
+<p style="max-width: 500px; margin: auto"><br />
+<img src="/img/knight/knight.jpg" alt="img" class="img-responsive" /></p>
+<p style="max-width: 500px; margin: auto"><br />
+<img src="/img/knight/triforce.jpg" alt="img" class="img-responsive" /></p>
+<p><br /></p>
+
+<p>Do you like them? You can buy them on Redbubble <a href="https://www.redbubble.com/de/people/edouardfouche/portfolio">here</a>! My preferred one is this <a href="https://www.redbubble.com/de/people/edouardfouche/works/25836292-knight-of-love?p=laptop-skin&amp;rel=carousel">laptop skin</a>.</p>
+
+<p>I am also going to make a real-world piece of art. I will take a board, nails and a string and represent the result of my choice. I have done a study for it already (on a small used cutting board) to see the real colors:</p>
+
+<p style="max-width: 500px; margin: auto"><br />
+<img src="/img/knight/study.jpg" alt="img" class="img-responsive" /></p>
+<p><br /></p>
+
+<p>I am going to make one or two copies on boards of size greater than 1 meter. I will post the results here too!</p>
+
+<h2 id="future-work">Future Work</h2>
+
+<p>The current algorithm can be extended in several ways, such as:</p>
+<ul>
+  <li>Supporting different heuristics<sup id="fnref:fn6" role="doc-noteref"><a href="#fn:fn6" class="footnote" rel="footnote">4</a></sup><sup id="fnref:fn4" role="doc-noteref"><a href="#fn:fn4" class="footnote" rel="footnote">5</a></sup> and (better) tie breaking strategies<sup id="fnref:fn1:3" role="doc-noteref"><a href="#fn:fn1" class="footnote" rel="footnote">2</a></sup>.</li>
+  <li>Generalize the problem to other chess figures than the knight<sup id="fnref:fn5" role="doc-noteref"><a href="#fn:fn5" class="footnote" rel="footnote">6</a></sup>.</li>
+</ul>
+
+<p>For the first item, I might do it, because this will help getting more complete, or closed solutions. For the second one, I am not sure yet :)</p>
+
+<h2 id="more-resources">More Resources</h2>
+
+<p>Aww. I see that you found this post interesting. Here is a list of selected resources about the Knight Tour problems that I found on the Internet:</p>
+<ul>
+  <li><a href="http://www.mayhematics.com/t/t.htm">Knight’s Tour Notes by George Jelliss</a></li>
+  <li>A nice <a href="https://youtu.be/9fSFC00ZKPg">video</a> explaining of how to solve the Knight’s Tour by hand</li>
+  <li><a href="http://warnsdorff.com/">Warnsdorff.com</a> and this GitHub <a href="https://github.com/douglassquirrel/warnsdorff">repository</a> from Douglas Squirrel</li>
+  <li>A <a href="https://rosettacode.org/wiki/Knight%27s_tour">collection</a> of implementations in 48 different programming languages.</li>
+</ul>
+
+<p>By looking around for resources about the Knight’s Tour on the Internet, I found out that many have disappeared, because the pages were not maintained anymore. That’s a pity. I would instead encourage you to read the historical literature.</p>
+
+<p>By the way, I’m not sure, is it <em>Warnsdorf</em> or <em>Warnsdorff</em> ? I found both writing in the literature and Internet.</p>
+
+<h2 id="sources">Sources</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:fn2" role="doc-endnote">
+      <p>Warnsdorf, H.C. (1823). Des Rösselsprunges einfachste und allgemeinste Lösung, Schmalkalden. <a href="#fnref:fn2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:fn1" role="doc-endnote">
+      <p>Squirrel &amp; Cull (1996). A Warnsdorff-rule algorithm for knight’s tours on square chessboards. Oregon State REU Program. <a href="#fnref:fn1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:fn1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:fn1:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a> <a href="#fnref:fn1:3" class="reversefootnote" role="doc-backlink">&#8617;<sup>4</sup></a></p>
+    </li>
+    <li id="fn:fn3" role="doc-endnote">
+      <p>Cull, De Curtins (1978). Knight’s tour revisited. Fibonacci Quarterly. <a href="#fnref:fn3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:fn6" role="doc-endnote">
+      <p>Parberry (1997). An efficient algorithm for the Knight’s tour problem. Discrete Applied Mathematics. <a href="#fnref:fn6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:fn4" role="doc-endnote">
+      <p>Lin, Wei, (2005). Optimal algorithms for constructing knight’s tours on arbitrary n×m chessboards. Discrete Applied Mathematics. <a href="#fnref:fn4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:fn5" role="doc-endnote">
+      <p>Chia, Ong (2005). Generalized knight’s tours on rectangular chessboards. Discrete Applied Mathematics. <a href="#fnref:fn5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

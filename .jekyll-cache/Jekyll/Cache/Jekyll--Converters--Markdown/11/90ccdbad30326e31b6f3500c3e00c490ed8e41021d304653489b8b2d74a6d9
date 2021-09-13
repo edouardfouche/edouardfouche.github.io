@@ -1,0 +1,24 @@
+I"(<p>and welcome ! In this blog, I will speak about my work as a computer scientist, but also about art, culture and all the things I like. I am building this place to share freely a part of my views. Also, I want to get out of my comfort zone !</p>
+
+<p><img src="/img/hello_world_1.png" alt="comfort_zone" class="img-responsive" /></p>
+
+<p>Furthermore, I have been profiting so much from the content of the web, that I want to give it back to the community somehow and to contribute. I’ll try to create interesting content and convey information in a simple way.</p>
+
+<p>Why I think this adventure is scary:</p>
+<ul>
+  <li>Writing is a tedious exercise, especially if you’re not writing in your mother tongue.</li>
+  <li>Fear of human judgement about my skills (OMG YOU HAVE A TYPO).</li>
+  <li>Fear of not having enough things to say or to be boring.</li>
+</ul>
+
+<p>Despite its scariness, it might be worth a try !</p>
+
+<p>This blog is based on <a href="https://jekyllrb.com/">Jekyll</a> and <a href="http://getbootstrap.com/">Bootstrap</a> and the code is hosted on <a href="https://github.com/edouardfouche/edouardfouche.github.io">Github</a>. I moved my old CV-only Bootstrap-based website to Github Pages and created a blog sections, which you are reading now. Feel free to reuse or adapt my code. I would appreciate a reference if you take my design :). Note that several improvements (style, UI, code factoring) still have to be made… well, this blog is alive !</p>
+
+<p>Thanks for reading this post, you are the best !</p>
+
+<p>Cheers,</p>
+
+<p>Edouard Fouché</p>
+
+:ET

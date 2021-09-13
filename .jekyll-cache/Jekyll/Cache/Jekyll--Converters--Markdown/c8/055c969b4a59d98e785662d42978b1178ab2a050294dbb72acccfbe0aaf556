@@ -1,0 +1,59 @@
+I"<p>Nowadays, it has become more and more common to publish on <a href="https://arxiv.org/">arXiv</a> before peer-review. There are several (good) reasons for that: (1) Academic publishing takes too much time, and even then, (2) your paper often ends up behind a paywall. In over-hyped fields, the state of the art may change every month (or sometimes, week!), so it is a good way to “plant the flag” on your research idea. But what are the consequences of that?</p>
+
+<p>This indeed comes with some drawbacks. Before it was “cool” to publish on <a href="https://arxiv.org/">arXiv</a>, researchers had no other option but to publish in peer-reviewed journals or conferences, which only have room for a few hundreds of papers per year. As of 2020, we are now facing more than 44K paper per year being published on <a href="https://arxiv.org/">arXiv</a>, just for the field of Computer Science! This more than 155K per year, all categories together.</p>
+
+<p>Even if scientists tend to specialize in small niches, it becomes challenging to stay up to date with the progress in your field. If you were to read, say 1K new paper per year, that would be about 3 per day – and you also need to allocate time to <em>your</em> research. As a researcher, it just becomes harder and harder to decide what to read. So, will the number of submissions per year continue to increase? Let’s find out.</p>
+
+<h2 id="mining-the-arxiv-metadata">Mining the <a href="https://arxiv.org/">arXiv</a> Metadata</h2>
+
+<p>You can reproduce all the plots from this GitHub <a href="https://github.com/edouardfouche/arxiv-information-explosion">repository</a>. Note that <a href="https://arxiv.org/">arXiv</a> does publish some statistics. For example, <a href="https://arxiv.org/help/stats/2019_by_area/index">here</a>. However, the plots are somewhat clunky. We obtained the MetaData about every paper submitted on <a href="https://arxiv.org/">arXiv</a> from <a href="https://www.kaggle.com/Cornell-University/arxiv/tasks">here</a>.</p>
+
+<p><img src="/img/arxiv-information-explosion/counts_arxiv.svg" alt="counts_arxiv" class="img-responsive" /></p>
+
+<p>Warmer colours are for categories with more submissions (in 2019). As we can see, Computer Science (cs) only recently become a major field on <a href="https://arxiv.org/">arXiv</a>, but it is increasing fast! Let’s have a look at the relative counts:</p>
+
+<p><img src="/img/arxiv-information-explosion/relative_counts_arxiv.svg" alt="relative_counts_arxiv" class="img-responsive" /></p>
+
+<p>So the category <code class="language-plaintext highlighter-rouge">hep-*</code> (High Energy Physics), has been most prominent for a long time, now it is <code class="language-plaintext highlighter-rouge">math</code> and <code class="language-plaintext highlighter-rouge">physics</code>. Let’s see how fast the total number of paper (the size of the <a href="https://arxiv.org/">arXiv</a>!) has evolved over time:</p>
+
+<p><img src="/img/arxiv-information-explosion/total_counts_arxiv.svg" alt="total_counts_arxiv" class="img-responsive" /></p>
+
+<p>As we can see, the number of articles has doubled twice in 1992, then doubled every 1-2 years, and now every 5-6 years. Can we guess how many papers will be on <a href="https://arxiv.org/">arXiv</a> in 2030? Let’s plot the evolution of the number of submission per year.</p>
+
+<p><img src="/img/arxiv-information-explosion/submissions_per_year_arxiv_forecast.svg" alt="submissions_per_year_arxiv_forecast" class="img-responsive" /></p>
+
+<p>We have also fitted a second- and third-order polynomial to the evolution of the number of submissions. The third-order polynomial fits the bars quite nicely but leads to a steep increase. In comparison, the second-order polynomial feels more realistic. With the second-order polynomial, we forecast that there will be about 3.6M papers on <a href="https://arxiv.org/">arXiv</a> in 2030, while the third-order polynomial expects about 4.1M.</p>
+
+<p>Who is right? Only time will tell. It depends on how many scientists in the world are there, who do not <em>yet</em> use <a href="https://arxiv.org/">arXiv</a> —Rendez-vous in 2030.</p>
+
+<h2 id="and-what-about-computer-science">And what about Computer Science?</h2>
+
+<p>As we could see, the number of submissions has increased steeply in recent years. Let’s have a look!</p>
+
+<p><img src="/img/arxiv-information-explosion/counts_arxiv_cs.svg" alt="counts_arxiv_cs" class="img-responsive" /></p>
+
+<p>That is a much faster increase as before! What about the relative counts?</p>
+
+<p><img src="/img/arxiv-information-explosion/relative_counts_arxiv_cs.svg" alt="relative_counts_arxiv_cs" class="img-responsive" /></p>
+
+<p>So at the very start, there were only three categories: <code class="language-plaintext highlighter-rouge">DS</code> (Data Structures and Algorithms), <code class="language-plaintext highlighter-rouge">CC</code> (Computational Complexity), and <code class="language-plaintext highlighter-rouge">GL</code> (General Literature). In the early 90s, the <code class="language-plaintext highlighter-rouge">AI</code> (Artificial Intelligence) community massively submitted to <a href="https://arxiv.org/">arXiv</a>, but the larger fields are now <code class="language-plaintext highlighter-rouge">CV</code> (Computer Vision), <code class="language-plaintext highlighter-rouge">IT</code> (Information Theory), <code class="language-plaintext highlighter-rouge">LG</code> (Machine Learning), and <code class="language-plaintext highlighter-rouge">CL</code> (Computation and Language).</p>
+
+<p>As an exercise for you: How many computer science articles will we have on <a href="https://arxiv.org/">arXiv</a> in 2030? Of course, you can use the polynomial-fitting technique above, but the question is instead: How many more paper per year will the community post on <a href="https://arxiv.org/">arXiv</a>?</p>
+
+<h2 id="threats-and-opportunities">Threats and Opportunities</h2>
+
+<p>As we have more and more papers, each of them gets less and less exposure (unless if you work with someone famous?). In the end, one may only consider those with more citations. But getting citations is a tricky business (more on that later, probably). Although citations are often being used as a proxy for quality, they do not help us to find new problems, i.e., those which did not get much attention so far!</p>
+
+<p>In the future, it may become more likely that we will reinvent things over and over again, simply because they have gone unnoticed. By systemically exploring the papers being published (via Data Mining, Machine Learning, etc.), can we find new trends? New subfields?</p>
+
+<p>The massive information explosion on <a href="https://arxiv.org/">arXiv</a> opens the ways to exciting research directions. <a href="https://arxiv.org/">arXiv</a> can be a great tool to explore the historical evolution of a particular field. For this, however, you might need to dive deeper into the semantics of the papers. Luckily we now have many great tools to extract semantic information from text! Interesting questions are, for example:</p>
+
+<ul>
+  <li>What has been the focus of community <code class="language-plaintext highlighter-rouge">X</code> over the past few years? How did it change?</li>
+  <li>What are the common interests between community <code class="language-plaintext highlighter-rouge">X</code> and <code class="language-plaintext highlighter-rouge">Y</code>? How much do they overlap?</li>
+  <li>Can one see community <code class="language-plaintext highlighter-rouge">X</code> and a parent of community <code class="language-plaintext highlighter-rouge">Y</code>?</li>
+</ul>
+
+<p>Getting answers to such questions may be not only interesting from a historical perspective but also to identify new trends and emerging fields! Finally, it would be nice to visualize the relationship between communities at different points in time and create better taxonomies.</p>
+
+:ET
