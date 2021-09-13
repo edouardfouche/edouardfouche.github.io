@@ -10,10 +10,14 @@ ruby RUBY_VERSION
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 #gem "jekyll", "3.6.3"
-gem 'jekyll', '~> 3'
+gem 'jekyll', '~> 4.2'
+gem "addressable", ">= 2.8.0"
+gem "rexml", ">= 3.2.5"
+
+
 
 # kramdown
-gem "kramdown", ">= 2.3.0"
+gem "kramdown", ">= 2.3.1"
 gem "kramdown-parser-gfm"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
