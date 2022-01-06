@@ -82,3 +82,17 @@ Here are some good resources that helped me getting there:
 - The PhD Grind
 - Karpathy's blog post: http://karpathy.github.io/2016/09/07/phd/
 - check the favorites? 
+
+Pawel Bielski  3:13 PM
+https://www.coursera.org/learn/learning-how-to-learn  (5 hours of videos)
+
+Florian Kalinke  3:16 PM
+https://www.youtube.com/watch?v=IlU-zDU6aQ0 <= A short and informative talk on the same topic I watched when in my master's and which I enjoyed. (edited) 
+
+Bela  3:24 PM
+How to find and read papers: use tools to take work of your back like:
+https://inciteful.xyz
+https://www.scholarcy.com/
+https://api.scholarcy.com/
+https://ref.scholarcy.com/api/
+https://library.scholarcy.com/flashcard-generator.html
