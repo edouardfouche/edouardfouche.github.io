@@ -24,6 +24,7 @@ A few things that are still to be done...
 - ~~Add RSS feed~~
 - ~~Move to CC license~~ 
 - Add citation policy (how?)
+- write more
 
 A cool trick for title resizing: https://css-tricks.com/snippets/css/fluid-typography/
 
