@@ -3,7 +3,7 @@ layout: post
 title:  "Hello World"
 date:   2016-03-05 11:35:00 +0100
 comments: true
-categories: other
+categories: Other
 ---
 
 and welcome ! In this blog, I will speak about my work as a computer scientist, but also about art, culture and all the things I like. I am building this place to share freely a part of my views. Also, I want to get out of my comfort zone ! 

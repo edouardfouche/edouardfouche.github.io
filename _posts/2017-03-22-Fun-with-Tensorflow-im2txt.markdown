@@ -3,7 +3,7 @@ layout: post
 title:  "Fun with Tensorflow - im2txt"
 date:   2017-03-22 07:00:00 +0100
 comments: true
-categories: other
+categories: Machine Learning
 ---
 
 I came across the *im2txt* model for *Tensorflow*. It is a model developed by *Google DeepMind* that takes an image as input and creates a caption for it. I used the model to create captions for a few of my own images, and it was a lot of fun ! In this article, I will explain how to play with it. Then, I will show a few examples.  

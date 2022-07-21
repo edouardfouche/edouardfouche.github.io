@@ -3,7 +3,7 @@ layout: post
 title:  "Data Stream Generation with Concept Drift"
 date:   2017-05-19 7:00:00 +0100
 comments: true
-categories: other
+categories: Machine Learning
 ---
 
 Concept drift is a well-known issue in the data stream community. It means that the statistical properties of a data stream can change over time in unforeseen ways. In this article, I will talk about concept drift and its relation to the outlier detection problem. I will also introduce a prototype in R that can be used to simulate several kinds of drift.

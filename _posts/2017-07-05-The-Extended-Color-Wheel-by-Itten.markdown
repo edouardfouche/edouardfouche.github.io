@@ -3,7 +3,7 @@ layout: post
 title:  "The Extended Color Wheel by Itten"
 date:   2017-07-05 08:00:00 +0100
 comments: true
-categories: color
+categories: Art
 ---
 
 I was recently done reading "[Kunst der Farbe][KdF]" (Art of Color) by Johannes Itten. In this book, the great master of the Bauhaus exposes his theory about color and its role in artistic compositions. Itten makes the distinction between 7 kinds of contrast and shows the discrepancies between the objective physical properties of colors and our subjective perception. Itten introduces the 12-part color wheel to represent the visible spectrum of light.
