@@ -103,6 +103,7 @@ I find that the bottom line is that there are two ways to approach a career in g
 - Do that PhD with this famous Professor. 
 - Do a Postdoc in the USA.
 - Write that nature paper.
+
 And, there is another path, where you do whatever you want, stay true to yourself, and things turn out fine because people value your unique experience and want to hire you because you can bring something different. But remember that those positions are rare because people want to hire people who are alike. 
 
 **...**
