@@ -6,65 +6,105 @@ comments: true
 categories: Personal
 ---
 
-!!! DRAFT !!! Please be kind ;)
+I was invited to the "To be Honest" conference organized by the German Scholars Organization (GSO) to share my experience about my recent transition from Academia into the industry. In this blog post, I will share my first observations about my transition, which occurred only two months ago.
 
-I was invited in the “To be Honest” conference organised by the German Scholars Organization (GSO) to share my experience about my recent transition from academia into the industry. In this blog post, I will share my two cents about my transition, which took place only two months ago.
+The session was called "Heartbreak or Dance of Joy? Careers After Academia." The organizers kindly sent us a list of guiding questions to prepare for discussion. So, I will use those questions to structure this post :). 
 
-The session was called  “Heartbreak or Dance of Joy? Careers After Academia” and the organisers kindly sent us a list of guiding question to prepare for discussion. So will use those questions to structure this post :). 
+**→ What is your current job about?**
 
-Please briefly introduce yourself 
+I am a Data Scientist for Product Innovation at Siemens Smart Infrastructure. My primary role is to develop and deploy data-driven products that are of general interest all across the company. Of course, I am not alone; I work with a team, but I mainly contribute with my expertise in Data Science, the field I specialized in during my studies, Ph.D., and postdoc. I am also active on a less technical level in data strategy topics.  
 
-→ What’s your current job about? 
+**→ At what point in your academic career did you transition?** 
 
-I am a Data Scientist at Siemens Smart Infrastructure. My role is to develop data-driven products that can be used all across the company. Of course I am not alone, I work with a team, but I mainly provide the Data Science expertise, which is the field I specialised in during my studies, PhD, Postdoc. I am also involved on a lesser technical level about data strategy topics at Siemens. 
+I have transitioned after three years of being a Postdoc (I have been employed at the university for seven years). Some people at this stage call themselves "group leaders," but that is similar to me. I had lectures to give every week, exams to conduct, and four PhD students that I was directly advising (without being their official advisor). I was also involved in administrative committees at the university. My work was similar to that of a Professor but without the corresponding title or recognition. 
 
-→ At what point in your academic career did you transition? 
+And already, I had a feeling that I had seen enough of the academic world. As you step up, you get to do less and less research. You must spend most of your time teaching, handling administrative tasks, and managing younger researchers, students, and technical staff. That last point can quickly become very frustrating if you choose (or poorly choose) your staff.
 
-I have transitioned after three years being a Postdoc (altogether, I have been employed at the university for seven years). I had a feeling that I had seen enough of the academic world, and as you step up you actually get to do less and less research, more teaching, administrative tasks and management of younger researchers, students and technical staff. That last point can quickly become very frustrating if you do not choose (or poorly choose!) your staff (because the head of the lab) and some of them do not have the right attitude to be in research. I found that as you progress, the expectations about research output becomes higher, but you actually have less control over it (until you actually become a Professor, and even that depends on the position), so progress becomes a game of luck. To some extent, staying in Academia is not even survival of the fittest, but survival of the luckiest (don’t get me wrong, at that level everyone is excellent anyway). 
+At this stage and beyond, not choosing may happen for various reasons, e.g., some people are here already, and you have to deal with them; you cannot let them go. Or, you do not have your own lab yet, and the head of the lab does not involve you in hiring decisions. 
 
-→ One thing that surprised you after you stepped beyond academia 
+As you progress in Academia, the expected research output increases (you are an experienced researcher, right? So you can write more papers), but you have less control over productivity -- it depends on your environment and what you can make of it. In my opinion, the most important aspects are: good students, enough funding, and a supportive mentor. 
 
-Everything must go faster, but we usually have better tools (money is not a problem). Not everyone is so smart. Work/Life balance is much better. 
+Until you become a Professor, you do not have much control over the environment, and even once you become Professor, your control is limited. You may have excellent research ideas, but if the topic and your profile do not fit the current expectation of funding parties (which can be influenced by various trends), you will likely not get the funds to perform your research. For example, I have met researchers who would artificially inject buzzwords like "Blockchain" into their project proposal to get the attention and approval of reviewers. 
 
-→ Heartbreak or dance of joy? How did it feel for you personally to move on to a career after academia – and why?
+Ultimately, progress in Academia becomes a game of luck and possibly involves compromises on integrity. One pattern I see when looking at some successful researchers is that they tend to publish the same idea with a slight twist many times but sell it each time as brand new. To some extent, staying in Academia is not survival of the fittest but survival of the luckiest and least scrupulous. Don't get me wrong, at that level, everyone is excellent, and there are still outstanding researchers out there. The stakes are high, and the general attitude of "publish or perish" leads well-intentioned people to bend their integrity. 
 
-It is leap into the unknown, so that is definitely scary and leaving the academic freedom does trigger a bitter feeling. But for me personally this was a dance of joy. I must say I was really fed up with the academic system and I did not feel I could continue to thrive there. I could still have become a Professor, but my feeling was: “I’ll become a Prof and then what?”. Here in the industry career evolution are much more diverse, and I value that diversity. 
+**→ One thing that surprised you after you stepped beyond Academia**
 
-→ What are the differences between working in academia compared to your current job? (Or: what are similarities?) 
+Everything must go faster (time is money). Still, we usually have better tools (money is not a problem, provided it brings you to your goal / the company's goal). Not everyone is so smart, so sometimes you have to go down two or three levels of abstraction to explain your science, although that makes it less precise. 
 
-Team work is much more important, and I feel much less isolated. I am also in a very large company so there is always someone you can ask if you have a question about something. Quality expectation in the industry tend to be a bit lower, it must be “good enough” and not “perfect”, because investing the time to make things 5% better is not worth it economically, but in Academia, we tend to be focussing on those 5%. 
+Work/life balance is much better, though that last point depends on the company. How we approach time in Academia versus industry differs widely. Formally speaking, when you have a contract of employment, you sell your time (that holds both for industry and Academia). But, in Academia, we tend to think as if we "give" our time. We literally "give" our time in Academia for various reasons: passion for research, higher purpose, conference deadlines, (unreasonable) reviewing deadlines, teaching, mentoring, or the "number of papers" required to reach specific goals.
 
-→ What makes PhD graduates and Postdocs well-equipped for careers beyond academia? 
+Also, compensation in Academia is usually not based on performance. We may or may not have the elements I just mentioned in the industry. Still, it is easier to quantify your impact on the business (that depends on your branch), making it easier to set a fair price on your time and negotiate. 
 
-We are extremely good at comparing things. Which is hard, and people who have no been in science long enough have a hard time to do. 
+If you feel your engagement and impact go beyond your current retributions, you should gather proof and ask for a raise. Ultimately, time is the only resource you cannot get back -- making it the most valuable one. Some companies may try to get every drop of productivity out of you and may drive you to burnout. My general advice is to be aware and careful about that. 
 
-→ Was there anything you found to be challenging in transitioning – and if so, what helped you address those challenges? 
+**→ Heartbreak or dance of joy? How did it feel for you personally to move on to a career after Academia – and why?**
 
-I find one of the hardest thing is explaining what I did in my time in Academia. Most people just do not understand what you did and they have no clue what process you went through. And when you talk about it, we from academia tend to largely undersell ourself. Some people in the industry would talk about themself like they are expert at something, but the level they need to call themself “expert” at something is very far below the level we need as research-person. That is important to keep in mind, no to take everything for its face value. 
+It is a leap into the unknown, so that is scary. Also, leaving the academic freedom did trigger a bitter feeling. After all, it was nice to have all this time to pursue something one wanted to do. But life goes on! For me, leaving was more like a dance of joy. I was fed up with the academic system and did not feel I could continue to thrive there. I could still have become a Professor, but I thought: "I will become a Professor, and then what?". 
 
-→ What has helped you the most in getting to where you are right now in your career (e.g. skills, networking, visibility, mentors, etc.)? 
- Resilience. Simply, to never give up. Networking is very helpful too. For example, if you happen to have someone in your network that is working for the company you are applying to, it can be very helpful to get in touch with them about salary negotiations, and when are about to make a decision about to join or not. 
+In the industry, career evolution is much more diverse, and I value that diversity. I also value that I am not so much tied to my employer. If, at some point, work becomes less enjoyable or my life situation changes for whatever reason, it is relatively easy to find another job somewhere else. That is not so much the case in Academia. Spots with unlimited contracts are so scarce that if you ever get one, more likely than not, you will stay in the same spot for your whole career. 
 
-→ How can you prepare yourself for a career after academia? 
 
-Doing some internship. Try to break the stereotype of the crazy scientist. The message should be “yes, I am a scientist, but I am so much more than that”. 
+When I decided to leave, I was afraid others would think (that, alone, worrying about what others think, is a mistake) that I left Academia because "I was not good enough to become a Professor," but I know for a fact that is untrue. I left because I wanted to avoid becoming a Professor, which is a different perspective. That "not-good-enough" thinking is based on the premise that Professors are where they are because they were the best or most promising researchers in their field. That is what many Professors believe, and it is not true! Most professors got the job because a committee (mainly composed of professors, many of whom may have a hidden agenda) decided they were the most fitting candidates at this point. 
 
-→ Is there a good time to leave academia? Or in other words: Can it ever be too late? 
+I would advise anyone considering whether to leave Academia to think deeply about whether they want to become a Professor and to take the time to consider the positive and negative aspects of the job for themselves. If the negative aspects outweigh the positive ones, then you should leave. If not, going to the industry may also help you become a professor, ironically (more on that later).  
+
+**→ What are the differences between working in Academia and your current job? (Or: what are similarities?)**
+
+Teamwork is much more important, and I feel much less isolated. I am also in a very large company, so there is always someone you can ask if you have a question about something. Quality expectations in the industry tend to be a bit lower; it must be "good enough" and not "perfect" because investing the time to make things 5% better is not worth it economically. In Academia, we tend to only focus on those 5% because we have the freedom to do so, and doing anything else would be perceived as not novel enough. 
+
+**→ What makes PhD graduates and Postdocs well-equipped for careers beyond Academia?**
+
+We are extremely good at comparing things. This is a hard thing to do; it requires patience, courage, rigor, method, knowledge in the field, openness, and resistance to your own cognitive biases. People who have not been in science long enough tend to have difficulty doing that. 
+
+Also, we have learned to refrain from taking arguments or whatever is being written somewhere at face value. Through the PhD experience, we have become more genuine, and we are not afraid to say "I do not know" and to speak up when something feels odd. 
+
+**→ Was there anything you found challenging in transitioning – and if so, what helped you address those challenges?**
+
+One of the hardest things is explaining what I did during my time in Academia. Most people need help understanding what you did and have no clue what process you went through. 
+
+And, we from Academia tend to undersell ourselves largely. Some people in the industry would talk about themself like they are expert at something, but the level they need to call themself "expert" at something is very far below the level we need as researchers to call ourselves that. 
+
+That is important to remember, and if you have a PhD, feel free to brag a little about it! 
+
+**→ What has helped you the most in getting to where you are right now in your career (e.g., skills, networking, visibility, mentors, etc.)?**
+
+A skill: Resilience. During my Ph.D., I have learned never to give up. Networking is beneficial, too. For example, having someone in your network working for the company you are applying to can be beneficial. You can contact them about interview preparation, salary negotiations, and when you are about to decide whether to join. 
+
+**→ How can you prepare yourself for a career after Academia?** 
+
+The best way is to do one or several internships. It will give you insights about how the industry works and create important relationships for your network. Try to break away from the stereotype of the crazy scientist and prepare to explain your research in super simple terms. You want to send the message: "Yes, I am a scientist, but I am so much more than that." 
+
+I did not have the opportunity to do an internship during the PhD, but I did quite some before, which has been helpful. 
+
+**→ Is there a good time to leave Academia? Or, in other words: Can it ever be too late?**
  
-I think it is never too late. But some timing in not optimal. Earlier is easier, then it gets harder and harder. But it seems that there is a market for senior prof that are brought to lead some corporate research lab, but that is much much later. 
+It is never too late, but earlier is easier, and then it gets harder and harder. Still, there is a market for senior Professors who are brought in to lead a corporate research lab, but that is much later. You first need to become somewhat famous, which is not guaranteed and may not be what you want. I think the best time to leave Academia is right after the  Ph.D. The industry does not highly value postdoc experience. However, it is challenging because, near the end of the Ph.D., one is usually too busy to engage seriously in job hunting. 
 
-→ Let’s be honest, what should we be aware of when it comes to leaving academia? 
+**→ Let's be honest: what should we be aware of when it comes to leaving Academia?**
 
-There are many positions out, but it is hard to find a position that will be truly interesting to you. Even if you are awesome, you will face many rejections and it will take time to find a position. 
+Many positions are available, but finding a position that will be truly interesting to you is challenging. Many companies are looking for "good workhorses" and are thus not ready to hire a Ph.D. holder who will start by questioning the task first. The other problem is that companies might expect you to be more expensive (and you should be! Ph.D. time is work experience, and you have a great degree). So, why hire an expensive Ph.D. holder if they expect someone else to do the job just as well? In fact, doing the Ph.D. closes more doors than it opens, but many of the remaining jobs are more attractive (to me). Even if you are fantastic, you will face many rejections, and it will take time to find a position. But you must understand that these rejections have nothing to do with you. Often, the position is being given internally already, or they are looking for a profile quite different from yours or whatever they say they are looking for. It is a game of patience and perseverance. 
 
-→ What advice would you give to your younger self (PhD candidate/ Postdoc)?
+**→ What advice would you give to your younger self (PhD candidate/ Postdoc)?**
 
-Do no worry so much. It’s gonna be alright. And push that idea of yours to go do some internship it will make your life later easier. Haters gonna hate.  
+Do not worry so much. It is going to be all right. And push that idea of yours to do some Ph.D. internship. It will make your life easier later. Keep focusing on yourself rather than on what others think. You can only compare yourself with your earlier self. People tend to be much less shiny as how they present themselves. 
 
-→ What piece of advice do you give to younger researchers who are considering transitioning beyond academia today? 
+**→ What piece of advice do you give to younger researchers who are considering transitioning beyond Academia today?**
 
-There are many people in Academia that will try to discourage you. Do not listen to them and find out what you really want to do. Consider what it will take from you to continue in Academia and make a decision based on whether you are ready to do that.  
+Many people in Academia will try to discourage you. Please do not listen to them and find out what you want to do. Consider what it will take from you to continue in Academia and decide whether you are ready to do that.  
 
-→ What was the best piece of advice you have received on your way towards a career after academia? 
+**→ What was the best piece of advice you have received on your way towards a career after Academia?**
 
-That is kind of sad to say, but I did not get any piece of advice that is worth mentioning as “good”. Actually I often got bad advice. Perhaps one reason is that I have not got the chance to get a mentor so far. One thing that I want to share is that just when I announced at the university that I am leaving, I had a talk with the person who was responsible for the whole teaching activities at the faculty, and she told me something I will remember for a long time: “Mr. Fouché, it is great that you are going to industry. It will be a very valuable asset to have some years of experience in the industry when later you apply for professorships.” The bottom line for me is that there are two ways to approach career in general (and there it does not matter much, academia or not). There is the typical path: Do that PhD with this famous Professor, then go do a Postdoc in the US, write that nature paper. And, there is that other path, where you actually do whatever you want, be authentic and things turns out fine because people value your unique experience and want to hire you because you can bring something different. But keep in mind, those positions are rare because people tend to want to hire people who are alike. 
+That is kind of sad to say, but I think I did not get any advice worth mentioning as "good." I often got bad advice. One reason, perhaps, is that I have not had the chance to get a mentor so far. 
+
+There is one thing I would like to share: Just once I announced at the university that I was leaving, I had a chat with the person who was responsible for the whole teaching activities at the faculty, and she told me something I will remember for a long time: "Mr. Fouché, it is great that you are going to industry. It will be a precious asset to have some years of experience in the industry when later you apply for professorships". And I thought, ironically, that was a door that I was closing. This statement surprised me because leaving Academia at first is not commonly seen in people who have become professors (except in applied universities). However, I can see very well how industry experience can be beneficial for leading a chair or a research lab. 
+
+I find that the bottom line is that there are two ways to approach a career in general (and it does not matter much, Academia or not). There is the typical path:
+- Do that PhD with this famous Professor. 
+- Do a Postdoc in the USA.
+- Write that nature paper.
+And, there is another path, where you do whatever you want, stay true to yourself, and things turn out fine because people value your unique experience and want to hire you because you can bring something different. But remember that those positions are rare because people want to hire people who are alike. 
+
+**...**
+
+If you are reading this, you might have considered leaving Academia. Do you see it differently? And, if you did leave, did you have a different experience? I would be happy if you could share in the comments :). 
