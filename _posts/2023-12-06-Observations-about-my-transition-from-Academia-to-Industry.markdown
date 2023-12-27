@@ -16,13 +16,13 @@ I am a Data Scientist for Product Innovation at Siemens Smart Infrastructure. My
 
 **→ At what point in your academic career did you transition?** 
 
-I have transitioned after three years of being a Postdoc (I have been employed at the university for seven years). Some people at this stage call themselves "group leaders," but that is similar to me. I had lectures to give every week, exams to conduct, and four PhD students that I was directly advising (without being their official advisor). I was also involved in administrative committees at the university. My work was similar to that of a Professor but without the corresponding title or recognition. 
+I have transitioned after three years of being a Postdoc (I have been employed at the university for seven years). The position I had is sometimes called "Group Leader", but I find that label misleading. I had lectures to give every week, exams to conduct, and four PhD students that I was directly advising (without being their official advisor on paper). I was also involved in administrative committees at the university. My work was similar to that of a Professor but without the corresponding title or recognition. 
 
-And already, I had a feeling that I had seen enough of the academic world. As you step up, you get to do less and less research. You must spend most of your time teaching, handling administrative tasks, and managing younger researchers, students, and technical staff. That last point can quickly become very frustrating if you choose (or poorly choose) your staff.
+And already, I had a feeling that I had seen enough of the academic world. As you step up, you get to do less and less research. You must spend most of your time teaching, handling administrative tasks, and managing younger researchers, students, and technical staff. That last point can quickly become very frustrating if you choose (or poorly choose) your staff. Academia has a way to suck out the fun of research, which I was not aware of during the Ph.D. journey. 
 
-At this stage and beyond, not choosing may happen for various reasons, e.g., some people are here already, and you have to deal with them; you cannot let them go. Or, you do not have your own lab yet, and the head of the lab does not involve you in hiring decisions. 
+At this stage and beyond, not choosing your staff may happen for various reasons, e.g., some people are here already, and you have to deal with them; you cannot let them go. Or, you do not have your own lab yet, and the head of the lab does not involve you in hiring decisions. 
 
-As you progress in Academia, the expected research output increases (you are an experienced researcher, right? So you can write more papers), but actually you have less control over productivity. What you can achieve mainly depend on your environment, and factors that you cannot control. In my opinion, the most important aspects are: good students, enough funding, and a supportive mentor. 
+As you progress in Academia, the expected research output increases (you are an experienced researcher, right? So you can write more papers), but actually you have less control over productivity. What you can achieve depends on your environment and factors that you cannot control. In my opinion, the most important aspects are: good students, enough funding, and a supportive mentor. 
 
 Until you become a Professor, you do not have much control over your environment, and even once you become Professor, your control is limited. You may have excellent research ideas, but if the topic and your profile do not fit the current expectation of funding parties (which can be influenced by various trends), you will likely not get the funds to perform your research. For example, I have met researchers who would artificially inject buzzwords like "Blockchain" into their project proposal to get the attention and approval of reviewers. 
 
@@ -30,9 +30,9 @@ Ultimately, progress in Academia becomes a game of luck and possibly involves co
 
 **→ One thing that surprised you after you stepped beyond Academia?**
 
-Everything must go faster (time is money). Still, we usually have better tools (money is not a problem, provided it brings you to your goal / the company's goal). Not everyone is so smart, so sometimes you have to go down two or three levels of abstraction to explain your science, although that makes it less precise. 
+Everything must go faster (time is indeed money). Still, we usually have better tools (money is not a problem, provided it brings you to your goal / the company's goal). Not everyone is so smart, so sometimes you have to go down two or three levels of abstraction to explain your science, although that makes it less precise. 
 
-Work/life balance is much better, though that last point depends on the company. How we approach time in Academia versus industry differs widely. Formally speaking, when you have a contract of employment, you sell your time (that holds both for industry and Academia). But, in Academia, we tend to think as if we "give" our time. We literally "give" our time in Academia for various reasons: passion for research, higher purpose, conference deadlines, (unreasonable) reviewing deadlines, teaching, mentoring, or the "number of papers" required to reach specific goals.
+Work/life balance is much better, though that last point depends on the company and your individual behavior too. Generally, how we approach time in Academia versus industry differs widely. Formally speaking, when you have a contract of employment, you sell your time (that holds both for industry and Academia). But, in Academia, we tend to think as if we "give" our time. We literally "give" our time in Academia for various reasons: passion for research, higher purpose, conference deadlines, (unreasonable) reviewing deadlines, teaching, mentoring, or the "number of papers" required to reach specific goals.
 
 Also, compensation in Academia is usually not based on performance. We may or may not have the elements I just mentioned in the industry. Still, it is easier to quantify your impact on the business (that depends on your branch), making it easier to set a fair price on your time and negotiate. 
 
@@ -61,7 +61,7 @@ Also, we have learned to refrain from taking arguments or whatever is being writ
 
 **→ Was there anything you found challenging in transitioning – and if so, what helped you address those challenges?**
 
-One of the hardest things is explaining what I did during my time in Academia. Most people need help understanding what you did and have no clue what process you went through. 
+One of the hardest things is explaining what I did during my time in Academia. I have the feeling most people do not understand what U did and have no clue what process I went through. 
 
 And, we from Academia tend to undersell ourselves largely. Some people in the industry would talk about themself like they are expert at something, but the level they need to call themself "expert" at something is very far below the level we need as researchers to call ourselves an expert. 
 
@@ -75,11 +75,11 @@ A skill: Resilience. During my Ph.D., I have learned never to give up. Networkin
 
 The best way is to do one or several internships. It will give you insights about how the industry works and create important relationships for your network. Try to break away from the stereotype of the crazy scientist and prepare to explain your research in super simple terms. You want to send the message: "Yes, I am a scientist, but I am so much more than that." 
 
-I did not have the opportunity to do an internship during the PhD, but I did quite some before, which has been helpful. 
+I did not have the opportunity to do an internship during the PhD, but I did several internships before, which has been helpful. 
 
 **→ Is there a good time to leave Academia? Or, in other words: Can it ever be too late?**
  
-It is never too late, but earlier is easier, after the Ph.D. it gets harder and harder. Still, there is a market for senior Professors who are brought in to lead a corporate research lab, but that is much later. You first need to become somewhat famous, which is not guaranteed and may not be what you want. I think the best time to leave Academia is right after the  Ph.D. The industry does not highly value postdoc experience. However, it is challenging because, near the end of the Ph.D., one is usually too busy to engage seriously in job hunting. 
+It is never too late, but earlier is easier. After the Ph.D. it gets harder and harder. Still, there is a market for senior Professors who are brought in to lead a corporate research lab, but that is much later. You first need to become somewhat famous, which is not guaranteed and may not be what you want. I think the best time to leave Academia is right after the  Ph.D. The industry does not highly value postdoc experience. However, it is challenging because, near the end of the Ph.D., one is usually too busy to engage seriously in job hunting. 
 
 **→ Let's be honest: what should we be aware of when it comes to leaving Academia?**
 
@@ -87,7 +87,7 @@ Many positions are available, but finding a position that will be truly interest
 
 **→ What advice would you give to your younger self (PhD candidate/ Postdoc)?**
 
-Do not worry so much. It is going to be all right. And push that idea of yours to do some Ph.D. internship. It will make your life easier later. Keep focusing on yourself rather than on what others think. You can only compare yourself with your earlier self. People tend to be much less brilliant than how they present themselves. 
+Do not worry so much. It is going to be all right. And push that idea of yours to do a Ph.D. internship. It will make your life easier later. Keep focusing on yourself rather than on what others think. You can only compare yourself with your earlier self. People tend to be much less brilliant than how they present themselves. 
 
 **→ What piece of advice do you give to younger researchers who are considering transitioning beyond Academia today?**
 
@@ -109,3 +109,16 @@ And, there is another path, where you do whatever you want, stay true to yoursel
 **...**
 
 If you are reading this, you might have considered leaving Academia. Do you see it differently? And, if you did leave, did you have a different experience? I would be happy if you could share in the comments :). 
+
+![img](/img/memes/meme_feelbadforyou_strugglingscientist.jpg){:class="img-responsive"} {:style="max-width: 500px; margin: auto"} 
+
+Want to read more about the topic of leaving Academia? Here are a few blogs I found insightful:
+- [On leaving academia, Hadas Kotek][On leaving academia, Hadas Kotek]
+- [Goodbye, Academia!][Goodbye, Academia!]
+- [Goodbye academia, I get a life.][Goodbye academia, I get a life.]
+- [The Struggling Scientists][The Struggling Scientists] (If you like podcasts!)
+
+[On leaving academia, Hadas Kotek]: https://hkotek.com/blog/on-leaving-academia/
+[Goodbye, Academia!]: https://goodbyeacademia.com/wordpress
+[Goodbye academia, I get a life.]: http://blog.devicerandom.org/2011/02/18/getting-a-life/
+[The Struggling Scientists]: https://thestrugglingscientists.com/
