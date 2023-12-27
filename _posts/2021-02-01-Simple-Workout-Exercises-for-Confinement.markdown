@@ -7,6 +7,7 @@ categories: Sport
 ---
 
 Exercising is extremely important for our physical and mental health. Nowadays, it could not be more true, as we are facing numerous restrictions: We can't go to the gym, we can't meet our friends and family, we work from home and don't have much time outdoor. Also, many of us live in tiny spaces. In this article, I am sharing a small set of exercises that are suitable for our confined lives. Maybe you'll find them useful too!
+<!--more-->
 
 ## How I came up with it
 

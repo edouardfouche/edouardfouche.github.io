@@ -7,6 +7,7 @@ categories: Research
 ---
 
 If you want to be recognized as a scientist, you need to do a PhD. While it is an incredibly fulfilling and transcending experience, working towards a PhD also is a long and tedious journey. There also are many misconceptions about it. If you are interested in research or considering doing a PhD, you may find this article helpful.
+<!--more-->
 
 **Small disclaimer:** As I did most of my studies in Germany and in the field of Computer Science, what I am about to say may not apply well in other places or fields. However, I expect most points to be similar, with a few variations in how things are done. If you have had a different experience or opinion, please feel free to share in the comments!
 

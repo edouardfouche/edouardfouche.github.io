@@ -7,6 +7,7 @@ categories: Machine Learning
 ---
 
 Nowadays, it has become more and more common to publish on [arXiv][arXiv] before peer-review. There are several (good) reasons for that: (1) Academic publishing takes too much time, and even then, (2) your paper often ends up behind a paywall. In over-hyped fields, the state of the art may change every month (or sometimes, week!), so it is a good way to "plant the flag" on your research idea. But what are the consequences of that? 
+<!--more-->
 
 This indeed comes with some drawbacks. Before it was "cool" to publish on [arXiv][arXiv], researchers had no other option but to publish in peer-reviewed journals or conferences, which only have room for a few hundreds of papers per year. As of 2020, we are now facing more than 44K paper per year being published on [arXiv][arXiv], just for the field of Computer Science! This more than 155K per year, all categories together.
 

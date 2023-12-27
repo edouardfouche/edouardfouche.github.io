@@ -7,6 +7,7 @@ categories: Art
 ---
 
 I became recently interested in the Knight's Tour problem. It is one of the oldest problem in computer science, known for more than 1000 years! I have written a program in Scala that solves it for arbitrary-shaped chessboards. I find the visual patterns in the solutions quite interesting. In this article, I will talk about that. 
+<!--more-->
 
 The Background Story
 --------------------

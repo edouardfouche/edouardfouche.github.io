@@ -7,6 +7,7 @@ categories: Project RPi
 ---
 
 I hate missing my train or arriving at the station to find out that my train is being delayed. This happens often, because German public transports are so unpredictable ! Since I take the train every day for work, it is also a pain to check online every time I leave. I found a solution to this problem, using a Raspberry Pi. 
+<!--more-->
 
 The Solution
 ------------

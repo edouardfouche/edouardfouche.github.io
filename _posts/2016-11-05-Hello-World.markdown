@@ -6,7 +6,8 @@ comments: true
 categories: Other
 ---
 
-and welcome ! In this blog, I will speak about my work as a computer scientist, but also about art, culture and all the things I like. I am building this place to share freely a part of my views. Also, I want to get out of my comfort zone ! 
+and welcome ! In this blog, I will speak about my work as a scientist, but also about art, culture and all the things I like. I am building this place as a little corner of the internet that I can use my open diary. 
+<!--more-->
 
 ![comfort_zone](/img/hello_world_1.png){:class="img-responsive"}
 
