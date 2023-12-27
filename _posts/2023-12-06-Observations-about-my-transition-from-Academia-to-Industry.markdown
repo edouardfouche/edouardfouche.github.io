@@ -110,7 +110,7 @@ And, there is another path, where you do whatever you want, stay true to yoursel
 
 If you are reading this, you might have considered leaving Academia. Do you see it differently? And, if you did leave, did you have a different experience? I would be happy if you could share in the comments :). 
 
-![img](/img/memes/meme_feelbadforyou_strugglingscientist.jpg){:class="img-responsive"} {:style="max-width: 500px; margin: auto"} 
+![img](/img/memes/meme_feelbadforyou_strugglingscientist.jpg){:class="img-responsive"}{:style="max-width: 500px; margin: auto"} 
 
 Want to read more about the topic of leaving Academia? Here are a few blogs I found insightful:
 - [On leaving academia, Hadas Kotek][On leaving academia, Hadas Kotek]
