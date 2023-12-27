@@ -117,7 +117,10 @@ Want to read more about the topic of leaving Academia? Here are a few blogs I fo
 - [On leaving academia, Hadas Kotek][On leaving academia, Hadas Kotek]
 - [Goodbye, Academia!][Goodbye, Academia!]
 - [Goodbye academia, I get a life.][Goodbye academia, I get a life.]
-- [The Struggling Scientists][The Struggling Scientists] (If you like podcasts!)
+- [The Struggling Scientists][The Struggling Scientists] (If you like podcasts)
+
+
+
 
 [On leaving academia, Hadas Kotek]: https://hkotek.com/blog/on-leaving-academia/
 [Goodbye, Academia!]: https://goodbyeacademia.com/wordpress
