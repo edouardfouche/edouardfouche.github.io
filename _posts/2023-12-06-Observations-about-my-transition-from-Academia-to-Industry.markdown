@@ -3,10 +3,11 @@ layout: post
 title:  "Observations about my transition from Academia to Industry (two-months in)"
 date:   2023-12-06 00:00:00 +0100
 comments: true
-categories: Personal
+categories: Research
 ---
 
 I was invited to the "To be Honest" conference organized by the German Scholars Organization (GSO) to share my experience about my recent transition from Academia into the industry. In this blog post, I will share my first observations about my transition, which occurred only two months ago.
+
 
 The session was called "Heartbreak or Dance of Joy? Careers After Academia." The organizers kindly sent us a list of guiding questions to prepare for discussion. So, I will use those questions to structure this post :). 
 
