@@ -58,6 +58,8 @@ permalink: /:title/
 
 exclude: [README.md, LICENSE, Gemfile, Gemfile.lock]
 
+excerpt_separator: <!--more-->
+
 # Feed
 #feed:
 #  path: feed.xml
