@@ -378,7 +378,7 @@ a {
 
 /* Define wrapper for title in the main content */
 .title-wrapper {
-  padding: 20px;
+  padding-left: 2%;
   /*height: 70px ;
   border-bottom: 2px solid ;
   padding-left: 2% ;*/
@@ -438,8 +438,8 @@ a {
   margin-top: 3.5%;
   */
   /* border: 1px solid #ccc; */
-  padding: 1%;
-  border-radius: 2px ;
+  padding: 10px;
+  /* border-radius: 2px ; */
 }
 
 .information-line {
