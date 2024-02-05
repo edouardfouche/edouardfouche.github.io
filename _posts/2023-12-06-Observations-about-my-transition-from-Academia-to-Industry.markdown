@@ -13,7 +13,7 @@ The session was called "Heartbreak or Dance of Joy? Careers After Academia." The
 
 **→ What is your current job about?**
 
-I am a Data Scientist for Product Innovation at Siemens Smart Infrastructure. My primary role is to develop and deploy data-driven products that are of general interest all across the company. Of course, I am not alone; I work with a team, but I mainly contribute with my expertise in Data Science, the field I specialized in during my studies, Ph.D., and postdoc. I am also active on a less technical level in data strategy topics.  
+I am a Data Scientist for Product Innovation at Siemens Smart Infrastructure. My primary role is to develop and deploy data-driven products that are of general interest all across the company. Of course, I am not alone; I work with a team, but I mainly contribute with my expertise in Data Science, the field I specialized in during my studies, Ph.D., and Postdoc. I am also active on a less technical level in data strategy topics.  
 
 **→ At what point in your academic career did you transition?** 
 
@@ -39,7 +39,7 @@ Work/life balance is much better, though that last point depends on the company 
 
 Also, compensation in Academia is usually not based on performance, but grade and length of service. It is easy to get locked into a grade (or maybe, you have reached the highest grade possible already?), and then you have little to no evolution. And if you suddenly decide to stop delivering, compensation will likely not change either.  
 
-In turn, it is often easier in the industry to quantify your impact on the business (that depends on your branch), which it easier to set a fair price on your time and to negotiate. If you feel your engagement and impact go beyond your current retributions, you should gather proof and ask for a raise. Ultimately, time is the only resource you cannot get back -- making it the most valuable one. Some companies may try to get every drop of productivity out of you and may drive you to burnout. My general advice is to be aware and careful about that. 
+In turn, it is often easier in the industry to quantify your impact on the business (that depends on your branch), which makes it easier to set a fair price on your time and to negotiate. If you feel your engagement and impact go beyond your current retributions, you should gather proof and ask for a raise. Ultimately, time is the only resource you cannot get back -- making it the most valuable one. Some companies may try to get every drop of productivity out of you and may drive you to burnout. My general advice is to be aware and careful about that. 
 
 **→ Heartbreak or dance of joy? How did it feel for you personally to move on to a career after Academia – and why?**
 
