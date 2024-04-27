@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Observations about my transition from Academia to Industry (two-months in)"
+title:  "Observations about my transition from Academia to Industry"
 date:   2023-12-06 00:00:00 +0100
 comments: true
 categories: Research
