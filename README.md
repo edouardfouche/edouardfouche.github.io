@@ -23,10 +23,10 @@ A few things that are still to be done...
 - Add right column in blog section (categories)
 - ~~Add RSS feed~~
 - ~~Move to CC license~~ 
-- Add citation policy (how?)
-- write more
 - ~~Remove disqus because of GDPR concerns~~
 - ~~Use utterances for comments https://gabrielstaples.com/github-pages-comments/#gsc.tab=0 ~~
+- Add citation policy (how?)
+- write more
 
 A cool trick for title resizing: https://css-tricks.com/snippets/css/fluid-typography/
 
