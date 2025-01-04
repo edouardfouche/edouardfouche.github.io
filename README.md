@@ -19,12 +19,12 @@ A few things that are still to be done...
 - ~~update CV pdf~~
 - ~~write posts~~
 - ~~Latex integration~~
-- Matplotlib / interactive visualization integration 
-- Add right column in blog section (categories)
 - ~~Add RSS feed~~
 - ~~Move to CC license~~ 
 - ~~Remove disqus because of GDPR concerns~~
 - ~~Use utterances for comments https://gabrielstaples.com/github-pages-comments/#gsc.tab=0 ~~
+- Matplotlib / interactive visualization integration 
+- Add right column in blog section (categories)
 - Add citation policy (how?)
 - write more
 
