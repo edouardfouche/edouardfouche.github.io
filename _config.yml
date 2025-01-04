@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Edouard Fouché | Computer Science
-email: edouard.fouche@hotmail.fr
-description: A blog about computer science, art and culture
+title: Edouard Fouché
+email: hello@edouardfouche.com
+description: Personal website
 baseurl: "" # the subpath of your site, e.g. /blog
 
 url: https://edouardfouche.com   # with the https protocol
@@ -50,7 +50,12 @@ exclude:
 disqus: edouardfouche
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-56634264-1
+# google_analytics: UA-56634264-1
+
+donations:
+  paypal:
+    id:             PCUQMFDVS8JWJ  	   # PayPal button ID
+    # text:         Buy me a coffee    # Button text (not used)
 
 # Other stuff
 permalink: /:title/
