@@ -25,10 +25,9 @@ A few things that are still to be done...
 - ~~Move to CC license~~ 
 - Add citation policy (how?)
 - write more
-- Use utterances for comments https://gabrielstaples.com/github-pages-comments/#gsc.tab=0 
-	- another option: https://staticman.net/
-	- or: https://dc25.github.io/myBlog/2017/06/24/using-github-comments-in-a-jekyll-blog.html
-	
+- ~~Remove disqus because of GDPR concerns~~
+- ~~Use utterances for comments https://gabrielstaples.com/github-pages-comments/#gsc.tab=0 ~~
+
 A cool trick for title resizing: https://css-tricks.com/snippets/css/fluid-typography/
 
 Hyphenation: https://www.w3schools.com/cssref/css3_pr_hyphens.asp
