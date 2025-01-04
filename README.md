@@ -11,7 +11,7 @@ A few things that are still to be done...
 - ~~Push to Github~~
 - ~~Domain name edouardfouche.com~~
 - ~~404 page~~
-- ~~Set up https (pending)~~
+- ~~Set up https~~
 	- ~~https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/~~
 	- ~~https://developer.ubuntu.com/en/blog/2016/02/17/how-host-your-static-site-https-github-pages-and-cloudflare/~~
 - ~~update CV online~~
@@ -25,7 +25,10 @@ A few things that are still to be done...
 - ~~Move to CC license~~ 
 - Add citation policy (how?)
 - write more
-
+- Use utterances for comments https://gabrielstaples.com/github-pages-comments/#gsc.tab=0 
+	- another option: https://staticman.net/
+	- or: https://dc25.github.io/myBlog/2017/06/24/using-github-comments-in-a-jekyll-blog.html
+	
 A cool trick for title resizing: https://css-tricks.com/snippets/css/fluid-typography/
 
 Hyphenation: https://www.w3schools.com/cssref/css3_pr_hyphens.asp
