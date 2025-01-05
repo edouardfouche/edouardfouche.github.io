@@ -11,7 +11,7 @@ A few things that are still to be done...
 - ~~Push to Github~~
 - ~~Domain name edouardfouche.com~~
 - ~~404 page~~
-- ~~Set up https (pending)~~
+- ~~Set up https~~
 	- ~~https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/~~
 	- ~~https://developer.ubuntu.com/en/blog/2016/02/17/how-host-your-static-site-https-github-pages-and-cloudflare/~~
 - ~~update CV online~~
@@ -19,10 +19,12 @@ A few things that are still to be done...
 - ~~update CV pdf~~
 - ~~write posts~~
 - ~~Latex integration~~
-- Matplotlib / interactive visualization integration 
-- Add right column in blog section (categories)
 - ~~Add RSS feed~~
 - ~~Move to CC license~~ 
+- ~~Remove disqus because of GDPR concerns~~
+- ~~Use utterances for comments https://gabrielstaples.com/github-pages-comments/#gsc.tab=0 ~~
+- Matplotlib / interactive visualization integration 
+- Add right column in blog section (categories)
 - Add citation policy (how?)
 - write more
 

@@ -46,8 +46,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+# Commenting out as it is not GDPR compliant
 # Your disqus shortname, entering this will enable commenting on posts
-disqus: edouardfouche
+# disqus: edouardfouche
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 # google_analytics: UA-56634264-1

@@ -35,7 +35,9 @@
     <link rel="icon" href="/img/favicon.png" type="image/png">
     <title> Edouard Fouché | {{ page.title }} </title> <!-- Edouard Fouché | Computer Science -->
 
-    <link rel="canonical" href=" { { site.url } }{ { page.url } }" />
+    <!-- Followed recommendation from https://github.com/utterance/utterances/issues/474 -->
+    <!-- <link rel="canonical" href=" { { site.url } }{ { page.url } }" /> -->
+    <link rel="canonical" href="{{ .Permalink }}"/>
 
     <!-- highlighting -->
     <link href="/css/syntax.css" rel="stylesheet">
