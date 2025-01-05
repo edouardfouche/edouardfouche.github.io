@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+  {% include head.html %}
+  
+  <body class="about">
+
+  {% include navbar.html %}
+    
+    <div class="space"></div>
+
+    <div class="content-wrapper">
+    <div class="container">
+    <div class="row" style=" margin-right: 0px ;" >
+
+    <!-- This part is dedicated to the design of the left column -->
+    <!-- <div class="col-xs-12 col-md-10"> -->
+
+    </div>
+
+    <div class="title-wrapper">
+        <h2 style="padding-left:2%" class="content-title" id="sec0"> 
+            Citation Policy
+        </h2>
+    </div>
+
+    <div class="subcontent-wrapper">
+
+    <p class="content-paragraph">
+    <b> License </b> <br>
+    The content of this website is published under the creative common CC-BY-SA-4.0 license, of which you may find a copy of the terms <a href="https://creativecommons.org/licenses/by-sa/4.0/">here</a>. In simple terms, it means that you are free to share or adapt the materials under the condition that you (1) attribute it properly and (2) if you use significant portions of the work you must distribute your contributions under the same license as well. 
+    <br>
+    <b> How to cite </b>
+    <br>
+    Citing blog article is never easy and sometimes frowned upon among academics. But there are a few resources out there you can use to properly cite the materials. For example, see this white paper from Cambridge University on <a href="https://www.research-integrity.admin.cam.ac.uk/files/citing_blogs_as_reference_sources.pdf">Citing Blogs</a>, and this guide from bibtex if you use LaTeX: <a href="https://bibtex.eu/faq/how-can-i-use-bibtex-to-cite-a-website/">How can I use BibTeX to cite a website in LaTex?</a>
+    <br>
+
+    My recommendation is to use BibLatex, the citation must at least include
+    </p>
+
+    <p class="content-paragraph">
+    <ul style="font-size:18px;">
+          <li>Name of the author(s)</li>
+          <li>Title of the article</li>
+          <li>Year it was published</li>
+          <li>URL</li>
+          <li>Date of access</li>
+    </ul> 
+    </p>
+
+    <p class="content-paragraph">
+    With BibLatex, here is how an entry to my blog may look like: 
+    </p>
+
+    <pre style="color:white">
+    @online{EdouardFouche2023,
+      title        = {Observations about my transition from Academia to Industry},
+      author       = {Edouard Fouché},
+      year         = 2023,
+      url          = {https://edouardfouche.com/Observations-about-my-transition-from-Academia-to-Industry/},
+      urldate      = {January 5th, 2025}
+    }</pre>
+    
+    <p class="content-paragraph">
+    In doubt, do not hesitate to reach out (<a href="/about/">How to contact me</a>), I am happy to hear when my work gets cited!
+    </p>
+    </div>
+    <div class="space"></div>
+
+        {% include footer.html %}
+
+    </div>
+  {% include script.html %}
+  </body>
+
+</html>
