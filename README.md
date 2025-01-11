@@ -23,9 +23,10 @@ A few things that are still to be done...
 - ~~Move to CC license~~ 
 - ~~Remove disqus because of GDPR concerns~~
 - ~~Use utterances for comments https://gabrielstaples.com/github-pages-comments/#gsc.tab=0 ~~
+- ~~Add citation policy (how?)~~
+- Add "Book Me" section
 - Matplotlib / interactive visualization integration 
 - Add right column in blog section (categories)
-- Add citation policy (how?)
 - write more
 
 A cool trick for title resizing: https://css-tricks.com/snippets/css/fluid-typography/
