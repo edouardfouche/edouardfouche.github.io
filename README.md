@@ -23,6 +23,7 @@ A few things that are still to be done...
 - ~~Move to CC license~~ 
 - ~~Remove disqus because of GDPR concerns~~
 - ~~Use utterances for comments https://gabrielstaples.com/github-pages-comments/#gsc.tab=0 ~~
+- ~~Migrate to giscus~~
 - ~~Add citation policy (how?)~~
 - Add "Book Me" section
 - Matplotlib / interactive visualization integration 
