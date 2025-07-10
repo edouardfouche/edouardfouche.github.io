@@ -41,7 +41,7 @@ a:hover, a:visited, a:link, a:active
 Require to hav for each page the body with the corresponding class
 As well as the links in the navbar
 */
-body.home a.home, body.about a.about, body.cv a.cv,body.publications a.publications, body.contact a.contact {
+body.home a.home, body.about a.about, body.cv a.cv, body.publications a.publications, body.tengu-consulting a.tengu-consulting, body.contact a.contact {
 color: white;
 
 }
