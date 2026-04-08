@@ -1,14 +1,18 @@
 ---
 layout: post
-title:  "Anthropic's Claude Code leak may become one of the most instructive AI product lessons of the year"
+title:  "Anthropic's Claude Code leak"
 date:   2026-04-08 00:00:00 +0100
 comments: true
 categories: Technology
 ---
 
-Last week, Anthropic accidentally exposed internal Claude Code source through a packaging mistake. Anthropic itself admitted this was a human error. Everyone can now discuss what this leak revealed, and there are at least a few important things to learn from it.
+Last week, Anthropic accidentally exposed internal Claude Code source through a packaging mistake, and that may lead to one of the most instructive AI product lessons of the year. Anthropic itself admitted this was a human error. Everyone can now discuss what this leak revealed, and there are at least a few important things to learn from it.
 
 <!--more-->
+<br>
+![img](/img/posts/2026-04-09-claude-code-leak.png){:class="img-responsive"}
+{:style="max-width: 600px; margin: auto"}
+<br>
 
 **1. In AI, speed of shipping can become a liability if release discipline does not keep up.**
 
