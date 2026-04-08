@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Anthropic's Claude Code leak"
+title:  "Anthropic's Claude Code Leak"
 date:   2026-04-08 00:00:00 +0100
 comments: true
 categories: Technology
