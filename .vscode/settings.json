@@ -1,0 +1,23 @@
+{
+    "editor.rulers": [
+        100
+    ],
+    "python.testing.pytestArgs": [
+        ".","-s"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingIndent": "same",
+    "editor.wordWrapColumn": 100,
+    "pylint.args": ["--load-plugins", "pylint_pydantic", "--rcfile", ".pylintrc"],
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit",
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "black-formatter.args": ["--line-length", "100"],
+}
