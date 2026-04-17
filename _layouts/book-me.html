@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+  {% include head.html %}
+  
+  <body class="book-me">
+
+  {% include navbar.html %}
+    
+
+    <div class="space"></div>
+
+    <div class="content-wrapper">
+    <div class="container">
+    <div class="row" style=" margin-right: 0px ;" >
+    </div>
+
+    <div class="title-wrapper">
+        <h1 style="padding-left:2%" class="content-title" id="sec0">
+            Book Me — Tengu Consulting
+        </h1>
+    </div>
+
+    <div class="subcontent-wrapper">
+      <p class="content-paragraph">
+        Welcome to the intake form for <strong>Tengu Consulting</strong>. 
+      </p>
+      <p class="content-paragraph">
+        Your answers go directly to me (Edouard). I will review them and get back to you as soon as possible. Since I receive many requests, I prioritize serious and well-described inquiries. 
+      </p>
+      <p class="content-paragraph">
+        Please do not submit any sensitive or confidential information via this form.
+      </p>
+    </div>
+
+    <div class="subcontent-wrapper">
+      <!-- 
+        INSTRUCTIONS: Replace YOUR_GOOGLE_FORM_ID below with your actual Google Form ID.
+        To get it: Google Forms > your form > Send > Embed (<>) > copy the URL from the src attribute.
+        The URL looks like: https://docs.google.com/forms/d/e/XXXXXXXXX/viewform?embedded=true
+      -->
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLScVwiX5EptpNc56l8a0JnL3yXriuCh-qs9uraR2hoftb6T1GQ/viewform?embedded=true" 
+        width="100%" 
+        height="1800" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0"
+        style="border: none; max-width: 100%;">
+        Loading…
+      </iframe>
+    </div>
+
+
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+
+    </div>
+
+        <div class="space"></div>
+
+        {% include footer.html %}
+
+    </div>
+
+  {% include script.html %}
+  </body>
+
+</html>
