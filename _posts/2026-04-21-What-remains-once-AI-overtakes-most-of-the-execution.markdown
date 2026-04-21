@@ -1,20 +1,18 @@
 ---
 layout: post
-title:  "In the Age of AI, What Remains Is Taste"
+title:  "What remains once AI overtakes most of the execution? Taste."
 date:   2026-04-21 00:00:00 +0100
 comments: true
 categories: Technology
 ---
 
-What remains once AI overtakes most of the execution? Taste.
+Taste is not whether one uses short rather than long sentences, or whether one dares to use the infamous em-dash with style.
 
 <!--more-->
 <br>
 ![img](/img/posts/2026-04-21-taste.png){:class="img-responsive"}
 {:style="max-width: 600px; margin: auto"}
 <br>
-
-Taste is not whether one uses short rather than long sentences, or whether one dares to use the infamous em-dash with style.
 
 **Taste is using one's best judgement to determine whether the execution is right:** whether it fits the intention and original purpose. You can generate a thousand lines of code in minutes now. But deciding which of those lines belong in your product, and which do not — that is taste.
 
