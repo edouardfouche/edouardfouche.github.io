@@ -1,4 +1,5 @@
-<head> 
+<head>
+    <meta charset="utf-8">
     <!-- Google tag (gtag.js) -->
     <!--
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TWKJLC0HTV"></script>
@@ -13,27 +14,20 @@
 
     {% feed_meta %}
     <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} posts" />
-    <meta charset="utf-8">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal website of Edouard Fouché">
-    <meta name="author" content="Edouard Fouché">
     <meta name="creator" content="Edouard Fouché">
     <meta name="Publisher" content="Edouard Fouché">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="{{ page.robots | default: 'index, follow' }}">
     <meta name="google" content="notranslate" />
-    <meta name="keywords" content="Edouard Fouché, blog, computer, science, art, culture, livestyle, engineering, cv">
-    <meta name="Generator" content="Sublime Text" />
-    <meta name="Identifier-URL" content="www.edouardfouche.com" />
     <meta name="copyright" content="All Rights Reserved - Edouard Fouché" />
-    <meta property="og:image" content="https://edouardfouche.com/img/press-package-edouard-fouche/Edouard-Fouche-by-Cherie-Birkner-for-web-light.jpg" />
-    <meta property='og:title' content="Edouard Fouché | Blog"/>
-    <meta property='og:description' content="Personal website of Edouard Fouché"/>
     <link rel="icon" href="/img/favicon.png" type="image/png">
-    <title> Edouard Fouché | {{ page.title }} </title> <!-- Edouard Fouché | Computer Science -->
 
-    <link rel="canonical" href="{{ page.url | absolute_url }}"/>
+    <!-- jekyll-seo-tag (settings in _config.yml): <title>, author, meta description (front matter
+         `description`, else a post's excerpt, else site.description), canonical URL, Open Graph and
+         Twitter card tags, and JSON-LD structured data. -->
+    {% seo %}
 
     <!-- highlighting -->
     <link href="/css/syntax.css" rel="stylesheet">

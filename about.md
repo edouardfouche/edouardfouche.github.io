@@ -1,6 +1,9 @@
 ---
 layout: about
 title: About
+description: "Short biography of Edouard Fouché, a French-German data scientist with a Ph.D. from KIT who builds decision-making algorithms for energy systems."
+seo:
+  type: Person
 permalink: /about/
 ---
 

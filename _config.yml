@@ -15,7 +15,13 @@
 # in the templates via {{ site.myvariable }}.
 title: Edouard Fouché
 email: hello@edouardfouche.com
-description: Personal website
+# Meta description of the home page and of any page without its own `description:` (posts use their
+# excerpt), and the description of the RSS feed. Search engines show about 155 characters.
+description: >-
+  Personal website and blog of Edouard Fouché, a French-German data scientist. Articles on AI,
+  machine learning, research and careers, plus CV and publications.
+# jekyll-seo-tag titles the home page "<title> | <tagline>" and every other page "<page title> | <title>".
+tagline: Blog
 baseurl: "" # the subpath of your site, e.g. /blog
 
 url: https://edouardfouche.com   # with the https protocol
@@ -23,6 +29,26 @@ enforce_ssl: edouardfouche.com   # without any protocol
 
 twitter_username: edouardfouche
 github_username:  edouardfouche
+
+# SEO (jekyll-seo-tag, called with {% seo %} in _includes/head.html): author of posts in the JSON-LD
+# structured data, and the profiles listed as `sameAs` of the Person on the home and about pages.
+author:
+  name: Edouard Fouché
+  url: https://edouardfouche.com/about/
+social:
+  name: Edouard Fouché
+  links:
+    - https://www.linkedin.com/in/edouardfouche
+    - https://github.com/edouardfouche
+    - https://www.instagram.com/edouardfouche/
+    - https://www.flickr.com/photos/edouardf
+
+# Image shown when a page is shared (og:image / twitter:image). A post can set its own `image:`.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /img/press-package-edouard-fouche/Edouard-Fouche-by-Cherie-Birkner-for-web-light.jpg
 
 # Render post dates in local time. Without this, GitHub Pages builds in UTC and a post dated
 # "2026-04-21 00:00:00 +0100" is shown as April 20. Also makes local builds match production.
@@ -46,6 +72,7 @@ highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag   # <title>, meta description, canonical, Open Graph, Twitter card, JSON-LD
 
 # Commenting out as it is not GDPR compliant
 # Your disqus shortname, entering this will enable commenting on posts
