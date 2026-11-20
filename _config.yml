@@ -64,7 +64,7 @@ permalink: /:title/
 # /blog/:year-:month-:day/:title.html
 
 # Files that must not be published (Jekyll copies any file without front matter as-is).
-exclude: [README.md, CLAUDE.md, LICENSE, Gemfile, Gemfile.lock, vendor/]
+exclude: [README.md, CLAUDE.md, LICENSE, Gemfile, Gemfile.lock, vendor/, docs/]
 
 excerpt_separator: <!--more-->
 
