@@ -69,6 +69,11 @@ removed over GDPR concerns, so do not add tracking or third-party embeds that co
 
 **Edge rewrites:** the site is served through Cloudflare, which rewrites some HTML (`http://` links to
 `https://`, email obfuscation). The live HTML can therefore differ slightly from `_site/`.
+Cloudflare is also the DNS provider. Its SSL/TLS mode should be **Full**: GitHub Pages has no
+certificate for the domain (it presents `*.github.io`), so **Full (strict)** fails with error 526,
+and **Flexible** makes GitHub's own redirects (`www`, trailing slash) point to `http://`. Do not turn
+on "Enforce HTTPS" in the GitHub Pages settings, because Cloudflare already enforces HTTPS. See
+`docs/2026-11-20-seo-follow-up.md`.
 
 **SEO:** `{% seo %}` (jekyll-seo-tag) in `head.html` writes the `<title>`, meta description, canonical
 URL, Open Graph and Twitter card tags, and JSON-LD structured data, so do not add those tags by hand.

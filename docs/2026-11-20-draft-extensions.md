@@ -51,3 +51,6 @@ default, so a checkout holds only one file, and rewriting the index dropped the 
 The deletion was unstaged with `git restore --staged publications/Poster_DS32020_SGMRD.pdf`, so it is
 not part of this change. Until item 16 is decided, check `git status` before committing on a Mac.
 Otherwise, a commit can remove that poster's public URL without anyone noticing.
+
+**Update (same day):** the deletion was intentional. It came from a concurrent session in the same
+checkout, and was redone and committed. See [SEO follow-up](2026-11-20-seo-follow-up.md#1-duplicate-poster-removed).
