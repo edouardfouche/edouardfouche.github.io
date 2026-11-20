@@ -44,12 +44,13 @@ needs its own layout, a stub `.md`, and a link in `_includes/navbar.html`.
 `_sass/` exists, but the custom layouts do not reference either. Upgrading the Bootstrap CSS can change
 the design, so leave it unless that is the goal.
 
-**Global scripts in `head.html`:** MathJax 2.7 (so LaTeX works in posts), jQuery 3.7.1 from Google's CDN
-with an `integrity` hash, then the local Bootstrap JS 3.4.1 (`js/bootstrap.min.js`). Bootstrap JS must
+**Global scripts in `head.html`:** MathJax 2.7.9 from cdnjs (so LaTeX works in posts; used by the
+concept-drift and knight's-tour posts), jQuery 3.7.1 from Google's CDN, then the local Bootstrap JS
+3.4.1 (`js/bootstrap.min.js`). Both CDN scripts carry `integrity` hashes. Bootstrap JS must
 load after jQuery. The only active JavaScript that uses them is Bootstrap's collapse plugin, which
 drives the mobile navbar toggle. The gallery, dropdown and scrollspy scripts in `_layouts/cv.html` are
-commented out. If you change the jQuery version, update its `integrity` hash, or the browser refuses to
-run it. Analytics is Simple Analytics in `_includes/script.html`. Google Analytics and Disqus were
+commented out. If you change the version of a CDN script, update its `integrity` hash, or the browser
+refuses to run it. Analytics is Simple Analytics in `_includes/script.html`. Google Analytics and Disqus were
 removed over GDPR concerns, so do not add tracking or third-party embeds that collect personal data.
 
 **Edge rewrites:** the site is served through Cloudflare, which rewrites some HTML (`http://` links to
