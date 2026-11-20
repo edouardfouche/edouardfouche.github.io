@@ -73,6 +73,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag   # <title>, meta description, canonical, Open Graph, Twitter card, JSON-LD
+  - jekyll-sitemap   # /sitemap.xml, plus /robots.txt pointing to it (there is no robots.txt file)
 
 # Commenting out as it is not GDPR compliant
 # Your disqus shortname, entering this will enable commenting on posts
