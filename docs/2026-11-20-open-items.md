@@ -19,6 +19,8 @@ image path). This changes the files, not the design. The 10 MB print-quality pre
 
 ## 2. RSS feed is announced twice, with the wrong type
 
+**Resolved** on 2026-11-20 in `cf8246a`: see the [SEO record](2026-11-20-seo.md).
+
 The built `<head>` contains two `<link rel="alternate">` tags for the same `/feed.xml`: one from
 jekyll-feed's `{% feed_meta %}` and one written by hand in `_includes/head.html`. Both declare
 `type="application/atom+xml"`, but `feed.xml` is a hand-written **RSS 2.0** feed, which should be
