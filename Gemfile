@@ -1,42 +1,17 @@
 source "https://rubygems.org"
-ruby RUBY_VERSION
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+# This site is deployed by GitHub Pages' built-in Jekyll build (from the root of `master`), which
+# ignores this Gemfile and uses its own pinned versions: https://pages.github.com/versions/
+# The `github-pages` gem pins exactly those versions (Jekyll, kramdown, jekyll-feed, minima, ...),
+# so a local build renders the same HTML as the live site.
 #
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-#gem "jekyll", "3.6.3"
-gem 'jekyll', '~> 4.2'
-gem "addressable", ">= 2.8.0"
-gem "rexml", ">= 3.2.5"
+# Usage:   bundle install && bundle exec jekyll serve
+# Upgrade: when https://pages.github.com/versions/ lists a newer `github-pages` version, bump the
+#          constraint below and run `bundle update github-pages`.
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
-
-
-# kramdown
-gem "kramdown", ">= 2.3.1"
-gem "kramdown-parser-gfm"
-
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.0"
-
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-
-# If you have any plugins, put them here!
-group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.6"
-end
-
-
+# `jekyll serve` needs webrick, which is no longer bundled with Ruby >= 3.0.
 gem "webrick", "~> 1.8"
-gem "jekyll-sass-converter", "~> 2.0"
-gem "csv", "~> 3.3"
 
-gem "base64", "~> 0.2.0"
-
-gem "bigdecimal", "~> 3.1"
+# Silences the "To use retry middleware with Faraday v2.0+" warning from jekyll-github-metadata.
+gem "faraday-retry", "~> 2.2"

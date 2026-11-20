@@ -1,6 +1,21 @@
 # edouardfouche.github.io
 my personal website
 
+Local development
+-----------------
+
+Requires [rbenv](https://github.com/rbenv/rbenv) (`brew install rbenv ruby-build libyaml`). The
+`github-pages` gem pins the same versions that GitHub Pages builds with, so a local build matches the
+live site.
+
+```sh
+rbenv install          # installs the Ruby version in .ruby-version
+bundle install
+bundle exec jekyll serve   # http://localhost:4000 (add --drafts to preview _drafts/)
+```
+
+Pushing to `master` deploys the site through GitHub Pages.
+
 TODO(s)
 -------
 

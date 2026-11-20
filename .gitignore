@@ -7,8 +7,7 @@ _site
 .DS_Store
 .jekyll
 .bundle
-Gemfile
-Gemfile.lock
+vendor/
 node_modules
 package.json
 .Rhistory
