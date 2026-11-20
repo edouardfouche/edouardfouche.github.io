@@ -24,6 +24,10 @@ enforce_ssl: edouardfouche.com   # without any protocol
 twitter_username: edouardfouche
 github_username:  edouardfouche
 
+# Render post dates in local time. Without this, GitHub Pages builds in UTC and a post dated
+# "2026-04-21 00:00:00 +0100" is shown as April 20. Also makes local builds match production.
+timezone: Europe/Berlin
+
 # Build settings
 #markdown: kramdown
 #highlighter: pygments
