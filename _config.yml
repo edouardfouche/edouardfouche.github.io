@@ -42,9 +42,6 @@ highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
 
 # Commenting out as it is not GDPR compliant
 # Your disqus shortname, entering this will enable commenting on posts
@@ -62,7 +59,8 @@ donations:
 permalink: /:title/
 # /blog/:year-:month-:day/:title.html
 
-exclude: [README.md, LICENSE, Gemfile, Gemfile.lock]
+# Files that must not be published (Jekyll copies any file without front matter as-is).
+exclude: [README.md, CLAUDE.md, LICENSE, Gemfile, Gemfile.lock, vendor/]
 
 excerpt_separator: <!--more-->
 
