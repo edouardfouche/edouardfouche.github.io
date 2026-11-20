@@ -7,6 +7,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Personal website and blog of Edouard Fouché, served at https://edouardfouche.com (see `CNAME`). It is a
 Jekyll static site with no tests, linter, or CI.
 
+## Documenting work (always)
+
+Record every piece of maintenance or development work in `docs/` as Markdown. This includes what you
+observed, what you changed and why, and how you verified it.
+
+- Name each file `docs/YYYY-MM-DD-<topic>.md`, using the date of the work and a short kebab-case topic.
+  Do not add Jekyll front matter.
+- Add each new file to the index table in `docs/README.md`, which also explains the conventions.
+- Dated files are records. When something changes later, write a new dated file that links to the
+  old one; do not rewrite history.
+- The repository is public. Never put email addresses, tokens or local machine paths in `docs/`.
+- `docs/` is excluded from the published site in `_config.yml`, and must stay excluded.
+
 ## Build and deploy
 
 - Toolchain: rbenv (Homebrew) with the Ruby version pinned in `.ruby-version`, matching the Ruby that
@@ -23,7 +36,7 @@ Jekyll static site with no tests, linter, or CI.
   `Gemfile` and would break or render them differently.
 - Upgrading: when https://pages.github.com/versions/ lists a newer `github-pages` version, bump the
   constraint in the `Gemfile`, run `bundle update github-pages`, and commit `Gemfile.lock`.
-- `_config.yml`'s `exclude` list keeps repo-only files (README, CLAUDE.md, Gemfile, ...) out of the
+- `_config.yml`'s `exclude` list keeps repo-only files (README, CLAUDE.md, docs/, Gemfile, ...) out of the
   published site. Jekyll copies every other file without front matter as-is, so add any new repo-only
   file to that list.
 
