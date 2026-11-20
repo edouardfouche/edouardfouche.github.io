@@ -32,6 +32,20 @@ The drafts session saw the change in the shared index, took it for an accident, 
 `git restore --staged`. The removal was then redone and committed right away. Lesson: when two sessions share one checkout, stage and
 commit in a single step, or work in separate git worktrees.
 
+**Checked again after deploy (same day), by the drafts session:**
+
+- `45b07cc` removed the right copy. HEAD tracks only `POSTER_DS32020_SGMRD.pdf`. That is the name the
+  publications page links to, and it matches the `POSTER_<NAME>_<VENUE><YY>.pdf` convention of the
+  other posters.
+- Live, the upper-case URL returns 200, and the downloaded file hashes to blob `98370d9`. The
+  lower-case URL returns 404, and `sitemap.xml` lists 62 URLs, with only the upper-case poster.
+- History: the lower-case name is the original. It was added in `df8bc4a` (2021-01-05), and the
+  publications page linked it until `2906a65` (2022-08-31) switched the link to the upper-case copy.
+  Links saved or shared during those 20 months now get a 404. If that matters, a Cloudflare redirect
+  rule (301 from `/publications/Poster_DS32020_SGMRD.pdf` to the upper-case URL) restores them. A
+  redirect inside the repository is not possible: a macOS checkout cannot hold both names, and
+  `jekyll-redirect-from` writes HTML pages, not PDFs.
+
 ## 2. How to submit the sitemap
 
 The sitemap is generated at every build: https://edouardfouche.com/sitemap.xml (62 URLs: the home page,
