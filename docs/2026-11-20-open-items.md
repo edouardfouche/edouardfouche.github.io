@@ -58,6 +58,7 @@ verify those two posts visually.
   having the extension `.04`: it renders at `/Automatic-backup-with-SSH-on-Ubuntu-16/` without
   Markdown conversion. Add `.markdown` to these files when you resume work on them. Drafts are never
   published, so the live site is unaffected.
+  **Resolved** on 2026-11-20 in `52fe52d`: see [Draft file extensions](2026-11-20-draft-extensions.md).
 
 ## 6. Dependabot and the `github-pages` gem
 

@@ -27,3 +27,4 @@ so nothing here ends up on edouardfouche.com.
 | 2026-11-20 | [Maintenance changes](2026-11-20-maintenance-changes.md) | Every change made, why, and how it was verified before and after deploy |
 | 2026-11-20 | [Open items](2026-11-20-open-items.md) | Observations not acted on yet, with suggested fixes |
 | 2026-11-20 | [SEO](2026-11-20-seo.md) | Search and link-preview metadata: findings, jekyll-seo-tag and sitemap, verification, what is left |
+| 2026-11-20 | [Draft file extensions](2026-11-20-draft-extensions.md) | Five drafts that Jekyll skipped or rendered unconverted, renamed to `.markdown` |
