@@ -113,9 +113,12 @@ See `docs/2026-11-20-seo.md`.
 ## Publications and CV
 
 - `_layouts/publications.html` holds the publication list as hand-maintained HTML, grouped by year
-  under `<h2><b> YEAR </b><h2>` headings, newest first. Each entry is a
+  under `<h2><b> YEAR </b></h2>` headings, newest first. Each entry is a
   `<div class="information-line"><p>…</p></div>` that contains bold authors, a linked title, the venue,
-  and then `<b> Supplementary Material:</b>` links. Copy an existing entry when you add one.
+  and then `<b> Supplementary Material:</b>` links. Copy an existing entry when you add one. The
+  entries' font weight and line height, and the spacing below each heading, come from the
+  `body.publications` rules in `css/customstyle.css`. They reproduce the look the page had while its
+  headings were left unclosed (see `docs/2026-11-21-publications-scholar-sync.md`).
 - Paper PDFs, slides and posters go in `publications/` and are linked by absolute URL
   (`https://edouardfouche.com/publications/<file>`). Name the files `SLIDES_<NAME>_<VENUE><YY>.pdf` and
   `POSTER_<NAME>_<VENUE><YY>.pdf`, for example `POSTER_SARAF_KDD26.pdf`.

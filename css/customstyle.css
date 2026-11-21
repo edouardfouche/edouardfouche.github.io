@@ -458,6 +458,20 @@ a {
   margin-top: 0px ;
 }
 
+/* Publications page. Until 2026-11-21 its year headings were never closed, so the entries of each
+   year sat inside an <h2>. These rules keep the look that this produced: the entries' heading font
+   weight and line height, and the spacing that the empty headings added. */
+body.publications .information-line {
+  font-weight: 500;
+  line-height: 1.7;
+}
+body.publications .subcontent-wrapper h2 {
+  margin-bottom: 1em;
+}
+body.publications .subcontent-wrapper {
+  padding-bottom: 25px;
+}
+
 .main-info {
   clear: both ;
   background-color: red ;
