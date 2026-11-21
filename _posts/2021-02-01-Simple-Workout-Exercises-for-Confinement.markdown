@@ -17,7 +17,7 @@ Let me start with some background. In Q4 2019, I visited UIUC in Champaign (IL, 
 
 ## The Daily Derby Hell Workout
 
-<object data="/publications/workout_derby_v1_cc.pdf" type="application/pdf" style="min-height:100vh;width:100%">
+<object data="/publications/workout_derby_v1_cc.pdf" type="application/pdf" title="The Daily Derby Hell Workout (PDF)" style="min-height:100vh;width:100%">
         <p>It appears that this browser does not support embedded PDFs. Please download the PDF to view it: <a href="/publications/workout_derby_v1_cc.pdf">Download PDF</a>.</p>
 </object>
 <br />
