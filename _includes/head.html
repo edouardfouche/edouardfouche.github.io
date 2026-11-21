@@ -49,10 +49,11 @@
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha512-M36RUChWzAh1veeenRZFql7HydLEnkYmoloiCvVrhz402UZgKI93qkV7SsaxtVKdN95Wzajh39ysrXCq34NTsg==" crossorigin="anonymous" type="text/javascript"></script>
     {% endif %}
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/js/bootstrap.min.js"></script>
+    {% comment %} jQuery 3.7.1 (self-hosted, so pages do not contact Google; same file as the CDN copy) and
+       Bootstrap JS 3.4.1. Their only job is the collapse plugin of the phone navbar. `defer` keeps their
+       order and lets the page render before they run. {% endcomment %}
+    <script defer src="/js/jquery-3.7.1.min.js"></script>
+    <script defer src="/js/bootstrap.min.js"></script>
 </head>
 
 
