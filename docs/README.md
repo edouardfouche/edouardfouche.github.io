@@ -29,3 +29,4 @@ so nothing here ends up on edouardfouche.com.
 | 2026-11-20 | [SEO](2026-11-20-seo.md) | Search and link-preview metadata: findings, jekyll-seo-tag and sitemap, verification, what is left |
 | 2026-11-20 | [Draft file extensions](2026-11-20-draft-extensions.md) | Five drafts that Jekyll skipped or rendered unconverted, renamed to `.markdown` |
 | 2026-11-20 | [SEO follow-up](2026-11-20-seo-follow-up.md) | Duplicate poster removed; how to submit the sitemap (Google, Bing) and fix the redirect chains in Cloudflare |
+| 2026-11-21 | [Knowledge work post](2026-11-21-knowledge-work-post.md) | LinkedIn post of 2026-11-19 added as a blog post, with its own share image, description and alt text |
