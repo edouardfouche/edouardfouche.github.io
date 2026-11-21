@@ -10,7 +10,7 @@ Taste is not whether one uses short rather than long sentences, or whether one d
 
 <!--more-->
 <br>
-![img](/img/posts/2026-04-21-taste.png){:class="img-responsive"}
+![img](/img/posts/2026-04-21-taste.jpg){:class="img-responsive"}
 {:style="max-width: 600px; margin: auto"}
 <br>
 

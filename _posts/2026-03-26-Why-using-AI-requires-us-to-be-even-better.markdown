@@ -10,7 +10,7 @@ In almost every movie involving air or space travel, the pilot relies on autopil
 
 <!--more-->
 <br>
-![img](/img/posts/2026-03-26-autopilot.png){:class="img-responsive"}
+![img](/img/posts/2026-03-26-autopilot.jpg){:class="img-responsive"}
 {:style="max-width: 600px; margin: auto"}
 <br>
 

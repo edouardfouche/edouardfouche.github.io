@@ -111,14 +111,20 @@ See `docs/2026-11-20-seo.md`.
   `image:` (a path like `/img/posts/...`) to use its own share image instead of the default portrait.
   `feed.xml` is a hand-written RSS feed of the last 10 posts with their full content. It takes the place
   of the feed that jekyll-feed would generate.
-- Images: recent posts use `/img/posts/YYYY-MM-DD-<name>.png`, and older posts use
+- Images: recent posts use `/img/posts/YYYY-MM-DD-<name>.jpg`, and older posts use
   `/img/<post-slug>/`. The usual pattern is kramdown attribute lists:
   ```
   <br>
-  ![img](/img/posts/2026-04-21-taste.png){:class="img-responsive"}
+  ![Describe the image](/img/posts/2026-04-21-taste.jpg){:class="img-responsive"}
   {:style="max-width: 600px; margin: auto"}
   <br>
   ```
+  Posts are at most 720px wide, so export images at most 1440px wide (2x for high-density screens):
+  JPEG for photos and illustrations, PNG only for graphics with flat colours or transparency
+  (`sips -Z 1440 -s format jpeg -s formatOptions 82 in.png --out out.jpg` resizes on macOS). Remove
+  the metadata before committing, because phone photos carry the GPS position: `exiftool -all= out.jpg`,
+  or Preview → Tools → Show Inspector → GPS → Remove Location Info. Write a real alt text instead of
+  "img".
 
 ## Publications and CV
 

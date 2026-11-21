@@ -15,7 +15,7 @@ The Solution
 A Raspberry Pi computer shows in my corridor the departure times for the next trains or public transports (bus, etc.) for a set of chosen lines. Let me first show you how the solution looks like ! 
 
 <br>
-[![Ok Rpi, show me the next trains](/img/deutsche-bahn/Rpi.png)](https://www.youtube.com/watch?v=Ocr8C1BaPi8)
+[![Ok Rpi, show me the next trains](/img/deutsche-bahn/Rpi.jpg)](https://www.youtube.com/watch?v=Ocr8C1BaPi8)
 {:style="margin: auto"}
 <br>
 
