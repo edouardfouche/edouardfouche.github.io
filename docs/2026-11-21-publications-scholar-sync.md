@@ -113,3 +113,25 @@ and the last one added 5px below the list.
 3. **Missing supplementary material**, which only the authors can provide: talk slides for PESS'26,
    code for SERAF (`github.com/ShiqiaoZhou` has a SARAF repository but no SERAF one), and slides or
    posters for the PAKDD'25, DSAA'24, DS'23, e-Energy'21, ARIC'19 and SSDBM'18 papers.
+
+## Post-deploy check
+
+`2c70fac` was pushed to `master`, and the GitHub Pages build succeeded (48 s). On the live site:
+
+- **HTML: as built.** `/publications/` has the PESS'26 entry and 25 entries in all. SERAF is in Seoul,
+  "32nd" and "34th" are fixed, there is no EGU entry, and all 9 year headings are closed (none left
+  unclosed). Cloudflare does not cache the HTML (`cf-cache-status: DYNAMIC`).
+- **CSS: stale at the edge.** Cloudflare served the previous `/css/customstyle.css`
+  (`cf-cache-status: HIT`, `last-modified` 09:01:23 UTC from the build before this one,
+  `cache-control: max-age=14400`). It had cached that copy at about 09:08 UTC, minutes before this
+  build finished. GitHub Pages itself already served the new file: a request sent straight to a GitHub
+  Pages IP returned `last-modified` 09:11:22 UTC and the new `body.publications` rules.
+- So for up to 4 hours the live page combines the new HTML with the old CSS. Headless Chromium on
+  the live page found the entries at weight 400 and line height 22.9px instead of 500 and 27.2px. The
+  page was shorter than the local build (2966 px instead of 3361 px at desktop size). It stays readable;
+  it shows the plain look of properly closed headings. The edge copy expires at about 13:08 UTC, and
+  browsers that fetched the old CSS keep it for up to 4 hours too. A purge of that URL in Cloudflare
+  (Caching → Configuration → Purge Cache → Custom Purge) ends it at the edge immediately.
+
+This applies to every change to CSS, JavaScript or images: the edge keeps the old file for up to
+4 hours, while new HTML is live within a minute. `CLAUDE.md` now says so.

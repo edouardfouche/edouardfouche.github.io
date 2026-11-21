@@ -74,6 +74,10 @@ certificate for the domain (it presents `*.github.io`), so **Full (strict)** fai
 and **Flexible** makes GitHub's own redirects (`www`, trailing slash) point to `http://`. Do not turn
 on "Enforce HTTPS" in the GitHub Pages settings, because Cloudflare already enforces HTTPS. See
 `docs/2026-11-20-seo-follow-up.md`.
+Cloudflare caches static files (CSS, JS, images) for up to 4 hours (`max-age=14400`), but not HTML.
+After a deploy that changes such a file, the live site can serve the new HTML with the old file
+until the cached copy expires. Check `cf-cache-status` on the changed file, and purge its URL in
+Cloudflare if the mix matters. See `docs/2026-11-21-publications-scholar-sync.md`.
 
 **SEO:** `{% seo %}` (jekyll-seo-tag) in `head.html` writes the `<title>`, meta description, canonical
 URL, Open Graph and Twitter card tags, and JSON-LD structured data, so do not add those tags by hand.
