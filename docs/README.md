@@ -33,3 +33,4 @@ so nothing here ends up on edouardfouche.com.
 | 2026-11-21 | [Knowledge work post](2026-11-21-knowledge-work-post.md) | LinkedIn post of 2026-11-19 added as a blog post, with its own share image, description and alt text |
 | 2026-11-21 | [Publications vs. Google Scholar](2026-11-21-publications-scholar-sync.md) | Missing PESS'26 paper added, entry errors fixed, unclosed year headings fixed (pixel-identical), all links checked; open items for the page and the Scholar profile |
 | 2026-11-21 | [Blog margins](2026-11-21-blog-margins.md) | Index and posts share one centered 720px reading column with equal margins; left-aligned text and wrapping inline code on phones |
+| 2026-11-21 | [Full site audit](2026-11-21-full-audit.md) | Second, broader audit (legal texts, privacy, dead links, performance, accessibility with axe-core, search, security headers, code health), with a prioritized list of what to fix and the status of earlier open items |
