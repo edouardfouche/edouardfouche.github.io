@@ -1,7 +1,7 @@
 ---
 layout: impressum
 title: Impressum
-description: "Impressum and legal disclosure (Angaben gemäß § 5 TMG) for edouardfouche.com."
+description: "Impressum (Angaben gemäß § 5 DDG) and privacy policy (Datenschutzerklärung) of edouardfouche.com."
 permalink: /impressum/
 ---
 

@@ -2,176 +2,180 @@
 <html lang="en">
 
   {% include head.html %}
-  
-  <body class="about">
+
+  <body class="impressum">
 
   {% include navbar.html %}
-    
+
     <div class="space"></div>
 
     <div class="content-wrapper">
     <div class="container">
     <div class="row" style=" margin-right: 0px ;" >
-      <!-- This part is dedicated to the design of the left column -->
-      <!-- <div class="col-xs-12 col-md-10"> -->
     </div>
 
+    {% comment %} Impressum (§ 5 DDG, § 18 Abs. 2 MStV) and privacy policy (Art. 13 GDPR) in one page; the
+       footer links both. Update the privacy policy whenever a third-party service is added or removed.
+       Cloudflare skips everything between email_off markers, so the address shows without JavaScript.
+       See docs/2026-11-21-impressum-privacy.md. {% endcomment %}
 
     <div class="title-wrapper">
-        <h1 style="padding-left:2%" id="sec0"> 
+        <h1 style="padding-left:2%" id="impressum">
             Impressum / Legal Disclosure
         </h1>
     </div>
 
     <div class="subcontent-wrapper">
-
     <p class="content-paragraph">
-    <i>Since this website is operated from Germany, we provide the following legal disclosure in German. </i>
+    <i>Since this website is operated from Germany, the legal disclosure and the privacy policy are in German.</i>
     </p>
-
     </div>
 
+    <div lang="de">
+
     <div class="title-wrapper">
-        <h2 style="padding-left:2%" class="content-title" id="sec0"> 
-            Angaben gemäß § 5 TMG
+        <h2 style="padding-left:2%" class="content-title" id="angaben">
+            Angaben gemäß § 5 DDG
         </h2>
     </div>
 
     <div class="subcontent-wrapper">
-
     <p class="content-paragraph">
-    <b>Name des Betreibers:</b>
-    <br>
     Edouard Fouché
     <br>
-    <!-- Vertreten durch / Represented by: -->
-    <!--[Full Name of the Legal Representative (if applicable)] -->
-    <b> Anschrift:</b>
+    Adamstr. 43
     <br>
-    Adamstr. 43 
+    90489 Nürnberg
     <br>
-    90489, Nürnberg
-    <br>
-    Germany
-    <br>
-    <!-- <b> Kontakt:</b> <br> -->
-    <b>Kontakt (E-Mail): </b> 
-    <br> hello@edouardfouche.com
-    <!-- Phone? -->
-
-    <!-- 
-    Registereintrag / Commercial Register Entry:
-    Eintragung im Handelsregister / Registered in the commercial register.
-    Registergericht / Register Court: [Name of the Register Court]
-    Registernummer / Registration Number: [Registration Number]
-
-    Umsatzsteuer-ID / VAT ID:
-    Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz / VAT identification number according to §27a of the German VAT Act: [Your VAT ID Number]
-    -->
+    Deutschland
     </p>
-
+    <p class="content-paragraph">
+    <b>Kontakt:</b>
+    <br>
+    E-Mail: <!--email_off--><a href="mailto:hello@edouardfouche.com">hello@edouardfouche.com</a><!--/email_off-->
+    </p>
     </div>
 
     <div class="title-wrapper">
-        <h2 style="padding-left:2%" class="content-title" id="sec0"> 
-            Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV 
+        <h2 style="padding-left:2%" class="content-title" id="verantwortlich">
+            Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+        </h2>
+    </div>
+
+    <div class="subcontent-wrapper">
+    <p class="content-paragraph">
+    Edouard Fouché, Anschrift wie oben.
+    </p>
+    </div>
+
+    <div class="title-wrapper">
+        <h2 style="padding-left:2%" class="content-title" id="haftung">
+            Haftung für Inhalte und Links
+        </h2>
+    </div>
+
+    <div class="subcontent-wrapper">
+    <p class="content-paragraph">
+    Die Inhalte dieser Website erstelle ich mit Sorgfalt. Für ihre Richtigkeit, Vollständigkeit und Aktualität kann ich jedoch keine Gewähr übernehmen.
+    </p>
+    <p class="content-paragraph">
+    Diese Website enthält Links zu Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
+    </p>
+    <p class="content-paragraph">
+    Sobald mir eine Rechtsverletzung bekannt wird, entferne ich den betreffenden Inhalt oder Link umgehend.
+    </p>
+    </div>
+
+    <div class="title-wrapper">
+        <h2 style="padding-left:2%" class="content-title" id="urheberrecht">
+            Urheberrecht und Lizenz
+        </h2>
+    </div>
+
+    <div class="subcontent-wrapper">
+    <p class="content-paragraph">
+    Soweit nicht anders angegeben, stehen die Texte und Bilder von Edouard Fouché auf dieser Website unter der Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">Creative Commons Namensnennung – Weitergabe unter gleichen Bedingungen 4.0 International (CC BY-SA 4.0)</a>. Sie dürfen sie unter den Bedingungen dieser Lizenz teilen und bearbeiten, auch kommerziell.
+    </p>
+    <p class="content-paragraph">
+    Ausgenommen sind die Fotos von Chérie Birkner, die wissenschaftlichen Publikationen (Artikel, Folien, Poster), an denen Verlage oder Mitautoren Rechte halten können, sowie als solche gekennzeichnete Inhalte Dritter. Wie Sie Beiträge zitieren, beschreibt die <a href="/citation-policy/" lang="en">Citation Policy</a>.
+    </p>
+    </div>
+
+    <div class="title-wrapper">
+        <h2 style="padding-left:2%" class="content-title" id="datenschutz">
+            Datenschutzerklärung
         </h2>
     </div>
 
     <div class="subcontent-wrapper">
 
     <p class="content-paragraph">
-    <b>Name:</b>
+    <b>Verantwortlicher</b>
     <br>
-    Edouard Fouché
-    <br>
-    <b>Adresse:</b>
-    <br>
-    Adamstr. 43 
-    <br>
-    90489, Nürnberg
-    <br>
-    Germany
+    Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website ist Edouard Fouché (Anschrift und E-Mail siehe oben).
     </p>
-
-    </div>
-
-
-    <div class="title-wrapper">
-        <h2 style="padding-left:2%" class="content-title" id="sec0"> 
-            Haftungsausschluss
-        </h2>
-    </div>
-
-    <div class="subcontent-wrapper">
 
     <p class="content-paragraph">
-    <b>Haftung für Inhalte:</b>
+    <b>Grundsätze</b>
     <br>
-    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.
-    <br>
-    <b>Haftung für Links:</b>
-    <br>
-    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. 
+    Ich verarbeite so wenige personenbezogene Daten wie möglich. Diese Website setzt keine Cookies und nutzt keine Werbe- oder Tracking-Dienste. Bei den unten beschriebenen Diensten werden jedoch personenbezogene Daten verarbeitet, insbesondere Ihre IP-Adresse.
     </p>
-
-    </div>
-
-    <div class="title-wrapper">
-        <h2 style="padding-left:2%" class="content-title" id="sec0"> 
-            Urheberrecht
-        </h2>
-    </div>
-
-    <div class="subcontent-wrapper">
 
     <p class="content-paragraph">
-    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. 
+    <b>Hosting und Auslieferung (GitHub Pages, Cloudflare)</b>
+    <br>
+    Diese Website wird bei GitHub Pages (GitHub, Inc., USA) gehostet und über das Netzwerk von Cloudflare (Cloudflare, Inc., USA) ausgeliefert. Beim Aufruf einer Seite verarbeiten beide Anbieter die technisch notwendigen Verbindungsdaten, insbesondere Ihre IP-Adresse, Datum und Uhrzeit, die aufgerufene Adresse und Angaben zu Ihrem Browser. GitHub protokolliert nach <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">eigenen Angaben</a> die IP-Adressen der Besucherinnen und Besucher aus Sicherheitsgründen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse ist eine sichere und zuverlässige Bereitstellung der Website. Dabei können Daten in die USA übermittelt werden. Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>, <a href="https://www.cloudflare.com/privacypolicy/">Datenschutzerklärung von Cloudflare</a>.
     </p>
-
-    </div>
-
-    <div class="title-wrapper">
-        <h2 style="padding-left:2%" class="content-title" id="sec0"> 
-            Datenschutzerklärung (DSGVO)
-        </h2>
-    </div>
-
-    <div class="subcontent-wrapper">
 
     <p class="content-paragraph">
-    Auf dieser Webseite werden keine personenbezogenen Daten erhoben, gespeichert oder verarbeitet. Es werden keine Cookies verwendet.
+    <b>Reichweitenmessung (Simple Analytics)</b>
     <br>
-    <b>Verwendung von Simple Analytics:</b>
-    <br>
-    Zur Analyse der Besuchsmuster dieser Webseite wird Simple Analytics verwendet. Dieses Tool erfasst ausschließlich aggregierte Daten über Seitenaufrufe, ohne Cookies oder Tracking-Technologien einzusetzen. Dabei werden keinerlei personenbezogene Informationen gespeichert, sodass Ihre Privatsphäre vollständig geschützt bleibt. 
-
-    <br>
-    <b>PayPal-Spendenbutton:</b>
-    <br>
-    Auf dieser Webseite wird ein Button bereitgestellt, der Sie zu PayPal weiterleitet, um Spenden an mein persönliches PayPal-Konto zu ermöglichen. Diese Weiterleitung erfolgt ohne den Einsatz von Cookies oder Tracking-Technologien. Nach dieser Weiterleitung unterliegt die Verarbeitung Ihrer Daten den Datenschutzrichtlinien von PayPal.
+    Um zu sehen, welche Seiten gelesen werden, nutze ich Simple Analytics (Simple Analytics B.V., Niederlande). Simple Analytics setzt keine Cookies und erstellt keine Nutzerprofile; ausgewertet werden nur aggregierte Angaben wie aufgerufene Seiten und Verweisquellen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse ist eine datensparsame Reichweitenmessung. Weitere Informationen: <a href="https://www.simpleanalytics.com/privacy-policy">Datenschutzerklärung von Simple Analytics</a>.
     </p>
-
-    </div>
-
-    <div class="title-wrapper">
-        <h2 style="padding-left:2%" class="content-title" id="sec0"> 
-            Verweis auf Dritte
-        </h2>
-    </div>
-
-    <div class="subcontent-wrapper">
 
     <p class="content-paragraph">
-    Diese Website wird auf <a href="https://www.github.com/">GitHub</a> als <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub Pages</a> gehostet. Die Datenschutzerklärung von GitHub (GitHub General Privacy Statement) ist <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">hier</a> hinterlegt.
+    <b>Kommentare (giscus, GitHub)</b>
     <br>
-    Die Datenschutzrichtlinien von Simple Analytics sind <a href="https://dashboard.simpleanalytics.com/privacy-policy">hier</a> hinterlegt.
+    Die Kommentare unter den Blogbeiträgen stellt giscus (giscus.app) bereit; gespeichert werden sie in GitHub Discussions des öffentlichen Repositorys dieser Website. Beim Aufruf eines Blogbeitrags lädt Ihr Browser ein Skript von giscus.app, der Kommentarbereich selbst wird erst geladen, wenn Sie zu ihm scrollen. Dabei werden Ihre IP-Adresse und technische Verbindungsdaten an giscus.app und an GitHub übermittelt, zum Beispiel beim Laden von Profilbildern. Zum Kommentieren melden Sie sich mit Ihrem GitHub-Konto an; giscus speichert dann ein verschlüsseltes Token im lokalen Speicher Ihres Browsers. Ihr Kommentar und Ihr GitHub-Benutzername sind öffentlich sichtbar. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO für die Anzeige der Kommentare und Art. 6 Abs. 1 lit. a DSGVO (Ihre Einwilligung durch die Anmeldung) für das Kommentieren. Weitere Informationen: <a href="https://github.com/giscus/giscus/blob/main/PRIVACY-POLICY.md">Datenschutzerklärung von giscus</a>, <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.
+    </p>
+
+    <p class="content-paragraph">
+    <b>Anfragen über das Formular (Google Forms)</b>
     <br>
-    Die Datenschutzrichtlinien von Paypal sind <a href="https://www.paypal.com/webapps/mpp/ua/privacy-full">hier</a> hinterlegt. 
+    Für Anfragen zu Mentoring und Beratung (Tengu Consulting) verlinke ich auf der Seite <a href="/book-me/">Book Me</a> ein Formular bei Google Forms (Google Ireland Limited, Irland). Das Formular ist nicht in diese Website eingebettet: Daten gehen erst an Google, wenn Sie den Link öffnen, und dort gilt die <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>. Ihre Angaben werden in meinem Google-Konto gespeichert und nur zur Bearbeitung Ihrer Anfrage verwendet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen auf Ihre Anfrage). Ich lösche die Angaben, sobald sie dafür nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten bestehen.
+    </p>
+
+    <p class="content-paragraph">
+    <b>Kontakt per E-Mail</b>
+    <br>
+    Wenn Sie mir eine E-Mail schreiben, verarbeite ich Ihre Angaben, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, wenn die Anfrage einen Vertrag betrifft, sonst Art. 6 Abs. 1 lit. f DSGVO. Auch hier lösche ich die Angaben, sobald sie nicht mehr erforderlich sind.
+    </p>
+
+    <p class="content-paragraph">
+    <b>Darstellung von Formeln (MathJax)</b>
+    <br>
+    Die Blogbeiträge mit mathematischen Formeln laden die Bibliothek MathJax von cdnjs.cloudflare.com (Cloudflare, Inc., USA). Dabei wird Ihre IP-Adresse an Cloudflare übermittelt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse ist die korrekte Darstellung der Formeln.
+    </p>
+
+    <p class="content-paragraph">
+    <b>Links zu anderen Websites</b>
+    <br>
+    Links zu anderen Websites, etwa zu LinkedIn, GitHub oder YouTube, übermitteln erst dann Daten an deren Betreiber, wenn Sie sie anklicken.
+    </p>
+
+    <p class="content-paragraph">
+    <b>Ihre Rechte</b>
+    <br>
+    Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO) und Datenübertragbarkeit (Art. 20 DSGVO). Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO können Sie widersprechen (Art. 21 DSGVO). Eine Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO). Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), zum Beispiel beim <a href="https://www.lda.bayern.de/">Bayerischen Landesamt für Datenschutzaufsicht</a>. Für alle Anfragen genügt eine E-Mail an die oben genannte Adresse.
+    </p>
+
+    <p class="content-paragraph">
+    <i>Stand: November 2026</i>
     </p>
 
     </div>
-    
+
+    </div>
 
     <div class="space"></div>
     <div class="space"></div>
