@@ -15,10 +15,13 @@ comments: true
   </div>
 
   <div class="entry">
-    {% comment %} loading="lazy" on images that carry width and height (their space is reserved, so nothing
-       moves when they arrive), except the first image, which is often visible right away. Images without
-       dimensions (the SVG charts) load as before. {% endcomment %}
-    {% assign img_parts = content | split: '<img ' %}{{ img_parts[0] }}{% for part in img_parts offset:1 %}{% assign img_tag = part | split: '>' | first %}{% if forloop.first == false and img_tag contains 'width="' and img_tag contains 'height="' %}<img loading="lazy" {{ part }}{% else %}<img {{ part }}{% endif %}{% endfor %}
+    {% comment %} Footnotes: kramdown adds role="doc-noteref" to <sup> (not allowed there by ARIA) and the
+       deprecated roles doc-endnotes/doc-endnote; they are removed (endnotes before endnote, which is a
+       prefix of it). Images: loading="lazy" on images that carry width and height (their space is
+       reserved, so nothing moves when they arrive), except the first image, which is often visible right
+       away. Images without dimensions (the SVG charts) load as before. {% endcomment %}
+    {% assign post_html = content | replace: ' role="doc-noteref"', '' | replace: ' role="doc-endnotes"', '' | replace: ' role="doc-endnote"', '' %}
+    {% assign img_parts = post_html | split: '<img ' %}{{ img_parts[0] }}{% for part in img_parts offset:1 %}{% assign img_tag = part | split: '>' | first %}{% if forloop.first == false and img_tag contains 'width="' and img_tag contains 'height="' %}<img loading="lazy" {{ part }}{% else %}<img {{ part }}{% endif %}{% endfor %}
   </div>
 
 </article>
