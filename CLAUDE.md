@@ -57,13 +57,14 @@ needs its own layout, a stub `.md`, and a link in `_includes/navbar.html`.
 `_sass/` exists, but the custom layouts do not reference either. Upgrading the Bootstrap CSS can change
 the design, so leave it unless that is the goal.
 
-**Global scripts in `head.html`:** MathJax 2.7.9 from cdnjs (so LaTeX works in posts; used by the
-concept-drift and knight's-tour posts), loaded `async` so that it does not block rendering, so do not
+**Global scripts in `head.html`:** MathJax 2.7.9 from cdnjs, only on pages whose front matter sets
+`math: true` (today the concept-drift and knight's-tour posts). A post with LaTeX needs that line, or its
+formulas show as raw TeX. MathJax is loaded `async` so that it does not block rendering, so do not
 add inline scripts that call `MathJax` directly. Then jQuery 3.7.1 from Google's CDN, then the local Bootstrap JS
 3.4.1 (`js/bootstrap.min.js`). Both CDN scripts carry `integrity` hashes. Bootstrap JS must
 load after jQuery. The only active JavaScript that uses them is Bootstrap's collapse plugin, which
-drives the mobile navbar toggle. The gallery, dropdown and scrollspy scripts in `_layouts/cv.html` are
-commented out. If you change the version of a CDN script, update its `integrity` hash, or the browser
+drives the mobile navbar toggle. The old gallery, dropdown and scrollspy scripts were removed from
+`_layouts/cv.html`. If you change the version of a CDN script, update its `integrity` hash, or the browser
 refuses to run it. Analytics is Simple Analytics in `_includes/script.html`. Google Analytics and Disqus were
 removed over GDPR concerns, so do not add tracking or third-party embeds that collect personal data.
 
@@ -94,7 +95,8 @@ See `docs/2026-11-20-seo.md`.
 ## Blog posts
 
 - Posts are files in `_posts/` named `YYYY-MM-DD-Title-With-Dashes.markdown`. Their front matter is
-  `layout: post`, `title`, `date`, `comments: true` and `categories`. Dates are rendered in the
+  `layout: post`, `title`, `date`, `comments: true` and `categories`, plus `math: true` if the post
+  contains LaTeX (see the global scripts above). Dates are rendered in the
   `timezone: Europe/Berlin` set in `_config.yml`. Without that setting, GitHub's UTC build would show a
   midnight `+0100` post on the previous day.
 - `permalink: /:title/` builds each post's URL from the **filename** slug, not from the `title` field.
