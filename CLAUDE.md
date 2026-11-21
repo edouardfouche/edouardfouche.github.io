@@ -64,6 +64,13 @@ build, and GitHub Pages would then fall back to its default theme, so leave it. 
 CSS can change the design, so leave it unless that is the goal. Links in running text are underlined
 (accessibility), and code colours meet 4.5:1 contrast; keep it that way.
 
+**Font:** the stack `Cambria, Caladea, Georgia, serif` is set once, on `body` in `css/style.css`;
+everything inherits it, so do not set `font-family` elsewhere. Cambria comes only with Windows and
+Microsoft Office. Caladea, a free metric-compatible substitute (same widths, so text wraps the same),
+is self-hosted in `fonts/caladea/` (WOFF2, with its SIL Open Font License in `OFL.txt`, which must stay
+next to the files) and declared with `@font-face` at the top of `style.css`. Browsers download it only
+where Cambria is missing.
+
 **Global scripts in `head.html`:** MathJax 2.7.9 from cdnjs, only on pages whose front matter sets
 `math: true` (today the concept-drift and knight's-tour posts). A post with LaTeX needs that line, or its
 formulas show as raw TeX. MathJax is loaded `async` so that it does not block rendering, so do not

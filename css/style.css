@@ -7,6 +7,47 @@
    selector started with a // comment are gone, as are rules for elements the site does not have.
    See docs/2026-11-21-full-audit.md (C1). */
 
+/*********/
+/* FONTS */
+/*********/
+
+/* The site's font is Cambria, which only Windows and Microsoft Office install. Everyone else gets
+   Caladea, a free font (SIL Open Font License, fonts/caladea/OFL.txt) designed as a metric-compatible
+   substitute for Cambria: same character widths, so the text wraps as designed. Self-hosted, so no
+   request goes to Google. Browsers download a file only if Cambria is missing and the page uses that
+   style; until it arrives they show Georgia or another serif (font-display: swap). */
+@font-face {
+  font-family: 'Caladea';
+  src: local('Caladea'), local('Caladea-Regular'), url('/fonts/caladea/Caladea-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caladea';
+  src: local('Caladea Bold'), local('Caladea-Bold'), url('/fonts/caladea/Caladea-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caladea';
+  src: local('Caladea Italic'), local('Caladea-Italic'), url('/fonts/caladea/Caladea-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caladea';
+  src: local('Caladea Bold Italic'), local('Caladea-BoldItalic'), url('/fonts/caladea/Caladea-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /**************/
 /* BASE RULES */
 /**************/
@@ -15,8 +56,9 @@ html {
   font-size: 100%;
 }
 
+/* The one place that sets the text font; everything else inherits it. */
 body {
-  font-family: 'cambria';
+  font-family: Cambria, Caladea, Georgia, serif;
   color: #333;
   background-color: #fff;
   -webkit-hyphens: auto;
