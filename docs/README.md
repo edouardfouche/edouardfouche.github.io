@@ -29,5 +29,6 @@ so nothing here ends up on edouardfouche.com.
 | 2026-11-20 | [SEO](2026-11-20-seo.md) | Search and link-preview metadata: findings, jekyll-seo-tag and sitemap, verification, what is left |
 | 2026-11-20 | [Draft file extensions](2026-11-20-draft-extensions.md) | Five drafts that Jekyll skipped or rendered unconverted, renamed to `.markdown` |
 | 2026-11-20 | [SEO follow-up](2026-11-20-seo-follow-up.md) | Duplicate poster removed; how to submit the sitemap (Google, Bing) and fix the redirect chains in Cloudflare |
+| 2026-11-21 | [About page biography](2026-11-21-about-bio.md) | New bio (AI-driven business transformation, Siemens Healthineers) and matching meta descriptions |
 | 2026-11-21 | [Knowledge work post](2026-11-21-knowledge-work-post.md) | LinkedIn post of 2026-11-19 added as a blog post, with its own share image, description and alt text |
 | 2026-11-21 | [Publications vs. Google Scholar](2026-11-21-publications-scholar-sync.md) | Missing PESS'26 paper added, entry errors fixed, unclosed year headings fixed (pixel-identical), all links checked; open items for the page and the Scholar profile |
