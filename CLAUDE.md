@@ -100,6 +100,10 @@ See `docs/2026-11-20-seo.md`.
 - `permalink: /:title/` builds each post's URL from the **filename** slug, not from the `title` field.
   Renaming a post file changes its public URL and detaches its giscus comments, which are mapped by
   pathname to GitHub Discussions (`_includes/giscus.html`).
+- The blog index (`_layouts/index.html`) and every post (`_layouts/default.html`) put their content in
+  `.blog-column` (`css/customstyle.css`): a centered column with 720px of text and the same margins on
+  both, so the text does not move when you open a post. Keep blog markup inside it, and do not wrap it
+  in a Bootstrap `.row`, whose negative margin shifts the text. See `docs/2026-11-21-blog-margins.md`.
 - `<!--more-->` separates the excerpt. The blog index (`_layouts/index.html`) shows the excerpt, and it
   is also the post's meta description unless the front matter sets `description:`. A post can set
   `image:` (a path like `/img/posts/...`) to use its own share image instead of the default portrait.

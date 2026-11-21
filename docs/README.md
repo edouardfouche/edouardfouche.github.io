@@ -32,3 +32,4 @@ so nothing here ends up on edouardfouche.com.
 | 2026-11-21 | [About page biography](2026-11-21-about-bio.md) | New bio (AI-driven business transformation, Siemens Healthineers) and matching meta descriptions |
 | 2026-11-21 | [Knowledge work post](2026-11-21-knowledge-work-post.md) | LinkedIn post of 2026-11-19 added as a blog post, with its own share image, description and alt text |
 | 2026-11-21 | [Publications vs. Google Scholar](2026-11-21-publications-scholar-sync.md) | Missing PESS'26 paper added, entry errors fixed, unclosed year headings fixed (pixel-identical), all links checked; open items for the page and the Scholar profile |
+| 2026-11-21 | [Blog margins](2026-11-21-blog-margins.md) | Index and posts share one centered 720px reading column with equal margins; left-aligned text and wrapping inline code on phones |
