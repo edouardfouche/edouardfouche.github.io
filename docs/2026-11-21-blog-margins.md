@@ -76,3 +76,9 @@ build` and served locally.
 - The About, CV, Publications, Services, Book Me, Impressum, Citation Policy and 404 pages were
   rendered at 1280px and 375px from a build of the previous commit (`fa20903`) and from the
   working tree. The screenshots are byte-identical.
+- After the push (`504ffb8`, `7e1bb89`), the GitHub Pages build of `7e1bb89` reported `built`. The
+  live home page and posts contain `.blog-column`. Cloudflare's cached copies of `css/customstyle.css`
+  and `css/style.css` had expired (`cf-cache-status: EXPIRED`), so the edge served the new files at
+  once, byte-identical to the repository, and no purge was needed. Rendered from the live site, the
+  home page, "Knowledge work as we know it is dying" and "Fun with Tensorflow im2txt" have text edges
+  of 280 / 280 at 1280px and 20 / 20 at 375px, with no horizontal overflow.
