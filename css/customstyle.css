@@ -18,7 +18,41 @@ p {
 
 .post {
   font-size: 18px;
-  margin-left: 20px;
+}
+
+/* BLOG READING COLUMN
+-------------------------------------------------- */
+/* The blog index (_layouts/index.html) and every post (_layouts/default.html) put their content in
+   .blog-column, so the text has the same position and width on both, and does not move when you
+   open a post. The column is centered, with equal margins on both sides, and is capped at 720px of
+   text (about 80 characters a line at 18px). On phones, the padding keeps about 20px between the
+   text and each edge of the screen. */
+.blog-column {
+  max-width: 752px; /* 720px of text plus the padding (Bootstrap sets box-sizing: border-box) */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Bootstrap 3.1.1 sets white-space: nowrap on code, so a long inline path ran past the right edge of
+   the screen on phones, where body's overflow-x: hidden cut it off. Let inline code wrap anywhere,
+   but never hyphenate it: body's hyphens: auto made WebKit split "show_and_tell" as "tel-l", which
+   both changes the path and still overflowed. Code blocks (pre > code) are left as they are. */
+.blog-column :not(pre) > code {
+  white-space: normal;
+  word-wrap: break-word;    /* fallback for browsers without overflow-wrap: anywhere */
+  overflow-wrap: anywhere;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* On phones, a narrow column of justified text gets wide gaps between words, so align it left. */
+@media (max-width: 767px) {
+  .blog-column p {
+    text-align: left;
+  }
 }
 
 

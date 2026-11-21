@@ -260,9 +260,7 @@ nav {
   border-bottom: none;
 }
 
-.post { 
-  padding-left: 1% ;
-  padding-right: 1% ;
+.post {
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
