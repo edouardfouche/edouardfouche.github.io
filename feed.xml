@@ -7,14 +7,19 @@ layout: null
     <title>{{ site.title | xml_escape }}</title>
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <language>en</language>
     <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% comment %} RSS has no base URL, so site-relative src="/…" and href="/…" in the post HTML become
+       absolute; protocol-relative "//…" URLs are protected with a placeholder and left as they are. {% endcomment %}
+    {% assign abs_src = 'src="' | append: site.url | append: site.baseurl | append: '/' %}
+    {% assign abs_href = 'href="' | append: site.url | append: site.baseurl | append: '/' %}
     {% for post in site.posts limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
+        <description>{{ post.content | replace: 'src="//', 'src="%%PROTOCOL-RELATIVE%%' | replace: 'href="//', 'href="%%PROTOCOL-RELATIVE%%' | replace: 'src="/', abs_src | replace: 'href="/', abs_href | replace: '%%PROTOCOL-RELATIVE%%', '//' | xml_escape }}</description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url | xml_escape }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url | xml_escape }}</guid>
