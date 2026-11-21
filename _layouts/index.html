@@ -22,10 +22,13 @@ title: "index"
     </div>
 
 	{% comment %} Same centered reading column as the posts (_layouts/default.html). Rules in css/customstyle.css.
-	   <main> is the page's main landmark. The page's <h1> is visually hidden for now, and the post titles
-	   are <h2>, styled like the earlier <h1> titles (.post-title in css/customstyle.css). {% endcomment %}
+	   <main> is the page's main landmark. The introduction carries the page's <h1>, and the post titles
+	   are <h2>, styled like the earlier <h1> titles (.post-title, .intro in css/customstyle.css). {% endcomment %}
 	<main class="posts blog-column">
-	  <h1 class="sr-only">{{ site.title }} – {{ site.tagline }}</h1>
+	  <header class="intro">
+	    <h1 class="intro-name">Edouard Fouché</h1>
+	    <p class="intro-text">AI engineer and data scientist. I write about how AI is changing software engineering and knowledge work, and why it makes human judgment more important, not less. <a href="/about/">More about me</a></p>
+	  </header>
   {% for post in site.posts %}
     <article class="post">
 

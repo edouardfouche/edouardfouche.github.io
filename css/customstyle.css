@@ -32,6 +32,29 @@ p {
   color: inherit;
 }
 
+/* Introduction at the top of the blog index */
+.intro {
+  padding-bottom: 1.2em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.intro-name {
+  margin-top: 0;
+  font-size: 26px;
+  font-size: calc(24px + 8 * ((100vw - 320px) / 680));
+}
+
+.intro-text {
+  font-size: 19px;
+  color: #555;
+  text-align: left;
+}
+
+.intro-text a {
+  white-space: nowrap;
+}
+
 /* BLOG READING COLUMN
 -------------------------------------------------- */
 /* The blog index (_layouts/index.html) and every post (_layouts/default.html) put their content in
@@ -88,7 +111,8 @@ a:hover, a:visited, a:link, a:active {
 .content-paragraph a:link, .content-paragraph a:visited,
 .subcontent-wrapper li a:link, .subcontent-wrapper li a:visited,
 .information-line a:link, .information-line a:visited,
-#footer a:link, #footer a:visited {
+#footer a:link, #footer a:visited,
+.intro-text a:link, .intro-text a:visited {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.15em;
