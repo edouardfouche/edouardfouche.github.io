@@ -52,21 +52,37 @@ in the matching `_layouts/<name>.html`. To change what a page says, edit its lay
 `footer.html` and `script.html` itself. Change shared page chrome in `_includes/`. A new top-level page
 needs its own layout, a stub `.md`, and a link in `_includes/navbar.html`.
 
-**Styling:** Bootstrap 3.1.1 CSS (`css/bootstrap*.css`) plus `css/customstyle.css` and
-`css/style.css`, all loaded from `_includes/head.html`. `theme: minima` is set in `_config.yml` and
-`_sass/` exists, but the custom layouts do not reference either. Upgrading the Bootstrap CSS can change
-the design, so leave it unless that is the goal.
+**Styling:** Bootstrap 3.1.1 CSS (`css/bootstrap.css`, `css/bootstrap-theme.css`) plus
+`css/customstyle.css`, `css/style.css` and `css/syntax.css` (code highlighting), all loaded from
+`_includes/head.html`. `css/bootstrap.css` is a locally modified copy: link colour #005e86, dark code
+blocks (`pre` background #272822, which `syntax.css` relies on) and the padding of the phone menu items.
+Move these into `customstyle.css` before replacing or upgrading the file. All CSS files are served as they
+are, without compilation, so write plain CSS: no Sass variables, `@include` or `//` comments (browsers
+drop such rules; `style.css` was rewritten for this reason). `theme: minima` is set in `_config.yml`
+and `_sass/` exists, but the custom layouts do not reference either. Removing the theme line breaks the
+build, and GitHub Pages would then fall back to its default theme, so leave it. Upgrading the Bootstrap
+CSS can change the design, so leave it unless that is the goal. Links in running text are underlined
+(accessibility), and code colours meet 4.5:1 contrast; keep it that way.
 
 **Global scripts in `head.html`:** MathJax 2.7.9 from cdnjs, only on pages whose front matter sets
 `math: true` (today the concept-drift and knight's-tour posts). A post with LaTeX needs that line, or its
 formulas show as raw TeX. MathJax is loaded `async` so that it does not block rendering, so do not
-add inline scripts that call `MathJax` directly. Then jQuery 3.7.1 from Google's CDN, then the local Bootstrap JS
-3.4.1 (`js/bootstrap.min.js`). Both CDN scripts carry `integrity` hashes. Bootstrap JS must
-load after jQuery. The only active JavaScript that uses them is Bootstrap's collapse plugin, which
-drives the mobile navbar toggle. The old gallery, dropdown and scrollspy scripts were removed from
-`_layouts/cv.html`. If you change the version of a CDN script, update its `integrity` hash, or the browser
-refuses to run it. Analytics is Simple Analytics in `_includes/script.html`. Google Analytics and Disqus were
-removed over GDPR concerns, so do not add tracking or third-party embeds that collect personal data.
+add inline scripts that call `MathJax` directly. It carries an `integrity` hash: if you change its
+version, update the hash, or the browser refuses to run it. Then jQuery 3.7.1
+(`js/jquery-3.7.1.min.js`, self-hosted so that pages do not contact Google) and Bootstrap JS 3.4.1
+(`js/bootstrap.min.js`), both with `defer`, which keeps their order. Their only job is Bootstrap's
+collapse plugin, which drives the mobile navbar toggle, so do not add inline scripts that need jQuery
+before the page has loaded. Analytics is Simple Analytics in `_includes/script.html`. Google Analytics
+and Disqus were removed over GDPR concerns, so do not add tracking or third-party embeds that collect
+personal data. The Book Me page links the Google Form instead of embedding it for the same reason.
+
+**Impressum and privacy policy:** `_layouts/impressum.html` holds both (the privacy policy is at
+`/impressum/#datenschutz`, linked from the footer). The privacy policy lists every service that
+receives visitors' data (GitHub Pages, Cloudflare, Simple Analytics, giscus, the Google Form, MathJax
+from cdnjs). When you add, remove or embed a third-party service, update it in the same change. The
+license statement is CC BY-SA 4.0 for texts and images by the owner, excluding Chérie Birkner's photos,
+the publications and third-party content; the footer, the Impressum, the Citation Policy and the
+`copyright` meta tag say the same.
 
 **Edge rewrites:** the site is served through Cloudflare, which rewrites some HTML (`http://` links to
 `https://`, email obfuscation). The live HTML can therefore differ slightly from `_site/`.
@@ -89,8 +105,8 @@ default `image` (the share image). Each top-level stub sets its own `description
 `seo: type: Person`. `robots: noindex` in front matter keeps a page out of search results (used by
 `404.md`). jekyll-sitemap generates `/sitemap.xml` (pages, posts and every PDF) and a `/robots.txt`
 that points to it. If you add a `robots.txt` file, it replaces the generated one, so keep the
-`Sitemap:` line in it. Cloudflare prepends its own managed comment block to the served `robots.txt`.
-See `docs/2026-11-20-seo.md`.
+`Sitemap:` line in it. (Cloudflare used to prepend its managed comment block to the served
+`robots.txt`; as of 2026-11-21 it serves the generated file unchanged.) See `docs/2026-11-20-seo.md`.
 
 ## Blog posts
 
@@ -110,15 +126,19 @@ See `docs/2026-11-20-seo.md`.
   is also the post's meta description unless the front matter sets `description:`. A post can set
   `image:` (a path like `/img/posts/...`) to use its own share image instead of the default portrait.
   `feed.xml` is a hand-written RSS feed of the last 10 posts with their full content. It takes the place
-  of the feed that jekyll-feed would generate.
+  of the feed that jekyll-feed would generate, and makes site-relative `src="/…"` and `href="/…"`
+  absolute, because RSS has no base URL.
 - Images: recent posts use `/img/posts/YYYY-MM-DD-<name>.jpg`, and older posts use
-  `/img/<post-slug>/`. The usual pattern is kramdown attribute lists:
+  `/img/<post-slug>/`. The usual pattern is kramdown attribute lists, with the image's pixel size:
   ```
   <br>
-  ![Describe the image](/img/posts/2026-04-21-taste.jpg){:class="img-responsive"}
+  ![Describe the image](/img/posts/2026-04-21-taste.jpg){:class="img-responsive" width="1440" height="871"}
   {:style="max-width: 600px; margin: auto"}
   <br>
   ```
+  `width`/`height` let browsers reserve the space before the image loads (`.entry img { height: auto }`
+  keeps the proportions), and `_layouts/post.html` adds `loading="lazy"` to every image that has them,
+  except the first image of the post.
   Posts are at most 720px wide, so export images at most 1440px wide (2x for high-density screens):
   JPEG for photos and illustrations, PNG only for graphics with flat colours or transparency
   (`sips -Z 1440 -s format jpeg -s formatOptions 82 in.png --out out.jpg` resizes on macOS). Remove
