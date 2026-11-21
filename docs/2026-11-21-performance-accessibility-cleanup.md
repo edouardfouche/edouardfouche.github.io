@@ -160,3 +160,24 @@ page introduction (S1), share images and descriptions for posts (S4), alt texts 
 (A7), the remaining unused images (C4), the CSS dead code in `customstyle.css` (C3), and the owner's
 dashboard tasks (Cloudflare, Search Console). See the
 [recommended order of work](2026-11-21-full-audit.md#recommended-order-of-work).
+
+## Post-deploy check
+
+`master` moved from `598098e` to `1a8365d` (these commits and the
+[Impressum and privacy policy](2026-11-21-impressum-privacy.md) work), and the GitHub Pages build
+succeeded (46 s). On the live site:
+
+- `css/style.css`, `css/customstyle.css`, `css/syntax.css`, `js/jquery-3.7.1.min.js` and the license
+  badge are byte-identical to the repository at the Cloudflare location tested (SHA-256 checked). Other
+  locations cache separately for up to 4 hours. An old `customstyle.css` there would lack
+  `.entry img { height: auto; }`, and the one post image without `img-responsive` (`Rpi.jpg` in the RPi
+  post) would look stretched until the copy expires. A Cloudflare cache purge removes that risk.
+- The home page loads nothing from `ajax.googleapis.com` or `i.creativecommons.org`, no gallery
+  stylesheet and no MathJax. It loads `/js/jquery-3.7.1.min.js` and has the privacy link in the footer.
+- `/book-me/` has no iframe and has the form link. `/impressum/` cites § 5 DDG and § 18 Abs. 2 MStV,
+  contains no "TMG", has the `#datenschutz` section, and its email address is not obfuscated (no
+  `email-protection` link).
+- `/publications/` links Google Scholar and uses the new award colour.
+- The new images return 200 (`taste.jpg` 133 KB, `DSC_8839.JPG` 80 KB, `animation.webp` as
+  `image/webp`), and the old PNG URL returns 404, as expected.
+- `/feed.xml` contains no relative URL.

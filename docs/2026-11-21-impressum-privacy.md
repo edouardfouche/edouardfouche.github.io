@@ -99,3 +99,9 @@ All cited URLs returned 200 on the audit date.
    example) or log more data, add them to the privacy policy.
 5. **A second opinion.** Generators such as eRecht24 or datenschutz-generator.de, or a lawyer, can
    confirm the wording. Keep the facts listed above, which were checked during this work.
+
+## Post-deploy check
+
+Deployed with `1a8365d`; see the
+[post-deploy check](2026-11-21-performance-accessibility-cleanup.md#post-deploy-check) of the
+performance record. The live `/impressum/` and `/book-me/` match the build.
