@@ -4,6 +4,7 @@ title:  "Anthropic's Claude Code Leak"
 date:   2026-04-08 00:00:00 +0100
 comments: true
 categories: Technology
+image: /img/posts/2026-04-09-claude-code-leak.jpg
 ---
 
 Last week, Anthropic accidentally exposed internal Claude Code source through a packaging mistake, and that may lead to one of the most instructive AI product lessons of the year. Anthropic itself admitted this was a human error. Everyone can now discuss what this leak revealed, and there are at least a few important things to learn from it.

@@ -4,6 +4,7 @@ title:  "Why using AI requires us to be even better (as developers and beyond)"
 date:   2026-03-26 00:00:00 +0100
 comments: true
 categories: Technology
+image: /img/posts/2026-03-26-autopilot.jpg
 ---
 
 In almost every movie involving air or space travel, the pilot relies on autopilot most of the time. But there always comes a heroic moment where they have to switch to manual mode and save the crew through sheer skill that almost no one else aboard possesses.

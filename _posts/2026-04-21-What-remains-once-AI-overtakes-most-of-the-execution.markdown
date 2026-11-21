@@ -4,6 +4,7 @@ title:  "What remains once AI overtakes most of the execution? Taste."
 date:   2026-04-21 00:00:00 +0100
 comments: true
 categories: Technology
+image: /img/posts/2026-04-21-taste.jpg
 ---
 
 Taste is not whether one uses short rather than long sentences, or whether one dares to use the infamous em-dash with style.

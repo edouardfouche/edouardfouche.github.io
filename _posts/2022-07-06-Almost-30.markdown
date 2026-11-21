@@ -4,6 +4,7 @@ title:  "Almost 30: I am, I have, I can, I want"
 date:   2022-07-21 00:00:00 +0100
 comments: true
 categories: Personal
+description: "I am almost 30... I am much happier than when I was almost 20. I am more open-minded, tolerant, aware of my body."
 ---
 
 I am almost 30...

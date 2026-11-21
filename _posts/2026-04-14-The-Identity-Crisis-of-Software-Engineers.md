@@ -4,6 +4,7 @@ title:  "The Identity Crisis of Software Engineers"
 date:   2026-04-14 00:00:00 +0100
 comments: true
 categories: Technology
+image: /img/posts/2026-04-14-identity-crisis.jpg
 ---
 
 Something big and unsettling is happening in software engineering right now. Not dramatic enough to make headlines on its own, but persistent enough that I keep noticing it in conversations with colleagues, in forums, and increasingly in myself.

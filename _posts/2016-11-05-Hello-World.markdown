@@ -4,6 +4,7 @@ title:  "Hello World"
 date:   2016-03-05 11:35:00 +0100
 comments: true
 categories: Other
+description: "In this blog, I will speak about my work as a scientist, but also about art, culture and all the things I like."
 ---
 
 and welcome ! In this blog, I will speak about my work as a scientist, but also about art, culture and all the things I like. I am building this place as a little corner of the internet that I can use my open diary. 
