@@ -12,7 +12,7 @@ Software engineers are going through an identity crisis.
 
 <!--more-->
 <br>
-![img](/img/posts/2026-04-14-identity-crisis.jpg){:class="img-responsive"}
+![img](/img/posts/2026-04-14-identity-crisis.jpg){:class="img-responsive" width="1440" height="960"}
 {:style="max-width: 600px; margin: auto"}
 <br>
 

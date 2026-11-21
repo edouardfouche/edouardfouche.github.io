@@ -15,7 +15,7 @@ The Solution
 A Raspberry Pi computer shows in my corridor the departure times for the next trains or public transports (bus, etc.) for a set of chosen lines. Let me first show you how the solution looks like ! 
 
 <br>
-[![Ok Rpi, show me the next trains](/img/deutsche-bahn/Rpi.jpg)](https://www.youtube.com/watch?v=Ocr8C1BaPi8)
+[![Ok Rpi, show me the next trains](/img/deutsche-bahn/Rpi.jpg){:width="960" height="540"}](https://www.youtube.com/watch?v=Ocr8C1BaPi8)
 {:style="margin: auto"}
 <br>
 
@@ -35,7 +35,7 @@ If you take a Raspberry PI 3 you won't need the wifi dongle :). The touchscreen 
 Then I bought some [on/off hook strips][tesa] from Tesa to put it in my corridor ! Hiding a part of the cable behind the mirror, it looks like this: 
 
 <br>
-![img](/img/deutsche-bahn/DSC_8839.JPG){:class="img-responsive"}
+![img](/img/deutsche-bahn/DSC_8839.JPG){:class="img-responsive" width="1440" height="954"}
 {:style="margin: auto"}
 <br>
 

@@ -10,7 +10,7 @@ I was recently done reading "[Kunst der Farbe][KdF]" (Art of Color) by Johannes 
 <!--more-->
 
 <br>
-![img](/img/color-wheel/farbkreis.png){:class="img-responsive"}
+![img](/img/color-wheel/farbkreis.png){:class="img-responsive" width="2000" height="2000"}
 {:style="max-width: 500px; margin: auto"}
 <br>
 
@@ -21,21 +21,21 @@ If you fit a regular shape in the wheel, such as a square, rectangle, or equilat
 I found the principle very interesting, so I decided to extend the wheel by adding a ring containing the "fourth-order" colors, i.e. a mix of the third-order colors with the first or second-order colors. So we move from a 12-color representation to a 24-color representation. It looks like this: 
 
 <br>
-![img](/img/color-wheel/farbkreis_extended.png){:class="img-responsive"}
+![img](/img/color-wheel/farbkreis_extended.png){:class="img-responsive" width="1440" height="1440"}
 {:style="max-width: 700px; margin: auto"}
 <br>
 
 I have documented the different steps of the creation of this image on Photoshop, as a GIF:  
 
 <br>
-![img](/img/color-wheel/animation.webp){:class="img-responsive"}
+![img](/img/color-wheel/animation.webp){:class="img-responsive" width="1000" height="998"}
 {:style="max-width: 700px; margin: auto"}
 <br>
 
 Itten said that such an extension would be useless and that artists just need to know the 12-part color wheel very well. Still, I like the result. In my opinion, the level of detail between the different orders can be best visualized this way: 
 
 <br>
-![img](/img/color-wheel/colors.png){:class="img-responsive"}
+![img](/img/color-wheel/colors.png){:class="img-responsive" width="5950" height="3825"}
 {:style="max-width: 700px; margin: auto"}
 <br>
 
@@ -44,7 +44,7 @@ The first line are the first-order colors, the second line are the second-order 
 Itten said that everyone has its specific subjective color chord. He could say a lot about the personality of someone just by looking at those colors. Here is my subjective color chord: 
 
 <br>
-![img](/img/color-wheel/subjective_chord.png){:class="img-responsive"}
+![img](/img/color-wheel/subjective_chord.png){:class="img-responsive" width="4000" height="2000"}
 {:style="max-width: 700px; margin: auto"}
 <br>
 

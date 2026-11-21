@@ -14,7 +14,7 @@ Software writes software. AI generates reports, presentations, analyses, documen
 
 <!--more-->
 <br>
-![The bottleneck is shifting. AI accelerates execution. Everything around it matters more. Problem, human intent, specification, AI execution, validation, adoption.](/img/posts/2026-11-19-knowledge-work.jpg){:class="img-responsive"}
+![The bottleneck is shifting. AI accelerates execution. Everything around it matters more. Problem, human intent, specification, AI execution, validation, adoption.](/img/posts/2026-11-19-knowledge-work.jpg){:class="img-responsive" width="800" height="533"}
 {:style="max-width: 600px; margin: auto"}
 <br>
 

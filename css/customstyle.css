@@ -55,6 +55,13 @@ p {
   }
 }
 
+/* Post images carry width and height attributes, so browsers reserve their space before they load.
+   When max-width: 100% makes an image narrower than its width attribute, height: auto keeps its
+   proportions (Bootstrap's .img-responsive already does this; this covers the other images). */
+.entry img {
+  height: auto;
+}
+
 
 a:hover, a:visited, a:link, a:active
 {

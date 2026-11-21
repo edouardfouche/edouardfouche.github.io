@@ -10,7 +10,7 @@ Last week, Anthropic accidentally exposed internal Claude Code source through a 
 
 <!--more-->
 <br>
-![img](/img/posts/2026-04-09-claude-code-leak.jpg){:class="img-responsive"}
+![img](/img/posts/2026-04-09-claude-code-leak.jpg){:class="img-responsive" width="1024" height="1024"}
 {:style="max-width: 600px; margin: auto"}
 <br>
 

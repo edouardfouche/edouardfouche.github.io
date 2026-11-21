@@ -179,7 +179,7 @@ I let the inference run on a bunch of pictures I took in the past. Sometimes, I'
 <br>
 
 {:.center}
-![img](/img/fun-with-tensorflow-im2txt/img.jpg){:class="img-responsive"}
+![img](/img/fun-with-tensorflow-im2txt/img.jpg){:class="img-responsive" width="960" height="960"}
 {:style="max-width: 500px; margin: auto"}
 **A man sitting on top of a wooden bench next to a tree.**
 {:style="text-align: center"}
@@ -188,7 +188,7 @@ This one is very accurate. Just the formulation "on top of a wooden bench" sound
 
 <br><br>
 
-![img2](/img/fun-with-tensorflow-im2txt/img2.jpg){:class="img-responsive"}
+![img2](/img/fun-with-tensorflow-im2txt/img2.jpg){:class="img-responsive" width="960" height="540"}
 
 **A group of people sitting around a table eating food**
 {:style="text-align: center"}
@@ -197,7 +197,7 @@ This one is also great ! By the way, those two guys are my friends [Daniel][Dani
 
 <br><br>
 
-![img18](/img/fun-with-tensorflow-im2txt/img18.jpg){:class="img-responsive"}
+![img18](/img/fun-with-tensorflow-im2txt/img18.jpg){:class="img-responsive" width="1562" height="800"}
 
 **A bike is parked next to a fence.**
 {:style="text-align: center"}
@@ -206,7 +206,7 @@ Very good too. Maybe it could have said something about the river and the trees.
 
 <br><br>
 
-![img20](/img/fun-with-tensorflow-im2txt/img20.jpg){:class="img-responsive"}
+![img20](/img/fun-with-tensorflow-im2txt/img20.jpg){:class="img-responsive" width="1236" height="825"}
 
 **A couple of birds that are standing in some water.** 
 {:style="text-align: center"}
@@ -215,7 +215,7 @@ Correct ! Though the water is in the background.
 
 <br><br>
 
-![img27](/img/fun-with-tensorflow-im2txt/img27.jpg){:class="img-responsive"}
+![img27](/img/fun-with-tensorflow-im2txt/img27.jpg){:class="img-responsive" width="1205" height="807"}
 
 **A close up of a television set with a keyboard.**
 {:style="text-align: center"}
@@ -224,7 +224,7 @@ Actually, the object in the picture is a device used to analyze numerical circui
 
 <br><br>
 
-![img11](/img/fun-with-tensorflow-im2txt/img11.jpg){:class="img-responsive"}
+![img11](/img/fun-with-tensorflow-im2txt/img11.jpg){:class="img-responsive" width="1246" height="820"}
 
 **A group of people standing on top of a sandy beach.**
 {:style="text-align: center"}
@@ -233,7 +233,7 @@ This one is partly wrong. Obviously, it did not get the [*tilt-shift*][tilt-shif
 
 <br><br>
 
-![img9](/img/fun-with-tensorflow-im2txt/img9.jpg){:class="img-responsive"}
+![img9](/img/fun-with-tensorflow-im2txt/img9.jpg){:class="img-responsive" width="939" height="621"}
 
 **A close up of a small bird on a table.**
 {:style="text-align: center"}
@@ -242,7 +242,7 @@ This is not so good. Clearly, it is an animal (actually, an [axolotl][axolotl]) 
 
 <br><br>
 
-![img30](/img/fun-with-tensorflow-im2txt/img30.jpg){:class="img-responsive"}
+![img30](/img/fun-with-tensorflow-im2txt/img30.jpg){:class="img-responsive" width="1153" height="813"}
 
 **A group of people standing next to a train in the background.**
 {:style="text-align: center"}
@@ -251,7 +251,7 @@ There are indeed people in the background (monks praying, but they are really ou
 
 <br><br>  
 
-![img15](/img/fun-with-tensorflow-im2txt/img15.jpg){:class="img-responsive"}
+![img15](/img/fun-with-tensorflow-im2txt/img15.jpg){:class="img-responsive" width="1246" height="803"}
 
 **A small bird sitting on top of a wooden bench.**
 {:style="text-align: center"}
@@ -262,7 +262,7 @@ Oops ! It did not get the picture at all, probably because it is too abstract.
 
 <br><br>
 
-![img31](/img/fun-with-tensorflow-im2txt/img31.jpg){:class="img-responsive"}
+![img31](/img/fun-with-tensorflow-im2txt/img31.jpg){:class="img-responsive" width="1205" height="766"}
 
 **A close up of a person holding a pair of scissors.**
 {:style="text-align: center"}

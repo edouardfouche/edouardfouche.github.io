@@ -15,7 +15,10 @@ comments: true
   </div>
 
   <div class="entry">
-    {{ content }}
+    {% comment %} loading="lazy" on images that carry width and height (their space is reserved, so nothing
+       moves when they arrive), except the first image, which is often visible right away. Images without
+       dimensions (the SVG charts) load as before. {% endcomment %}
+    {% assign img_parts = content | split: '<img ' %}{{ img_parts[0] }}{% for part in img_parts offset:1 %}{% assign img_tag = part | split: '>' | first %}{% if forloop.first == false and img_tag contains 'width="' and img_tag contains 'height="' %}<img loading="lazy" {{ part }}{% else %}<img {{ part }}{% endif %}{% endfor %}
   </div>
 
 </article>

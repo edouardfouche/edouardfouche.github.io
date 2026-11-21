@@ -26,7 +26,7 @@ Concept drift can also be of different types:
 
 The following figure illustrates the main types of concept drifts: 
 
-![concept-drift](/img/concept-drift/conceptdrift.png){:class="img-responsive"}{:style="margin: auto"}
+![concept-drift](/img/concept-drift/conceptdrift.png){:class="img-responsive" width="550" height="550"}{:style="margin: auto"}
 
 Quite often, concept drifts are a combination of all the above described types. Typically, concurrent drifts take place in multi-dimensional data streams and the characteristics of those drifts are unknown a priori. 
 

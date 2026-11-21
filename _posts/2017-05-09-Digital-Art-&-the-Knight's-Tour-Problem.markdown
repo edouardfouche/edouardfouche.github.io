@@ -16,7 +16,7 @@ The Background Story
 The [Knight's Tour][wikipedia-knights-tour] is a famous problem in computer science and chess. It consists in finding a sequence of moves of a knight on a chessboard, such that the knight visits every square only once. The tour is said to be "closed" if the starting position is reachable with a valid move from the ending position. The Knight's Tour problem is an instance of the more general [Hamiltonian path][wikipedia-hamiltonian-path] problem in graph theory, and the closed Knight's Tour problem is an instance of the [Hamiltonian cycle][hamiltonian-cycle] problem. 
 
 <br>
-![img1](/img/knight/knight_tour_animation.gif){:class="img-responsive"}
+![img1](/img/knight/knight_tour_animation.gif){:class="img-responsive" width="408" height="408"}
 {:style="max-width: 408px; margin: auto"}
 *An open Knight's Tour. Source: [Wikipedia][wikipedia-knights-tour]*
 {:style="text-align: center"}
@@ -70,7 +70,7 @@ tour.draw(path=folder)
 This will draw the tour and save it in a .png file, such as this one:  
 
 <br>
-![img1](/img/knight/drawing.jpg){:class="img-responsive"}
+![img1](/img/knight/drawing.jpg){:class="img-responsive" width="400" height="400"}
 {:style="max-width: 400px; margin: auto"}
 <br>
 
@@ -89,7 +89,7 @@ The Knight's Tour as Digital Art
 I find the random patterns created by the solutions of the Knight's Tour really interesting. So I had the idea to let the algorithm run on boards with custom shapes. My first idea was to try on a board in the shape of an heart (yes, computer science can be romantic!). I took a basic drawing of an heart from the Internet that I reduced down to \\( 30 \times 30\\) pixels. This resulted in this image, if we look at it pixel-wise. 
 
 <br>
-![img](/img/knight/heart.jpg){:class="img-responsive"}
+![img](/img/knight/heart.jpg){:class="img-responsive" width="759" height="760"}
 {:style="max-width: 500px; margin: auto"}
 <br>
 
@@ -112,7 +112,7 @@ The result might not be a closed tour on the custom board, but at least the larg
 
 By running it several times, you always get different results, because the starting square changes at each attempt and the ties in the Warnsdorf's rule are solved randomly. Each result is unique. Sometimes, it is surprising, ugly or good-looking. For example I like this one especially: 
 
-![img](/img/knight/knight_heart.jpg){:class="img-responsive"}
+![img](/img/knight/knight_heart.jpg){:class="img-responsive" width="1000" height="1000"}
 {:style="max-width: 500px; margin: auto"}
 
 The method `simulate` gives you more control on the aspect of the output. You can change the size of cells `cellSize`, the size of the nails `nailSize`, the width of the line `lineWidth`, declare if the drawing should be closed (`closed`) as well as the color of the visualization (`color`): 
@@ -125,13 +125,13 @@ tour.simulate(cellSize=50, nailSize=15, closed=true, path=output_folder)
 Here are a few example of designs I produced this way:
 
 <br>
-![img](/img/knight/ILOVEU.jpg){:class="img-responsive"}
+![img](/img/knight/ILOVEU.jpg){:class="img-responsive" width="1000" height="385"}
 {:style="max-width: 700px; margin: auto"}
 <br>
-![img](/img/knight/knight.jpg){:class="img-responsive"}
+![img](/img/knight/knight.jpg){:class="img-responsive" width="1000" height="1000"}
 {:style="max-width: 500px; margin: auto"}
 <br>
-![img](/img/knight/triforce.jpg){:class="img-responsive"}
+![img](/img/knight/triforce.jpg){:class="img-responsive" width="1000" height="869"}
 {:style="max-width: 500px; margin: auto"}
 <br>
 
@@ -140,7 +140,7 @@ Do you like them? You can buy them on Redbubble [here][redbubble]! My preferred 
 I am also going to make a real-world piece of art. I will take a board, nails and a string and represent the result of my choice. I have done a study for it already (on a small used cutting board) to see the real colors:
 
 <br>
-![img](/img/knight/study.jpg){:class="img-responsive"}
+![img](/img/knight/study.jpg){:class="img-responsive" width="1000" height="750"}
 {:style="max-width: 500px; margin: auto"}
 <br>
 
