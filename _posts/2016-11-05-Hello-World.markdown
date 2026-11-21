@@ -9,7 +9,7 @@ categories: Other
 and welcome ! In this blog, I will speak about my work as a scientist, but also about art, culture and all the things I like. I am building this place as a little corner of the internet that I can use my open diary. 
 <!--more-->
 
-![comfort_zone](/img/hello_world_1.png){:class="img-responsive" width="395" height="329"}
+![Sketch of a large circle labeled "My nice little comfort zone" and, outside it, a small circle labeled "Writing a blog – DANGER!"](/img/hello_world_1.png){:class="img-responsive" width="395" height="329"}
 
 
 Furthermore, I have been profiting so much from the content of the web, that I want to give it back to the community somehow and to contribute. I'll try to create interesting content and convey information in a simple way.

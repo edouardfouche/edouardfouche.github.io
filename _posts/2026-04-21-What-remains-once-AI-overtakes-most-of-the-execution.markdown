@@ -10,7 +10,7 @@ Taste is not whether one uses short rather than long sentences, or whether one d
 
 <!--more-->
 <br>
-![img](/img/posts/2026-04-21-taste.jpg){:class="img-responsive" width="1440" height="871"}
+![Four-frame meme from an interview with music producer Rick Rubin. Rubin: "No. I have zero technical ability." Interviewer: "So what are you being paid for?" Rubin: "The confidence that I have in my taste, and my ability to express my ideas."](/img/posts/2026-04-21-taste.jpg){:class="img-responsive" width="1440" height="871"}
 {:style="max-width: 600px; margin: auto"}
 <br>
 

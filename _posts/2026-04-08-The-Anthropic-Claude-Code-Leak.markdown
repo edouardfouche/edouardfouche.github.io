@@ -10,7 +10,7 @@ Last week, Anthropic accidentally exposed internal Claude Code source through a 
 
 <!--more-->
 <br>
-![img](/img/posts/2026-04-09-claude-code-leak.jpg){:class="img-responsive" width="1024" height="1024"}
+![Comic-style poster titled "Claude Code leak!": a hooded figure at a computer, the question "Where's the moat?" with four options (model, speed, design, distribution), a caped AI hero, and the caption "What really matters?"](/img/posts/2026-04-09-claude-code-leak.jpg){:class="img-responsive" width="1024" height="1024"}
 {:style="max-width: 600px; margin: auto"}
 <br>
 

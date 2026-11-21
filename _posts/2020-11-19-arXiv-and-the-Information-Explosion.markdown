@@ -17,19 +17,19 @@ Even if scientists tend to specialize in small niches, it becomes challenging to
 
 You can reproduce all the plots from this GitHub [repository][github]. Note that [arXiv][arXiv] does publish some statistics. For example, [here][arXivstats]. However, the plots are somewhat clunky. We obtained the MetaData about every paper submitted on [arXiv][arXiv] from [here][arXivdata]. 
 
-![counts_arxiv](/img/arxiv-information-explosion/counts_arxiv.svg){:class="img-responsive"}
+![Stacked area chart of the cumulative number of arXiv articles per category, 1991 to 2019: about 1.6 million in total, with computer science (cs) growing fastest in recent years](/img/arxiv-information-explosion/counts_arxiv.svg){:class="img-responsive"}
 
 Warmer colours are for categories with more submissions (in 2019). As we can see, Computer Science (cs) only recently become a major field on [arXiv][arXiv], but it is increasing fast! Let's have a look at the relative counts: 
 
-![relative_counts_arxiv](/img/arxiv-information-explosion/relative_counts_arxiv.svg){:class="img-responsive"}
+![Stacked area chart of each category's share of arXiv articles, 1991 to 2019: high-energy physics (hep) dominated at first; today math and physics have the largest shares, and cs is growing](/img/arxiv-information-explosion/relative_counts_arxiv.svg){:class="img-responsive"}
 
 So the category `hep-*` (High Energy Physics), has been most prominent for a long time, now it is `math` and `physics`. Let's see how fast the total number of paper (the size of the [arXiv][arXiv]!) has evolved over time:
 
-![total_counts_arxiv](/img/arxiv-information-explosion/total_counts_arxiv.svg){:class="img-responsive"}
+![Total number of arXiv articles on a base-2 logarithmic scale, 1991 to 2019, with a vertical line at each doubling: the doublings come further and further apart](/img/arxiv-information-explosion/total_counts_arxiv.svg){:class="img-responsive"}
 
 As we can see, the number of articles has doubled twice in 1992, then doubled every 1-2 years, and now every 5-6 years. Can we guess how many papers will be on [arXiv][arXiv] in 2030? Let's plot the evolution of the number of submission per year. 
 
-![submissions_per_year_arxiv_forecast](/img/arxiv-information-explosion/submissions_per_year_arxiv_forecast.svg){:class="img-responsive"}
+![Bar chart of arXiv submissions per year from 1991 to 2019, about 155,000 in 2019, extended to 2030 by a second-order fit (about 250,000) and a steeper third-order fit (about 340,000)](/img/arxiv-information-explosion/submissions_per_year_arxiv_forecast.svg){:class="img-responsive"}
 
 We have also fitted a second- and third-order polynomial to the evolution of the number of submissions. The third-order polynomial fits the bars quite nicely but leads to a steep increase. In comparison, the second-order polynomial feels more realistic. With the second-order polynomial, we forecast that there will be about 3.6M papers on [arXiv][arXiv] in 2030, while the third-order polynomial expects about 4.1M.  
 
@@ -39,11 +39,11 @@ Who is right? Only time will tell. It depends on how many scientists in the worl
 
 As we could see, the number of submissions has increased steeply in recent years. Let's have a look!
 
-![counts_arxiv_cs](/img/arxiv-information-explosion/counts_arxiv_cs.svg){:class="img-responsive"}
+![Stacked area chart of the cumulative number of computer science articles on arXiv per subcategory, 1991 to 2019: slow growth until about 2010, very steep afterwards, reaching about 210,000](/img/arxiv-information-explosion/counts_arxiv_cs.svg){:class="img-responsive"}
 
 That is a much faster increase as before! What about the relative counts?
 
-![relative_counts_arxiv_cs](/img/arxiv-information-explosion/relative_counts_arxiv_cs.svg){:class="img-responsive"}
+![Stacked area chart of each computer science subcategory's share on arXiv, 1991 to 2019: AI dominated in the 1990s; today computer vision (CV), information theory (IT), machine learning (LG) and computation and language (CL) are the largest](/img/arxiv-information-explosion/relative_counts_arxiv_cs.svg){:class="img-responsive"}
 
 So at the very start, there were only three categories: `DS` (Data Structures and Algorithms), `CC` (Computational Complexity), and `GL` (General Literature). In the early 90s, the `AI` (Artificial Intelligence) community massively submitted to [arXiv][arXiv], but the larger fields are now `CV` (Computer Vision), `IT` (Information Theory), `LG` (Machine Learning), and `CL` (Computation and Language). 
 

@@ -26,7 +26,7 @@ Concept drift can also be of different types:
 
 The following figure illustrates the main types of concept drifts: 
 
-![concept-drift](/img/concept-drift/conceptdrift.png){:class="img-responsive" width="550" height="550"}{:style="margin: auto"}
+![Four types of concept drift as line sketches: sudden (one step), gradual (switching back and forth before settling), incremental (a staircase) and recurrent (old concepts coming back)](/img/concept-drift/conceptdrift.png){:class="img-responsive" width="550" height="550"}{:style="margin: auto"}
 
 Quite often, concept drifts are a combination of all the above described types. Typically, concurrent drifts take place in multi-dimensional data streams and the characteristics of those drifts are unknown a priori. 
 
@@ -52,7 +52,7 @@ There exist also ways to generate data sets with outlier. The most common method
 Nonetheless, there are - to the best of my knowledge - no generation procedure available to generate data with outliers subject concept drift. Particularly interesting are the so-called *hidden* outliers, because they can only be seen in particular subspace, so their detection is not trivial. I gave an example of what a hidden outlier is in a precedent [article][neural-based-outlier-discovery], that I am going to display here again: 
 
 
-![3d-plot-outlier](/img/neural-based-outlier-discovery/3d-plot-outlier.svg){:class="img-responsive"}
+![3D scatter plot over x, y and z: a dense cloud of points, with a few red hidden outliers apart from it](/img/neural-based-outlier-discovery/3d-plot-outlier.svg){:class="img-responsive"}
 
 In this 3-dimensional space, the points in red can be considered as *hidden* outliers, because they will be invisible as such in any 2-D or 1-D projections. Such outliers are in regions of relatively low density, but they cannot be detected in the full dimensional space because of the effects of the so-called *curse of dimensionality*, which destroys the notion of neighborhood[^fn7]. To find them, one need to investigate particular subspaces. This is difficult, because the number of subspaces increases exponentially with the total number of dimensions. 
 
@@ -65,7 +65,7 @@ We create a number *N* of *m*-dimensional vectors. Their values are uniformly di
 
 The following image illustrates a 2-D subspace where the strength of the dependency changes over time. Each image corresponds to a snapshot of the same stream at different time steps. As you can see, two outliers (in red) are visible in the third image. 
 
-![stream-generator](/img/concept-drift/streamgenerator.svg){:class="img-responsive"}
+![Three snapshots (t=1, 2, 3) of the same 2D subspace of a generated stream: the points go from uniform noise to a strong dependency, and red outliers become visible](/img/concept-drift/streamgenerator.svg){:class="img-responsive"}
 
 Basically, points are generated independently, with respect to parameters that change over time, characterizing the current *concept*. The parameters consist mainly in a chosen set of subspaces \\(S = \{S_{1}, S_{2}, ..., S_{i} \}\\) associated to a value between 0 and 1, the so-called margins \\(M = M_{1}, M_{2}, ..., M_{i}\\). A smaller margin means a stronger dependency. For a number of iteration *n*, the procedure is the following:
 
@@ -100,7 +100,7 @@ data <- data.frame(t(replicate(1000, generateDonut())))
 plot(data)
 ```
 
-![stream-generator](/img/concept-drift/donut.svg){:class="img-responsive"}
+![Scatter plot of two variables, X1 and X2, forming a ring: a clear dependency that classical correlation coefficients barely detect](/img/concept-drift/donut.svg){:class="img-responsive"}
 {:style="max-width: 500px; margin: auto"}
 
 Such a subspace obtains very low correlation estimates with traditional correlation measures (Pearson, Spearman, Kendall), in the order of \\(10^{-2}\\). Nonetheless, a dependence obviously exists and there is space - for example in the center and corners - to place hidden outliers.

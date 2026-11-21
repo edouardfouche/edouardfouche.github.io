@@ -10,7 +10,7 @@ In almost every movie involving air or space travel, the pilot relies on autopil
 
 <!--more-->
 <br>
-![img](/img/posts/2026-03-26-autopilot.jpg){:class="img-responsive" width="1440" height="960"}
+![Comic-style illustration of a cockpit in a thunderstorm: a red screen flashes "Autopilot off!" as the pilot pulls the disengage lever](/img/posts/2026-03-26-autopilot.jpg){:class="img-responsive" width="1440" height="960"}
 {:style="max-width: 600px; margin: auto"}
 <br>
 

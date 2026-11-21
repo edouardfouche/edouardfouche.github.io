@@ -9,22 +9,22 @@ categories: Machine Learning
 Outlier detection has the goal to reveal unusual patterns in data. Typical scenarios in predictive maintenance are the identification of failures, sensor malfunctions or intrusions. This is a challenging task, especially when the data is high-dimensional, because outliers become *hidden* and are visible only in particular subspaces. In this article, I will discuss approaches based on auto-encoder to discover outliers in high-dimensional data.  
 <!--more-->
 
-![autoencoder](/img/neural-based-outlier-discovery/autoencoder.png){:class="img-responsive" width="884" height="690"}
+![Diagram of an autoencoder: six inputs pass through a hidden layer of three neurons and are reconstructed as six outputs](/img/neural-based-outlier-discovery/autoencoder.png){:class="img-responsive" width="884" height="690"}
 
 Introduction
 ------------
 
 Let's start with an example. By looking at the plot hereafter, it is easy to see that the red points are outlying in the space spanned by the variables x, y and z. 
 
-![3d-plot-outlier](/img/neural-based-outlier-discovery/3d-plot-outlier.svg){:class="img-responsive"}
+![3D scatter plot over x, y and z: a dense cloud of points, with a few red outliers clearly apart from it](/img/neural-based-outlier-discovery/3d-plot-outlier.svg){:class="img-responsive"}
 
 However, if we project the data in lower dimensional subspaces, their outlying behavior is lost. We say that such outliers are *non-trivial* [^fn2]. 
 
-![2d-plot-outlier](/img/neural-based-outlier-discovery/2d-plot-outlier.svg){:class="img-responsive"}
+![The same points projected onto the x-y, y-z and x-z planes: in each 2D view, the red outliers are hidden inside the cloud](/img/neural-based-outlier-discovery/2d-plot-outlier.svg){:class="img-responsive"}
 
 Also, the same points might not be seen as outliers in other dimensions, such as [r,s,t]. 
 
-![3d-plot-non-outlier](/img/neural-based-outlier-discovery/3d-plot-non-outlier.svg){:class="img-responsive"}
+![3D scatter plot over r, s and t: the red points blend into a uniform cloud, so they are not outliers in this subspace](/img/neural-based-outlier-discovery/3d-plot-non-outlier.svg){:class="img-responsive"}
 
 When the data is high-dimensional, i.e. each data point is described by a large vector (let's say 100, 1000 or more values), they cannot be detected in the full data space either. This is an artifact of the so-called *curse of dimensionality*: the space becomes sparsely populated and the notions of neighborhood becomes meaningless[^fn3], such that full space outlier detection shows poor results. The outlying behavior of data points can be observed in subspaces only. This is problematic, because the number of subspaces grows exponentially with the number of dimensions of a data set: We cannot afford to explore all of them. 
 
@@ -135,7 +135,7 @@ plt.legend(loc="lower right")
 plt.show()
 ```
 
-![ae-outlier-training-roc](/img/neural-based-outlier-discovery/ae-outlier-training-roc.svg){:class="img-responsive"}
+![ROC curve of the autoencoder's outlier scores, far above the diagonal, with an area under the curve (AUC) of 0.91](/img/neural-based-outlier-discovery/ae-outlier-training-roc.svg){:class="img-responsive"}
 
 An area under the curve (AUC) of 0.91 is actually very good. As a comparison, state-of-the-art methods, such as HiCS[^fn2], only obtain an AUC of about 0.8 on this data set. 
 
@@ -155,11 +155,11 @@ plt.show()
 plt.show()
 ```
 
-![ae-outlier-training](/img/neural-based-outlier-discovery/ae-outlier-training.svg){:class="img-responsive"}
+![Scatter plot of the outlier score of each of the 1,000 points: the dark points, the true outliers, mostly score higher than the others](/img/neural-based-outlier-discovery/ae-outlier-training.svg){:class="img-responsive"}
 
 Dark points are the outliers, inferred from the labels. As we can see, they get in general a higher score than non-outliers. The effect is even more visible if we compare the distance before and after learning. Before learning, the network weights are initialized randomly. The network has not learned any transformation yet so it performs very poorly at the reconstruction of each data points, independent of them being outliers or not. 
 
-![ae-outlier-training-comp](/img/neural-based-outlier-discovery/ae-outlier-training-comp.svg){:class="img-responsive"}
+![Outlier scores before and after training, side by side: before, outliers and normal points are mixed; after, the outliers score clearly higher](/img/neural-based-outlier-discovery/ae-outlier-training-comp.svg){:class="img-responsive"}
 
 Interpretability
 ----------------
@@ -185,17 +185,17 @@ plt.ylabel('Reconstruction error')
 plt.title("Reconstruction error in each dimension of point 350")
 ```
 
-![ae-outlier-reconstruction-350](/img/neural-based-outlier-discovery/ae-outlier-reconstruction-350.svg){:class="img-responsive"}
+![Line chart of the reconstruction error of point 350 in each of the 100 dimensions, with a sharp peak in dimensions 30 to 32](/img/neural-based-outlier-discovery/ae-outlier-reconstruction-350.svg){:class="img-responsive"}
 
 As we can see, the point 350 shows a higher reconstruction error in dimensions [30,31,32], suggesting correctly that it is outlying in this subspace. 
 
 Similarly, point 50, which is an outlier in subspace [30,31,32] and [68,69], shows a high reconstruction error in dimensions [30,31,32,68,69]. 
 
-![ae-outlier-reconstruction-50](/img/neural-based-outlier-discovery/ae-outlier-reconstruction-50.svg){:class="img-responsive"}
+![Line chart of the reconstruction error of point 50 in each dimension, with peaks in dimensions 30 to 32 and 68 to 69, and a smaller one around 50 to 52](/img/neural-based-outlier-discovery/ae-outlier-reconstruction-50.svg){:class="img-responsive"}
 
 Point 50 also has a relative high reconstruction error in subspace [50,51,52]. This is a false positive, because point 50 does not show a clear outlier behavior in this subspace. Still, it seems that point 50 is located in a relatively sparse region in the subspace [50,51,52] (see the red point).
 
-![3d-plot-non-outlier-50](/img/neural-based-outlier-discovery/3d-plot-non-outlier-50.svg){:class="img-responsive"}
+![3D scatter plot over dimensions 50, 51 and 52: point 50 (red) lies in a sparse region but not clearly outside the cloud](/img/neural-based-outlier-discovery/3d-plot-non-outlier-50.svg){:class="img-responsive"}
 
 So it seems that one can find back the information in which each object is an outlier by looking at the reconstruction errors, or at least reduce drastically the search space. Hereafter, we plot the reconstruction error of each outlier in the subspace [30,31,32]. Namely, the points 50, 121, 350, 572 and 559. 
 
@@ -214,7 +214,7 @@ plt.ylabel('Reconstruction error')
 plt.title("Reconstruction error in each dimension of outliers in [30,31,32]")
 ```
 
-![ae-outlier-reconstruction-all](/img/neural-based-outlier-discovery/ae-outlier-reconstruction-all.svg){:class="img-responsive"}
+![Reconstruction error in each dimension for all outliers of subspace 30, 31, 32, one line per point: every line peaks at dimensions 30 to 32](/img/neural-based-outlier-discovery/ae-outlier-reconstruction-all.svg){:class="img-responsive"}
 
 The peak at [30,31,32] seems quite consistent for each point. 
 

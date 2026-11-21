@@ -10,7 +10,7 @@ Last week, Nuremberg City Hall hosted a celebration for all its residents who ob
 
 <!--more-->
 <br>
-![img](/img/einbuergerung.jpg){:class="img-responsive" width="1440" height="1080"}
+![The naturalization celebration in the great hall of Nuremberg's historic city hall, full of guests under a vaulted wooden ceiling and chandeliers](/img/einbuergerung.jpg){:class="img-responsive" width="1440" height="1080"}
 {:style="max-width: 500px; margin: auto"}
 <br>
 
@@ -23,7 +23,7 @@ As an added bonus, I now get to vote twice more ;).
 How about you? If you had been living in Germany (or any other country) for a long time, would you consider obtaining its citizenship?
 
 <br>
-![img](/img/fouche_koenig.jpg){:class="img-responsive" width="1280" height="1707"}
+![Edouard Fouché with Mayor Marcus König at the celebration in Nuremberg City Hall](/img/fouche_koenig.jpg){:class="img-responsive" width="1280" height="1707"}
 {:style="max-width: 300px; margin: auto"}
 <br>
 
