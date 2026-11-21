@@ -1,21 +1,7 @@
 <head>
     <meta charset="utf-8">
-    <!-- Google tag (gtag.js) -->
-    <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TWKJLC0HTV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-TWKJLC0HTV');
-    </script>
-    --> 
-
-    <!-- feed.xml is RSS 2.0, hand-written (not jekyll-feed's Atom feed) -->
+    {% comment %} feed.xml is RSS 2.0, hand-written (not jekyll-feed's Atom feed). {% endcomment %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
-    <meta http-equiv="Content-Language" content="en">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="creator" content="Edouard Fouché">
     <meta name="Publisher" content="Edouard Fouché">
@@ -24,23 +10,17 @@
     <meta name="copyright" content="© Edouard Fouché. Texts and own images: CC BY-SA 4.0 unless marked otherwise (see /impressum/)." />
     <link rel="icon" href="/img/favicon.png" type="image/png">
 
-    <!-- jekyll-seo-tag (settings in _config.yml): <title>, author, meta description (front matter
-         `description`, else a post's excerpt, else site.description), canonical URL, Open Graph and
-         Twitter card tags, and JSON-LD structured data. -->
+    {% comment %} jekyll-seo-tag (settings in _config.yml): <title>, author, meta description (front matter
+       `description`, else a post's excerpt, else site.description), canonical URL, Open Graph and Twitter
+       card tags, and JSON-LD structured data. {% endcomment %}
     {% seo %}
 
-    <!-- highlighting -->
+    {% comment %} Code highlighting, Bootstrap 3.1.1 (bootstrap.css is locally modified, see CLAUDE.md),
+       then the site's own styles. {% endcomment %}
     <link href="/css/syntax.css" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.css" rel="stylesheet"> 
-
-    <!-- Bootstrap theme CSS -->
-    <link href="/css/bootstrap-theme.css" rel="stylesheet"> 
-
-    <!-- Custom Style -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
     <link href="/css/customstyle.css" type="text/css" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
     {% comment %} MathJax only on pages with `math: true` in their front matter (posts with LaTeX).
@@ -55,5 +35,3 @@
     <script defer src="/js/jquery-3.7.1.min.js"></script>
     <script defer src="/js/bootstrap.min.js"></script>
 </head>
-
-

@@ -6,11 +6,11 @@ title: "index"
 <html lang="en">
 
   {% include head.html %}
-  
+
   <body class="home">
 
   {% include navbar.html %}
-    
+
 
     <div class="space"></div>
 
@@ -18,32 +18,32 @@ title: "index"
     <div class="content-wrapper">
     <div class="container">
     <div class="row" style=" margin-right: 0px ;" >
-      <!-- This part is dedicated to the design of the left column -->
-      <!-- <div class="col-xs-12 col-md-10"> -->
-      <!-- <div class="content"> -->
         {{ content }}
     </div>
 
-	<!-- Same centered reading column as the posts (_layouts/default.html). Rules in css/customstyle.css. -->
-	<div class="posts blog-column">
+	{% comment %} Same centered reading column as the posts (_layouts/default.html). Rules in css/customstyle.css.
+	   <main> is the page's main landmark. The page's <h1> is visually hidden for now, and the post titles
+	   are <h2>, styled like the earlier <h1> titles (.post-title in css/customstyle.css). {% endcomment %}
+	<main class="posts blog-column">
+	  <h1 class="sr-only">{{ site.title }} – {{ site.tagline }}</h1>
   {% for post in site.posts %}
     <article class="post">
-      
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
       <div class="date">
-        Published on {{ post.date | date: "%B %e, %Y" }} <!-- date: "%Y-%m-%d"  -->
+        Published on {{ post.date | date: "%B %e, %Y" }}
         <br>
         <br>
-        
+
       </div>
       <div class="entry">
         {{ post.excerpt }}
       </div>
-      
+
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
-</div>
+</main>
 
     <div class="space"></div>
     <div class="space"></div>
@@ -56,10 +56,10 @@ title: "index"
 
     </div>
 
-  
+
   {% include script.html %}
   </body>
 
-  
+
 
 </html>

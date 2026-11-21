@@ -3,7 +3,7 @@
 
   {% include head.html %}
   
-  <body class="home">
+  <body class="error-page">
 
   {% include navbar.html %}
     
@@ -14,16 +14,14 @@
     <div class="content-wrapper">
     <div class="container">
     <div class="row" style=" margin-right: 0px ;" >
-      <!-- This part is dedicated to the design of the left column -->
-      <!-- <div class="col-xs-12 col-md-10"> -->
     </div>
     
-    <div class="col-xs-12 col-md-10">
+    <main class="col-xs-12 col-md-10">
 
     <div class="title-wrapper">
-        <h1 class="content-title" id="sec0"> 
-            Oops ! 404 Error
-        <h1>
+        <h1 class="content-title">
+            Oops! 404 Error
+        </h1>
     </div>
 
     <div class="subcontent-wrapper">
@@ -31,14 +29,14 @@
               <p class="content-paragraph">
                 Sorry, we can't find the page you are looking for. 
                 <br>
-                Please, get me <a href={{ site.url }}>back to the homepage</a> ! 
+                Please, get me <a href="{{ site.url }}/">back to the homepage</a>!
               </p>
 
 
     </div>
 
 
-    </div>
+    </main>
 
     </div>
 

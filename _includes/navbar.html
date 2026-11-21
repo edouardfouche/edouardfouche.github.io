@@ -1,81 +1,51 @@
-<!-- NAVBAR
-================================================== -->
-<!--  <img src='/img/linkedin25x25.png' style='display: none' /> -->
-<!-- <img src='/img/xing25x25.png' style='display: none' />  -->
-
     <div class="navbar-wrapper">
 
-      <div class="container"> 
+      <div class="container">
 
+        <nav class="navbar navbar-inverse navbar-static-top" aria-label="Main">
 
-
-        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-
-          <div class="container">  
-
-
+          <div class="container">
 
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-links" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <div class="navbar-brand-custom"><a href="/" class="home">Blog</a></div>
-              
-              
-              
-              
+
             </div>
 
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbar-links">
               <ul class="nav navbar-nav">
-                <!-- <li><a href="/index/" class="home" style="font-size:18px">Edouard Fouché's blog</a></li> -->
                 <li><a href="/about/" class="about">About</a></li>
                 <li><a href="/cv/" class="cv">CV</a></li>
                 <li><a href="/publications/" class="publications">Publications</a></li>
                 <li><a href="/services/" class="services">Services</a></li>
                 <li><a href="/book-me/" class="book-me">Book Me</a></li>
-                <!-- <li><a href="/projects.html">Projects</a></li> -->
-                <!-- <li><a href="/contact/" class="contact">Contact</a></li> -->
-
               </ul>
 
-              <ul class="nav navbar-nav navbar-right">
-                  <a class="link-icon" id="flickr" href="https://www.flickr.com/photos/edouardf" target="_BLANK"> <img src='/img/flickr25x25.png' id="flickr-container" alt="Flickr"> <!-- <div id="flickr-container"> </div> --> </a>
+              {% comment %} Profile icons. They float right, so they appear in reverse order. A <div>, not a
+                 <ul>: they are not list items. {% endcomment %}
+              <div class="nav navbar-nav navbar-right">
+                  <a class="link-icon" id="flickr" href="https://www.flickr.com/photos/edouardf" target="_BLANK"> <img src='/img/flickr25x25.png' id="flickr-container" alt="Flickr"> </a>
 
-                  <a class="link-icon" id="instagram" href="https://www.instagram.com/edouardfouche/" target="_BLANK"> <img src='/img/instagram25x25.png' id="icon-container" alt="Instagram"> <!--<div id="xing-container"> </div> --> </a>
+                  <a class="link-icon" id="instagram" href="https://www.instagram.com/edouardfouche/" target="_BLANK"> <img src='/img/instagram25x25.png' class="icon-container" alt="Instagram"> </a>
 
-                  <!-- <a class="link-icon" id="facebook" href="https://www.facebook.com/edouardf" target="_BLANK"> <img src='/img/facebook25x25.png' id="icon-container" alt="">  </a> --> <!-- <div id="facebook-container"> </div> -->
+                  <a class="link-icon" id="linkedin" href="https://www.linkedin.com/in/edouardfouche" target="_BLANK"> <img src='/img/linkedin25x25.png' class="icon-container" alt="LinkedIn"> </a>
 
-                  <!-- <a class="link-icon" id="twitter" href="https://twitter.com/edouardfouche" target="_BLANK"> <img src='/img/twitter25x25.png' id="icon-container" alt="">  </a> --> <!-- <div id="twitter-container"></div> -->
+                  <a class="link-icon" id="github" href="https://github.com/edouardfouche" target="_BLANK"> <img src='/img/github25x25.png' class="icon-container" alt="GitHub"> </a>
 
-                  <a class="link-icon" id="linkedin" href="https://www.linkedin.com/in/edouardfouche" target="_BLANK"> <img src='/img/linkedin25x25.png' id="icon-container" alt="LinkedIn"> <!--<div id="linkedin-container"></div> --></a>
-                  
-                  <a class="link-icon" id="github" href="https://github.com/edouardfouche" target="_BLANK"> <img src='/img/github25x25.png' id="icon-container" alt="GitHub"> </a>
-
-                  <a class="link-icon" id="rss" href="https://edouardfouche.com/feed.xml" target="_BLANK"> <img src='/img/rss25x25.png' id="icon-container" alt="RSS feed"> </a>
-
-
-                  
-
-                  
-
-
-              </ul> 
+                  <a class="link-icon" id="rss" href="https://edouardfouche.com/feed.xml" target="_BLANK"> <img src='/img/rss25x25.png' class="icon-container" alt="RSS feed"> </a>
+              </div>
 
             </div>
-          </div> 
-          
-        </div>
+          </div>
+
+        </nav>
         {% comment %} PayPal donation button, disabled. To bring it back, include donations-paypal.html here
            and describe PayPal in the privacy policy (_layouts/impressum.html). {% endcomment %}
       </div>
     </div>
-
-
-
-    <!-- END OF NAVBAR
-================================================== -->

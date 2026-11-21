@@ -20,6 +20,18 @@ p {
   font-size: 18px;
 }
 
+/* Post titles on the blog index are <h2> (the page has one <h1>), with the size and colour that the
+   <h1> titles had (see h1 and h1 a in css/style.css). */
+.posts .post-title {
+  font-size: 20px;
+  font-size: -webkit-calc(20px + 6 * ((100vw - 320px) / 680));
+  font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+}
+
+.posts .post-title a {
+  color: inherit;
+}
+
 /* BLOG READING COLUMN
 -------------------------------------------------- */
 /* The blog index (_layouts/index.html) and every post (_layouts/default.html) put their content in
@@ -156,7 +168,7 @@ body.home a.home, body.about a.about, body.cv a.cv, body.publications a.publicat
   float: right;
 }
 
-#icon-container {
+.icon-container {
   height: 25px;
   width: 25px;
   margin-bottom: 0px;
@@ -169,7 +181,7 @@ body.home a.home, body.about a.about, body.cv a.cv, body.publications a.publicat
   -webkit-backface-visibility: hidden;
 }
 
-#icon-container:hover {
+.icon-container:hover {
   -webkit-filter: grayscale(0%);
 }
 

@@ -1,9 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html lang="en">
 
   {% include head.html %}
-  
+
   <body class="home">
 
   {% include navbar.html %}
@@ -12,11 +11,11 @@
 
     <div class="content-wrapper">
     <div class="container">
-    <!-- Same centered reading column as the blog index (_layouts/index.html), so that the text does
-         not move when you open a post. Rules in css/customstyle.css. -->
-    <div class="blog-column">
+    {% comment %} Same centered reading column as the blog index (_layouts/index.html), so that the text does
+       not move when you open a post. Rules in css/customstyle.css. <main> is the page's main landmark. {% endcomment %}
+    <main class="blog-column">
       {{ content }}
-    </div>
+    </main>
 
     </div>
 
@@ -26,10 +25,10 @@
 
     </div>
 
-  
+
   {% include script.html %}
   </body>
 
-  
+
 
 </html>
