@@ -2,8 +2,8 @@
 
 **Date:** 2026-11-21
 **Follows:** the [full site audit](2026-11-21-full-audit.md), items L4, B1, B2, B3, A5, C3 (CV page only) and P2.
-**Branch:** `site-audit-quick-wins`, not yet merged into `master`, so nothing is live yet (see
-[Deploying](#deploying)).
+**Branch:** `site-audit-quick-wins`, fast-forwarded into `master` and deployed the same day (see
+[Post-deploy check](#post-deploy-check)), then deleted.
 
 ## Changes, one commit each
 
@@ -109,6 +109,22 @@ After the deploy:
   version also stays in the public git history, as noted in the audit.
 - Check that `/book-me/` shows the new heading, that `/cv/` is about 11 KB, and that only the two math
   posts load `MathJax.js`.
+
+## Post-deploy check
+
+`master` moved from `abae645` to `7581a17`, and the GitHub Pages build succeeded (40 s). On the live
+site:
+
+- `/book-me/` has the heading, the intro, the direct link to the form and the iframe `title`.
+- `/cv/` is 10.6 KB and has the fallback text "Download the CV as a PDF" and `type="application/pdf"`.
+- All 10 new links are in the live pages.
+- Of the 27 pages (the 26 in the sitemap and `/404.html`), only the two math posts load `MathJax.js`.
+- `img/knight/study.jpg` served through Cloudflare is byte-identical to the stripped file in the
+  repository (SHA-256 checked). That edge location's copy had expired (`cf-cache-status: EXPIRED`), so
+  it fetched the new file. The GitHub Pages origin, queried directly, serves the same file. Other
+  Cloudflare locations cache separately, so the purge described above is still advisable, though not
+  urgent.
+- `/docs/2026-11-21-quick-wins.md` returns 404, so `docs/` is still excluded.
 
 ## Still open from the audit's list
 
