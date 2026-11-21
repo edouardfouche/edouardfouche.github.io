@@ -43,14 +43,22 @@ observed, what you changed and why, and how you verified it.
 ## Architecture
 
 **The top-level `.md` pages are only stubs.** `about.md`, `cv.md`, `publications.md`, `services.md`,
-`book-me.md`, `citation-policy.md`, `impressum.md` and `404.md` contain front matter (layout, title,
-description, permalink) and a placeholder body that is never rendered. Each page's real content is hand-written HTML
-in the matching `_layouts/<name>.html`. To change what a page says, edit its layout.
+`book-me.md`, `citation-policy.md`, `impressum.md` and `404.md` contain only front matter (layout,
+title, description, permalink). Each page's real content is hand-written HTML in the matching
+`_layouts/<name>.html`. To change what a page says, edit its layout.
 
 **Most layouts are standalone documents.** Every layout except `post.html` (which extends
 `default.html`) is a full `<!doctype html>` page that includes `head.html`, `navbar.html`,
 `footer.html` and `script.html` itself. Change shared page chrome in `_includes/`. A new top-level page
 needs its own layout, a stub `.md`, and a link in `_includes/navbar.html`.
+
+**Page structure (accessibility):** the navbar is a `<nav>`, the footer a `<footer>`, and each layout
+wraps its content (not the navbar or footer) in one `<main>`. Every page has exactly one `<h1>`: the page
+title (on the blog index a visually hidden one, `.sr-only`, while post titles there are
+`<h2 class="post-title">`). IDs must be unique per page; the navbar icons share the class
+`.icon-container`. Write notes as Liquid comments (`{% comment %}…{% endcomment %}`), not HTML
+comments, which are sent to every visitor; the only HTML comments left are Cloudflare's `email_off`
+markers in the Impressum. Every content image needs a descriptive `alt`.
 
 **Styling:** Bootstrap 3.1.1 CSS (`css/bootstrap.css`, `css/bootstrap-theme.css`) plus
 `css/customstyle.css`, `css/style.css` and `css/syntax.css` (code highlighting), all loaded from
