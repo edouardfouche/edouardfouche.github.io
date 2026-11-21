@@ -18,8 +18,8 @@ email: hello@edouardfouche.com
 # Meta description of the home page and of any page without its own `description:` (posts use their
 # excerpt), and the description of the RSS feed. Search engines show about 155 characters.
 description: >-
-  Personal website and blog of Edouard Fouché, a French-German data scientist. Articles on AI,
-  machine learning, research and careers, plus CV and publications.
+  Blog of Edouard Fouché, French-German AI engineer and data scientist. Articles on AI, software
+  engineering, research and careers, plus CV and publications.
 # jekyll-seo-tag titles the home page "<title> | <tagline>" and every other page "<page title> | <title>".
 tagline: Blog
 baseurl: "" # the subpath of your site, e.g. /blog
