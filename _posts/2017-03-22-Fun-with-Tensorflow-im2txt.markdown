@@ -36,7 +36,7 @@ The following packages are required ([instructions][requirements]):
 
 Since we don't want to train the model by ourself (it would take weeks), we download a fine-tuned *checkpoint*, as well as a the corresponding vocabulary file. The checkpoint I found was trained over 3 millions iterations. I recommend to put the `model.ckpt-3000000`, `model.ckpt-3000000.meta` and `word_counts.txt` files in a distinct folder, such as `~/im2txt/`.
 
-- Download the *checkpoint* from [here][finetuned]. 
+- Download the *checkpoint*. The Google Drive file this post originally linked to is no longer available.
 
 Run the inference
 -----------------
@@ -302,12 +302,11 @@ Sources
 
 [^fn3]: Vinyals O., Toshev A., Bengio S. & Erhan D. (2016). *Show and Tell: Lessons learned from the 2015 MSCOCO Image Captioning Challenge*. IEEE Transactions on Pattern Analysis and Machine Intelligence.
 
-[COCO]:http://mscoco.org/
+[COCO]: https://cocodataset.org/
 [paper]: https://arxiv.org/abs/1609.06647
-[im2txt]: https://github.com/tensorflow/models/tree/master/im2txt
+[im2txt]: https://github.com/tensorflow/models/tree/archive/research/im2txt
 [flickr]: https://www.flickr.com/photos/edouardf
 [facebook]: https://www.facebook.com/edouardf
-[finetuned]: https://drive.google.com/file/d/0B_qCJ40uBfjEWVItOTdyNUFOMzg/view
 [Daniel]: http://www.danielrojas.net/
 [Maxim]: http://www.maximlapis.com/
 [c226118]: https://github.com/tensorflow/models/tree/c22611891d0826bbf656a367874489c0dad95777
@@ -315,9 +314,9 @@ Sources
 [Discussion1]: https://github.com/tensorflow/models/issues/466#issuecomment-254002590
 [Discussion2]: https://github.com/tensorflow/tensorflow/issues/6432
 
-[COCO/explore]: http://mscoco.org/explore/
+[COCO/explore]: https://cocodataset.org/#explore
 
-[requirements]:https://github.com/tensorflow/models/tree/master/im2txt#install-required-packages
+[requirements]: https://github.com/tensorflow/models/tree/archive/research/im2txt#install-required-packages
 
 [tilt-shift]: https://en.wikipedia.org/wiki/Tilt%E2%80%93shift_photography
 

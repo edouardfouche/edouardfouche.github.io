@@ -260,4 +260,4 @@ Sources
 
 [nn-github]: https://github.com/edouardfouche/neural-based-outlier-discovery/blob/master/autoencoder-keras.ipynb
 [keras]:https://keras.io/
-[HiCSdata]: https://www.ipd.kit.edu/~muellere/HiCS/
+[HiCSdata]: https://web.archive.org/web/20220121221420/https://www.ipd.kit.edu/~muellere/HiCS/

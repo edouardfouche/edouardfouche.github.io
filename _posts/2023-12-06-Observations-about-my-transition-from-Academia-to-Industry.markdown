@@ -125,6 +125,6 @@ Would you like to read more about the topic of leaving Academia? Here are a few 
 
 
 [On leaving academia, Hadas Kotek]: https://hkotek.com/blog/on-leaving-academia/
-[Goodbye, Academia!]: https://goodbyeacademia.com/wordpress
-[Goodbye academia, I get a life.]: http://blog.devicerandom.org/2011/02/18/getting-a-life/
+[Goodbye, Academia!]: https://web.archive.org/web/20260312172219/https://goodbyeacademia.com/wordpress/
+[Goodbye academia, I get a life.]: https://web.archive.org/web/20250626123546/http://blog.devicerandom.org/2011/02/18/getting-a-life/
 [The Struggling Scientists]: https://thestrugglingscientists.com/
