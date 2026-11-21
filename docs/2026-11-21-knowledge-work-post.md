@@ -53,3 +53,14 @@ Local build with `bundle exec jekyll build` (the `github-pages` gem, same versio
 - The post is first on the blog index (excerpt shown) and first in `feed.xml`, which still has 10 items.
   It is listed in `sitemap.xml`, and the 2026-04-21 post now links to it as "next".
 - giscus maps comments by `pathname`, so the post gets its own discussion on first comment.
+
+## After deploy
+
+Committed as `26effd1` and pushed to `master`. The GitHub Pages build finished about a minute later.
+Checked on https://edouardfouche.com:
+
+- `/Knowledge-work-as-we-know-it-is-dying/` returns 200 with the expected `<title>`, `description`,
+  `og:image` and the date "November 19, 2026".
+- `/img/posts/2026-11-19-knowledge-work.jpg` returns 200 (`image/jpeg`, 63,204 bytes).
+- The post is on the blog index and is the first item of `/feed.xml`.
+- `/docs/2026-11-21-knowledge-work-post.md` returns 404, so `docs/` is still excluded.
