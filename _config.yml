@@ -1,18 +1,5 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# Site settings. `jekyll serve` does not reload this file: restart the server after editing it.
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Edouard Fouché
 email: hello@edouardfouche.com
 # Meta description of the home page and of any page without its own `description:` (posts use their
@@ -25,7 +12,6 @@ tagline: Blog
 baseurl: "" # the subpath of your site, e.g. /blog
 
 url: https://edouardfouche.com   # with the https protocol
-enforce_ssl: edouardfouche.com   # without any protocol
 
 twitter_username: edouardfouche
 github_username:  edouardfouche
@@ -55,50 +41,28 @@ defaults:
 # "2026-04-21 00:00:00 +0100" is shown as April 20. Also makes local builds match production.
 timezone: Europe/Berlin
 
-# Build settings
-#markdown: kramdown
-#highlighter: pygments
-#markdown: kramdown
-
+# Build settings (GitHub Pages uses kramdown with GFM input by default)
 markdown: kramdown
 kramdown:
   html_to_native: true
 highlighter: rouge
 
-#kramdown:
-#  input: GFM
-#  syntax_highlighter: rouge
-
-  
+# The custom layouts do not use the theme, but removing it breaks the build (see CLAUDE.md).
 theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-feed      # generates nothing: the hand-written feed.xml takes its place
   - jekyll-seo-tag   # <title>, meta description, canonical, Open Graph, Twitter card, JSON-LD
   - jekyll-sitemap   # /sitemap.xml, plus /robots.txt pointing to it (there is no robots.txt file)
 
-# Commenting out as it is not GDPR compliant
-# Your disqus shortname, entering this will enable commenting on posts
-# disqus: edouardfouche
-
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-# google_analytics: UA-56634264-1
-
+# PayPal donation button (_includes/donations-paypal.html), currently not included anywhere.
 donations:
   paypal:
     id:             PCUQMFDVS8JWJ  	   # PayPal button ID
-    # text:         Buy me a coffee    # Button text (not used)
 
-# Other stuff
+# Post URLs: /<slug from the file name>/
 permalink: /:title/
-# /blog/:year-:month-:day/:title.html
 
 # Files that must not be published (Jekyll copies any file without front matter as-is).
 exclude: [README.md, CLAUDE.md, LICENSE, Gemfile, Gemfile.lock, vendor/, docs/]
 
 excerpt_separator: <!--more-->
-
-# Feed
-#feed:
-#  path: feed.xml
-#  limit: 20
-#  #type: atom
