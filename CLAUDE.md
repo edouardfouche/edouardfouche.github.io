@@ -5,9 +5,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 Personal website and blog of Edouard Fouché, served at https://edouardfouche.com (see `CNAME`). It is a
-Jekyll static site with no tests, linter, or CI.
+Jekyll static site with no tests, linter, or CI. The checks in `tools/` stand in for them (static
+audit, link check, dead CSS, WebKit screenshots with a before/after comparison, axe-core); see
+`tools/README.md`. Run them before and after a change that could affect rendering.
 
 ## Documenting work (always)
+
+At the start of a session, read the index in `docs/README.md`: the newest records describe the current
+state, open items and decisions that are waiting for the owner (the latest handover record lists them).
 
 Record every piece of maintenance or development work in `docs/` as Markdown. This includes what you
 observed, what you changed and why, and how you verified it.
@@ -23,7 +28,8 @@ observed, what you changed and why, and how you verified it.
 ## Build and deploy
 
 - Toolchain: rbenv (Homebrew) with the Ruby version pinned in `.ruby-version`, matching the Ruby that
-  GitHub Pages uses.
+  GitHub Pages uses. Non-interactive shells (such as Claude Code's Bash tool) may not load rbenv and fall
+  back to the macOS system Ruby, so `bundle` fails: prefix commands with `eval "$(rbenv init - zsh)" &&`.
 - Setup: `bundle install`. Preview: `bundle exec jekyll serve`, then open http://localhost:4000 (add
   `--drafts` to render `_drafts/`). Build only: `bundle exec jekyll build`, which writes to `_site/`.
   `_config.yml` is not reloaded by `serve`, so restart the server after you edit it.
@@ -36,7 +42,7 @@ observed, what you changed and why, and how you verified it.
   `Gemfile` and would break or render them differently.
 - Upgrading: when https://pages.github.com/versions/ lists a newer `github-pages` version, bump the
   constraint in the `Gemfile`, run `bundle update github-pages`, and commit `Gemfile.lock`.
-- `_config.yml`'s `exclude` list keeps repo-only files (README, CLAUDE.md, docs/, Gemfile, ...) out of the
+- `_config.yml`'s `exclude` list keeps repo-only files (README, CLAUDE.md, docs/, tools/, Gemfile, ...) out of the
   published site. Jekyll copies every other file without front matter as-is, so add any new repo-only
   file to that list.
 

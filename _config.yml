@@ -63,6 +63,6 @@ donations:
 permalink: /:title/
 
 # Files that must not be published (Jekyll copies any file without front matter as-is).
-exclude: [README.md, CLAUDE.md, LICENSE, Gemfile, Gemfile.lock, vendor/, docs/]
+exclude: [README.md, CLAUDE.md, LICENSE, Gemfile, Gemfile.lock, vendor/, docs/, tools/]
 
 excerpt_separator: <!--more-->

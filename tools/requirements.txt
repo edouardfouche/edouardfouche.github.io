@@ -1,0 +1,7 @@
+html5lib
+beautifulsoup4
+Pillow
+pypdf
+tinycss2
+fonttools
+brotli
