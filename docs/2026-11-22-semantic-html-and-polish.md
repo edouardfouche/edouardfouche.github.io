@@ -160,3 +160,26 @@ the branch into `master` (or ask for other wording).
   - the rules the old Sass file intended but browsers never applied (separators between posts on the
     index, a tighter heading line height on phones) would be visible design changes;
   - ten PDFs without an embedded title.
+
+## Post-deploy check
+
+`master` moved from `3f3b14b` to `642464d` (the commits of this record and of
+[alt texts, dead CSS and the font](2026-11-21-dead-css-alt-texts-font.md)). The GitHub Pages build
+succeeded (44 s). On the live site:
+
+- The home page has one `<main>`, `<nav>`, `<footer>` and `<h1>`, and 18 `<h2 class="post-title">`. The
+  navbar icons use the `icon-container` class. The only HTML comments left are jekyll-seo-tag's two
+  markers.
+- `css/style.css` and `css/customstyle.css` at the Cloudflare location tested are byte-identical to the
+  repository. `/fonts/caladea/Caladea-Regular.woff2` is served as `font/woff2` (31,620 bytes).
+- The Taste post has its new alt text and `og:image`. The 404 page has one `<h1>`, Services reads
+  "Why “Tengu”?", and the live SARAF poster has the title "Stationarity-Aware Retrieval-Augmented Time
+  Series Forecasting (poster)".
+- Rendered from the live site in WebKit, home, About and the Knight's Tour post:
+  - Caladea loads (regular, bold and italic where used), the navbar is one line, and no page is wider
+    than the window at 1280 or 375 px;
+  - the phone menu opens;
+  - MathJax typesets the post's six formulas.
+- Other Cloudflare locations may still hold yesterday's CSS for up to 4 hours. With old CSS, the navbar
+  icons would lose their grey filter and the index titles would render slightly smaller, until the copy
+  expires. A cache purge ends this at once.
